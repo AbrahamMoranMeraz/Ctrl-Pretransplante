@@ -197,11 +197,6 @@ namespace Control_PreTransplante_V2
             AbrirFormulario<Blanco>();
         }
 
-        private void btninicio_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Blanco>();
-        }
-
         private void MostrarSubmenu(Panel submenu)
         {
             if(submenu.Visible == false)
@@ -225,12 +220,27 @@ namespace Control_PreTransplante_V2
                 panelcentral.Controls.Add(formulario);
                 panelcentral.Tag = formulario;
                 formulario.Dock = DockStyle.Fill;
+                panelcentral.Size = formulario.MinimumSize;
                 formulario.Show();
             }
             else//Si el formulario existe
             {
                 formulario.BringToFront();
             }
+        }
+        private void btninicio_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Blanco>();
+        }
+
+        private void btncerrarsecion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Cerrar sesión, ¿estas seguro?", "Advertencia",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else { }
         }
     }
 }

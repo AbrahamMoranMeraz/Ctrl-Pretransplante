@@ -31,6 +31,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelcentral = new System.Windows.Forms.Panel();
             this.panelmenu = new System.Windows.Forms.Panel();
+            this.btncerrarsecion = new FontAwesome.Sharp.IconButton();
             this.panelsubmenupaciente = new System.Windows.Forms.Panel();
             this.btnnuevop = new FontAwesome.Sharp.IconButton();
             this.btnlista = new FontAwesome.Sharp.IconButton();
@@ -74,14 +75,16 @@
             this.panelcentral.BackColor = System.Drawing.Color.White;
             this.panelcentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcentral.Location = new System.Drawing.Point(285, 65);
+            this.panelcentral.MinimumSize = new System.Drawing.Size(1334, 707);
             this.panelcentral.Name = "panelcentral";
-            this.panelcentral.Size = new System.Drawing.Size(1010, 591);
+            this.panelcentral.Size = new System.Drawing.Size(1334, 707);
             this.panelcentral.TabIndex = 4;
             // 
             // panelmenu
             // 
             this.panelmenu.AutoScroll = true;
             this.panelmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(87)))));
+            this.panelmenu.Controls.Add(this.btncerrarsecion);
             this.panelmenu.Controls.Add(this.panelsubmenupaciente);
             this.panelmenu.Controls.Add(this.btnpaciente);
             this.panelmenu.Controls.Add(this.btninicio);
@@ -91,6 +94,25 @@
             this.panelmenu.Name = "panelmenu";
             this.panelmenu.Size = new System.Drawing.Size(285, 591);
             this.panelmenu.TabIndex = 3;
+            // 
+            // btncerrarsecion
+            // 
+            this.btncerrarsecion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btncerrarsecion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncerrarsecion.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btncerrarsecion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btncerrarsecion.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btncerrarsecion.IconColor = System.Drawing.Color.White;
+            this.btncerrarsecion.IconSize = 30;
+            this.btncerrarsecion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncerrarsecion.Location = new System.Drawing.Point(0, 510);
+            this.btncerrarsecion.Name = "btncerrarsecion";
+            this.btncerrarsecion.Rotation = 0D;
+            this.btncerrarsecion.Size = new System.Drawing.Size(285, 81);
+            this.btncerrarsecion.TabIndex = 0;
+            this.btncerrarsecion.Text = "Cerrar Sesión";
+            this.btncerrarsecion.UseVisualStyleBackColor = true;
+            this.btncerrarsecion.Click += new System.EventHandler(this.btncerrarsecion_Click);
             // 
             // panelsubmenupaciente
             // 
@@ -333,6 +355,7 @@
         private FontAwesome.Sharp.IconPictureBox btnminimizar;
         private FontAwesome.Sharp.IconPictureBox btnmaximisar;
         private FontAwesome.Sharp.IconPictureBox btnrestaurar;
+        private FontAwesome.Sharp.IconButton btncerrarsecion;
     }
 }
 

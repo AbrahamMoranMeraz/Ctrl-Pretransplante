@@ -24,6 +24,16 @@ namespace Control_PreTransplante_V2
             this.datos = new string[datos.Length];
             this.datos = datos;
         }
+
+        public void ActualizarDatos(string[] datos)
+        {
+            this.datos = datos;
+            lbnombre.Text = datos[3];
+            lbpaterno.Text = datos[4];
+            lbmaterno.Text = datos[5];
+            lbnss.Text = datos[1];
+        }
+
         private void Estudios_Load(object sender, EventArgs e)
         {
             lbnombre.Text = datos[3];

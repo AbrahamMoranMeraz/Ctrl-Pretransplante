@@ -64,7 +64,13 @@ namespace Control_PreTransplante_V2
             }
             else//Si el formulario existe
             {
-                formulario.BringToFront();
+                formulario.Close();
+                formulario = new Paciente(datos);
+                formulario.TopLevel = false;
+                pacientes.Controls.Add(formulario);
+                pacientes.Tag = formulario;
+                formulario.Dock = DockStyle.Fill;
+                formulario.Show();
             }
             tap.DeselectTab(0);//Cambia a la siguiente pagina del tap desde la pagina 0
         }

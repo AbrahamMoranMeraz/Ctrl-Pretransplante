@@ -19,30 +19,6 @@ namespace Control_PreTransplante_V2
             InitializeComponent();
             txt_contra.Focus();
         }
-
-        //private void btn_Entrar_Click(object sender, EventArgs e)
-        //{
-        //    if(secion.Login_Usuario(Nombre_U.Text, Contraseña.Text))
-        //    {
-        //        MessageBox.Show("Iniciaste secion");
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Nel prro");
-        //    }
-        //}
-
-        //private void Login_Load(object sender, EventArgs e)
-        //{
-        //    secion = new Logica_Secion();
-        //}
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    Form mostrarform = new Inicio();
-        //    mostrarform.Show();
-        //}
-
         private void btn_Entrar_Click(object sender, EventArgs e)
         {
             Login_();
@@ -85,11 +61,9 @@ namespace Control_PreTransplante_V2
                     var validacion = loginUsuario.LoginUsuario(txt_usuario.Text, txt_contra.Text);
                     if (validacion == true)
                     {
-                        //Inicio mostrarInicio = new Inicio();
-                        //mostrarInicio.Show();
-                        //mostrarInicio.FormClosed += CerrarSesion;
-                        //this.Hide();
-                        new Inicio().Show();
+                        Inicio mostrarInicio = new Inicio();
+                        mostrarInicio.Show();
+                        mostrarInicio.FormClosed += CerrarSesion;
                         this.Hide();
                     }
                     else
