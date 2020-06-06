@@ -50,6 +50,18 @@ namespace Capa_AccesoDatos
             conexion.CerrarConexion();
             return tabla;
         }
+
+        public DataTable MostrarDatos(string consulta)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = consulta;
+            //comando.CommandType = CommandType.StoredProcedure;
+            leerdatos = comando.ExecuteReader();
+            tabla.Load(leerdatos);
+            conexion.CerrarConexion();
+            return tabla;
+        }
+
         public void InsertarDatos(string num_seg, string curp1, string nom, string ap, string am, string sex, string nac)
         {
             comando.Connection = conexion.AbrirConexion();

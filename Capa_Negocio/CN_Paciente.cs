@@ -19,6 +19,11 @@ namespace Capa_Negocio
             return tabla;
         }
 
+        public DataTable Estudios(string nss)
+        {
+            return objPaciente.MostrarDatos("Select * from Estudios_P where Num_seg_social = " + nss);
+        }
+
         public void Insertar(string num_seg, string curp1, string nom, string ap, string am, string sex, string nac)
         {
             objPaciente.InsertarDatos(num_seg, curp1, nom, ap, am, sex, nac);

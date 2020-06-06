@@ -35,26 +35,22 @@
             this.lbpaterno = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataestudiosr = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
+            this.dataestudiosp = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataestudiosr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataestudiosp)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -137,66 +133,26 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.dataGridView3);
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.checkedListBox1);
+            this.panel3.Controls.Add(this.dataestudiosr);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.dataGridView2);
-            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.dataestudiosp);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Location = new System.Drawing.Point(389, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(810, 530);
             this.panel3.TabIndex = 18;
             // 
-            // panel4
+            // dataestudiosr
             // 
-            this.panel4.Controls.Add(this.listBox1);
-            this.panel4.Location = new System.Drawing.Point(184, 285);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 36);
-            this.panel4.TabIndex = 14;
-            // 
-            // listBox1
-            // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.listBox1.ForeColor = System.Drawing.Color.Black;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Items.AddRange(new object[] {
-            "Categoria 1",
-            "Categoria 2",
-            "Categoria 3"});
-            this.listBox1.Location = new System.Drawing.Point(0, 0);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(200, 36);
-            this.listBox1.TabIndex = 13;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(17, 333);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(781, 178);
-            this.dataGridView3.TabIndex = 11;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(781, 98);
-            this.dataGridView1.TabIndex = 7;
+            this.dataestudiosr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataestudiosr.Location = new System.Drawing.Point(17, 32);
+            this.dataestudiosr.Name = "dataestudiosr";
+            this.dataestudiosr.RowHeadersWidth = 51;
+            this.dataestudiosr.RowTemplate.Height = 24;
+            this.dataestudiosr.Size = new System.Drawing.Size(781, 98);
+            this.dataestudiosr.TabIndex = 7;
             // 
             // label6
             // 
@@ -208,27 +164,15 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Estudios Realizados";
             // 
-            // dataGridView2
+            // dataestudiosp
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(17, 168);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(781, 98);
-            this.dataGridView2.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label8.Location = new System.Drawing.Point(23, 287);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 20);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Nuevo Estudio";
+            this.dataestudiosp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataestudiosp.Location = new System.Drawing.Point(17, 168);
+            this.dataestudiosp.Name = "dataestudiosp";
+            this.dataestudiosp.RowHeadersWidth = 51;
+            this.dataestudiosp.RowTemplate.Height = 24;
+            this.dataestudiosp.Size = new System.Drawing.Size(781, 98);
+            this.dataestudiosp.TabIndex = 9;
             // 
             // label7
             // 
@@ -292,6 +236,47 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Notas:";
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Estudio 1",
+            "Estudio 2",
+            "Estudio 3",
+            "Estudio 4",
+            "Estudio 5",
+            "Estudio 6",
+            "Estudio 7",
+            "Estudio 8",
+            "Estudio 9",
+            "Estudio 10",
+            "Estudio 11",
+            "Estudio 12",
+            "Estudio 13",
+            "Estudio 14",
+            "Estudio 15",
+            "Estudio 16",
+            "Estudio 17",
+            "Estudio 18"});
+            this.checkedListBox1.Location = new System.Drawing.Point(17, 272);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(781, 157);
+            this.checkedListBox1.TabIndex = 13;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(224, 435);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(367, 92);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Generar Formato";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -309,10 +294,8 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataestudiosr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataestudiosp)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -331,18 +314,16 @@
         private System.Windows.Forms.Label lbpaterno;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataestudiosr;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dataestudiosp;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -48,7 +48,7 @@
             this.tap.Location = new System.Drawing.Point(0, 0);
             this.tap.Name = "tap";
             this.tap.SelectedIndex = 0;
-            this.tap.Size = new System.Drawing.Size(1334, 707);
+            this.tap.Size = new System.Drawing.Size(1600, 200);
             this.tap.TabIndex = 0;
             // 
             // listapaceintes
@@ -57,7 +57,7 @@
             this.listapaceintes.Location = new System.Drawing.Point(4, 25);
             this.listapaceintes.Name = "listapaceintes";
             this.listapaceintes.Padding = new System.Windows.Forms.Padding(3);
-            this.listapaceintes.Size = new System.Drawing.Size(1326, 678);
+            this.listapaceintes.Size = new System.Drawing.Size(1592, 171);
             this.listapaceintes.TabIndex = 0;
             this.listapaceintes.Text = "Lista Pacientes";
             this.listapaceintes.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@
             this.Lista.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.Lista.RowTemplate.Height = 24;
             this.Lista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Lista.Size = new System.Drawing.Size(1320, 672);
+            this.Lista.Size = new System.Drawing.Size(1586, 165);
             this.Lista.TabIndex = 2;
             this.Lista.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Lista_CellMouseDoubleClick);
             // 
@@ -123,10 +123,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 707);
+            this.ClientSize = new System.Drawing.Size(1600, 200);
             this.Controls.Add(this.tap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1334, 707);
+            this.MinimumSize = new System.Drawing.Size(1600, 200);
             this.Name = "Lista_P";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Lista_P_Load);
