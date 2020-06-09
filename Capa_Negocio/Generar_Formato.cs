@@ -20,7 +20,7 @@ namespace Capa_Negocio
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"C:\Users\moran\source\repos\Pruebas_Doc\bin\Debug\F1.docx", @"C:\Users\moran\source\repos\Pruebas_Doc\bin\Debug\" + datosPaciente[1] + ".docx", y);
+            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F1.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[1] + ".docx", y);
         }
         private static void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
@@ -101,9 +101,26 @@ namespace Capa_Negocio
                             ref missing, ref missing, ref missing,
                             ref missing, ref missing, ref missing);
 
+            //Codigo para impresion de formatos y asi.
+            if (myWordDoc != null)
+            {
+                object copies = "1";
+                object pages = "";
+                object range = Word.WdPrintOutRange.wdPrintAllDocument;
+                object items = Word.WdPrintOutItem.wdPrintDocumentContent;
+                object pageType = Word.WdPrintOutPages.wdPrintAllPages;
+                object oTrue = true;
+                object oFalse = false;
+                myWordDoc.PrintOut(ref oTrue, ref oFalse, ref range, ref missing, ref missing, ref missing,
+                                   ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
+                                   ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
+            }
+
             myWordDoc.Close();
             wordApp.Quit();
             return ("File Created!");
         }
+
+
     }
 }
