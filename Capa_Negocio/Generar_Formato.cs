@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Word = Microsoft.Office.Interop.Word;//Libreria para word
 using System.Reflection;//Libreria para word
 using System.IO;//libreria para archivos
+using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Capa_Negocio
 {
@@ -16,11 +18,25 @@ namespace Capa_Negocio
         static String[] datosPaciente;
         #endregion
 
-        static public String NuevoFormato(string [] e, string [] d, int y)
+        static public String NuevoFormato(string [] e, string [] d, int y, string comboBox)
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F1.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[1] + ".docx", y);
+            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F1.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[1] + "1.docx", y, comboBox);
+        }
+
+        static public String FormatoServicios(string[] e, string[] d, int y, string comboBox)
+        {
+            estudiosSeleccionados = e;
+            datosPaciente = d;
+            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[1] + "3.docx", y, comboBox);
+        }
+
+        static public String FormatoRadiologia(string[] e, string[] d, int y, string comboBox)
+        {
+            estudiosSeleccionados = e;
+            datosPaciente = d;
+            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[1] + "2.docx", y, comboBox);
         }
         private static void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
@@ -50,7 +66,7 @@ namespace Capa_Negocio
                 ref matchControl);
         }
 
-        private static String CreateWordDocument(object filename, object SaveAs, int cantidaddeestudiosselect)
+        private static String CreateWordDocument(object filename, object SaveAs, int cantidaddeestudiosselect, string combobox)
         {
             Word.Application wordApp = new Word.Application();
             object missing = Missing.Value;
@@ -101,7 +117,12 @@ namespace Capa_Negocio
                             ref missing, ref missing, ref missing,
                             ref missing, ref missing, ref missing);
 
+            wordApp.ActivePrinter =combobox;
             //Codigo para impresion de formatos y asi.
+            //if (myWordDoc != null)
+            //if (dialogResult == 1)
+            //int dialogResult = wordApp.Dialogs[Microsoft.Office.Interop.Word.WdWordDialog.wdDialogFilePrint].Show(ref missing);
+            //if (dialogResult == 1)
             if (myWordDoc != null)
             {
                 object copies = "1";
@@ -111,6 +132,9 @@ namespace Capa_Negocio
                 object pageType = Word.WdPrintOutPages.wdPrintAllPages;
                 object oTrue = true;
                 object oFalse = false;
+                //myWordDoc.PrintOut(ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
+                //                   ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
+                //                   ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
                 myWordDoc.PrintOut(ref oTrue, ref oFalse, ref range, ref missing, ref missing, ref missing,
                                    ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
                                    ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
@@ -118,6 +142,7 @@ namespace Capa_Negocio
 
             myWordDoc.Close();
             wordApp.Quit();
+
             return ("File Created!");
         }
 

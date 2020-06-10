@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,18 @@ namespace Control_PreTransplante_V2
 
         private void Estudios_Load(object sender, EventArgs e)
         {
+            //Llenar combobox con lo tipos de impresoras para seleccionar uno//
+            PrintDocument prtdoc = new PrintDocument();
+            string strDefaultPrinter = prtdoc.PrinterSettings.PrinterName;
+            foreach (String strPrinter in PrinterSettings.InstalledPrinters)
+            {
+                comboBox1.Items.Add(strPrinter);
+                if (strPrinter == strDefaultPrinter)
+                {
+                    comboBox1.SelectedIndex = comboBox1.Items.IndexOf(strPrinter);
+                }
+            }
+            //***************************************************************//
             lbnombre.Text = datos[3];
             lbpaterno.Text = datos[4];
             lbmaterno.Text = datos[5];
@@ -71,7 +84,8 @@ namespace Control_PreTransplante_V2
 
                 }
             }
-            MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y));
+            //MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString())/*,Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios,datos,y,comboBox1.SelectedItem.ToString())*/);
+            MessageBox.Show(/*Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString()), */Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString()));
         }
     }
 }
