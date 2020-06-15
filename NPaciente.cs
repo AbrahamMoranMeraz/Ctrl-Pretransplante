@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using Spire.Doc;
-using Spire.Doc.Documents;
 using Capa_Negocio;
 
 namespace Control_PreTransplante_V2
