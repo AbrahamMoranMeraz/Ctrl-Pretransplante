@@ -21,7 +21,9 @@ namespace Capa_Negocio
 
         public DataTable Estudios(string nss)
         {
-            return objPaciente.MostrarDatos("Select * from Estudios_P where Num_seg_social = " + nss);
+            return objPaciente.MostrarDatos("select NomForm from Formato join ImprimirFormato " +
+                "on Formato.IdFormato = ImprimirFormato.IdFormatowhere ImprimirFormato.IdPaciente = " +
+                "(select IdPaciente from Paciente where NSS ="+nss+")");
         }
 
         public void Insertar(string num_seg, string curp1, string nom, string ap, string am, string sex, string nac)

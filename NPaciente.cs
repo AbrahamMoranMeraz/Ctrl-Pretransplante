@@ -222,5 +222,10 @@ namespace Control_PreTransplante_V2
                 }
             }
         }
+
+        private void gbx_Registro_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

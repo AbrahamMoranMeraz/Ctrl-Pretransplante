@@ -1,4 +1,5 @@
 ﻿using Capa_AccesoDatos;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,7 +84,38 @@ namespace Control_PreTransplante_V2
 
         private void txt_usuario_KeyDown(object sender, KeyEventArgs e)
         {
-            Login_();
+            if (e.KeyCode == Keys.Enter)
+            {
+                Login_();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void txt_contra_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                Login_();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void txt_usuario_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Login_();
+            }
+            else
+            {
+
+            }
         }
     }
 }

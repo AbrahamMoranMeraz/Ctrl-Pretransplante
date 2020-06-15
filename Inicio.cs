@@ -184,7 +184,7 @@ namespace Control_PreTransplante_V2
 
         private void btnnuevop_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<NPaciente>();
+            AbrirFormulario<RgPacientes>();
             OcultarSubmenu();
         }
 
@@ -192,7 +192,7 @@ namespace Control_PreTransplante_V2
         {
             OcultarSubmenu();
             AbrirFormulario<Lista_P>();
-            AbrirFormulario<NPaciente>();
+            AbrirFormulario<RgPacientes>();
             AbrirFormulario<Blanco>();
             AbrirFormulario<Blanco>();
         }
