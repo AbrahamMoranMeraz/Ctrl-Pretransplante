@@ -13,7 +13,7 @@ namespace Control_PreTransplante_V2
     public partial class Lista_P : Form
     {
         string[] datos;
-
+        Capa_Negocio.CN_Paciente objforma;
         public Lista_P()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace Control_PreTransplante_V2
 
         private void MostrarPa()//Método para vizualizar los registros de la DB
         {
-            Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
+            objforma = new Capa_Negocio.CN_Paciente();
             Lista.DataSource = objforma.MostrarPaci();
         }
 
@@ -78,6 +78,16 @@ namespace Control_PreTransplante_V2
         private void pacientes_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             MessageBox.Show(Convert.ToString(tap.SelectedIndex));
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            MostrarPa();
         }
     }
 }

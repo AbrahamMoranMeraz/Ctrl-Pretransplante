@@ -152,6 +152,7 @@
             this.registrarP.TabIndex = 0;
             this.registrarP.Text = "Registrar";
             this.registrarP.UseVisualStyleBackColor = true;
+            this.registrarP.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // panel3
             // 
@@ -186,6 +187,7 @@
             this.rdb_femenino.TabIndex = 25;
             this.rdb_femenino.Text = "Femenino";
             this.rdb_femenino.UseVisualStyleBackColor = true;
+            this.rdb_femenino.Click += new System.EventHandler(this.rdb_femenino_CheckedChanged);
             // 
             // rdb_masculino
             // 
@@ -201,6 +203,7 @@
             this.rdb_masculino.TabStop = true;
             this.rdb_masculino.Text = "Masculino";
             this.rdb_masculino.UseVisualStyleBackColor = true;
+            this.rdb_masculino.Click += new System.EventHandler(this.rdb_masculino_CheckedChanged);
             // 
             // lbl_sexo
             // 
@@ -368,6 +371,7 @@
             this.btn_fecha.TabIndex = 13;
             this.btn_fecha.Text = "Agregar fecha";
             this.btn_fecha.UseVisualStyleBackColor = true;
+            this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
             // 
             // RgPacientes
             // 

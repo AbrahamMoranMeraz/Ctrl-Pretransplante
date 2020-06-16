@@ -103,6 +103,17 @@ namespace Control_PreTransplante_V2
             }
         }
 
+        private void btn_fecha_Click(object sender, EventArgs e)
+        {
+            txt_fecha.Text = monthCalendar1.SelectionStart.Year.ToString() + "-" +
+                monthCalendar1.SelectionStart.Month.ToString() + "-" +
+                monthCalendar1.SelectionStart.Day.ToString();
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e) //Registrar paciente
+        {
+            validar(this);
+        }
 
     }
 }

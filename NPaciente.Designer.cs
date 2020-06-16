@@ -28,18 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbc_datosGenerales = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ptb_Foto = new System.Windows.Forms.PictureBox();
-            this.btn_foto = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btn_borrar = new System.Windows.Forms.Button();
-            this.btn_editar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gbx_Registro = new System.Windows.Forms.GroupBox();
             this.txt_fecha = new System.Windows.Forms.TextBox();
             this.btn_fecha = new System.Windows.Forms.Button();
@@ -60,13 +53,20 @@
             this.lbl_fechaNa = new System.Windows.Forms.Label();
             this.lbl_sexo = new System.Windows.Forms.Label();
             this.txt_apellidoM = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ptb_Foto = new System.Windows.Forms.PictureBox();
+            this.btn_foto = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_borrar = new System.Windows.Forms.Button();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tbc_datosGenerales.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.gbx_Registro.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Foto)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.gbx_Registro.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbc_datosGenerales
@@ -95,113 +95,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos del paciente";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.ptb_Foto);
-            this.panel1.Controls.Add(this.btn_foto);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1623, 277);
-            this.panel1.TabIndex = 23;
-            // 
-            // ptb_Foto
-            // 
-            this.ptb_Foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptb_Foto.Location = new System.Drawing.Point(4, 4);
-            this.ptb_Foto.Margin = new System.Windows.Forms.Padding(4);
-            this.ptb_Foto.Name = "ptb_Foto";
-            this.ptb_Foto.Size = new System.Drawing.Size(257, 219);
-            this.ptb_Foto.TabIndex = 18;
-            this.ptb_Foto.TabStop = false;
-            // 
-            // btn_foto
-            // 
-            this.btn_foto.Location = new System.Drawing.Point(300, 186);
-            this.btn_foto.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_foto.Name = "btn_foto";
-            this.btn_foto.Size = new System.Drawing.Size(187, 37);
-            this.btn_foto.TabIndex = 12;
-            this.btn_foto.Text = "Agregar foto";
-            this.btn_foto.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.btn_borrar);
-            this.tabPage2.Controls.Add(this.btn_editar);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1631, 899);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Pacientes registrados";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btn_borrar
-            // 
-            this.btn_borrar.Location = new System.Drawing.Point(197, 671);
-            this.btn_borrar.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_borrar.Name = "btn_borrar";
-            this.btn_borrar.Size = new System.Drawing.Size(160, 37);
-            this.btn_borrar.TabIndex = 2;
-            this.btn_borrar.Text = "Borrar";
-            this.btn_borrar.UseVisualStyleBackColor = true;
-            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
-            // 
-            // btn_editar
-            // 
-            this.btn_editar.Location = new System.Drawing.Point(29, 671);
-            this.btn_editar.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_editar.Name = "btn_editar";
-            this.btn_editar.Size = new System.Drawing.Size(160, 37);
-            this.btn_editar.TabIndex = 1;
-            this.btn_editar.Text = "Editar";
-            this.btn_editar.UseVisualStyleBackColor = true;
-            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Teal;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(118)))), ((int)(((byte)(123)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 50;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.Teal;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1565, 629);
-            this.dataGridView1.TabIndex = 0;
             // 
             // gbx_Registro
             // 
@@ -251,6 +144,7 @@
             this.btn_fecha.TabIndex = 9;
             this.btn_fecha.Text = "Agregar fecha";
             this.btn_fecha.UseVisualStyleBackColor = true;
+            this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
             // 
             // btn_agregar
             // 
@@ -263,6 +157,7 @@
             this.btn_agregar.TabIndex = 10;
             this.btn_agregar.Text = "Registrar";
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // txt_nombres
             // 
@@ -349,6 +244,7 @@
             this.ibtn_enviar.TabIndex = 11;
             this.ibtn_enviar.Text = "Generar PDF";
             this.ibtn_enviar.UseVisualStyleBackColor = true;
+            this.ibtn_enviar.Click += new System.EventHandler(this.ibtn_enviar_Click);
             // 
             // txt_curp
             // 
@@ -458,6 +354,113 @@
             this.txt_apellidoM.Size = new System.Drawing.Size(251, 30);
             this.txt_apellidoM.TabIndex = 5;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ptb_Foto);
+            this.panel1.Controls.Add(this.btn_foto);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1623, 277);
+            this.panel1.TabIndex = 23;
+            // 
+            // ptb_Foto
+            // 
+            this.ptb_Foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptb_Foto.Location = new System.Drawing.Point(4, 4);
+            this.ptb_Foto.Margin = new System.Windows.Forms.Padding(4);
+            this.ptb_Foto.Name = "ptb_Foto";
+            this.ptb_Foto.Size = new System.Drawing.Size(257, 219);
+            this.ptb_Foto.TabIndex = 18;
+            this.ptb_Foto.TabStop = false;
+            // 
+            // btn_foto
+            // 
+            this.btn_foto.Location = new System.Drawing.Point(300, 186);
+            this.btn_foto.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_foto.Name = "btn_foto";
+            this.btn_foto.Size = new System.Drawing.Size(187, 37);
+            this.btn_foto.TabIndex = 12;
+            this.btn_foto.Text = "Agregar foto";
+            this.btn_foto.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btn_borrar);
+            this.tabPage2.Controls.Add(this.btn_editar);
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(1631, 899);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Pacientes registrados";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btn_borrar
+            // 
+            this.btn_borrar.Location = new System.Drawing.Point(197, 671);
+            this.btn_borrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_borrar.Name = "btn_borrar";
+            this.btn_borrar.Size = new System.Drawing.Size(160, 37);
+            this.btn_borrar.TabIndex = 2;
+            this.btn_borrar.Text = "Borrar";
+            this.btn_borrar.UseVisualStyleBackColor = true;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
+            // 
+            // btn_editar
+            // 
+            this.btn_editar.Location = new System.Drawing.Point(29, 671);
+            this.btn_editar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(160, 37);
+            this.btn_editar.TabIndex = 1;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Teal;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(118)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView1.ColumnHeadersHeight = 50;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.Teal;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1565, 629);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // NPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -471,12 +474,12 @@
             this.Load += new System.EventHandler(this.Paciente_Load);
             this.tbc_datosGenerales.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.gbx_Registro.ResumeLayout(false);
+            this.gbx_Registro.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Foto)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.gbx_Registro.ResumeLayout(false);
-            this.gbx_Registro.PerformLayout();
             this.ResumeLayout(false);
 
         }
