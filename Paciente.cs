@@ -22,7 +22,7 @@ namespace Control_PreTransplante_V2
         private void MostrarEstudios(string nss)//Método para vizualizar los registros de la DB
         {
             Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
-            dataestudiosp.DataSource = objforma.Estudios(nss);
+            dataestudiosr.DataSource = objforma.Estudios(nss);
         }
 
         public Paciente(string[] datos)
@@ -55,11 +55,11 @@ namespace Control_PreTransplante_V2
                 }
             }
             //***************************************************************//
-            lbnombre.Text = datos[3];
-            lbpaterno.Text = datos[4];
-            lbmaterno.Text = datos[5];
-            lbnss.Text = datos[1];
-            MostrarEstudios(datos[1]);
+            lbnombre.Text = datos[1];
+            lbpaterno.Text = datos[2];
+            lbmaterno.Text = datos[3];
+            lbnss.Text = datos[5];
+            MostrarEstudios(datos[5]);
         }
 
         private void label1_Click(object sender, EventArgs e)
