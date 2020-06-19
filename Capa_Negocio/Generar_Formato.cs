@@ -86,10 +86,10 @@ namespace Capa_Negocio
                 myWordDoc.Activate();
 
                 //find and replace
-                FindAndReplace(wordApp, "<name>", datosPaciente[3]);
-                FindAndReplace(wordApp, "<firstname>", datosPaciente[4]);
-                FindAndReplace(wordApp, "<secondname>", datosPaciente[5]);
-                FindAndReplace(wordApp, "<cedula>", datosPaciente[1]);
+                FindAndReplace(wordApp, "<name>", datosPaciente[1]);
+                FindAndReplace(wordApp, "<firstname>", datosPaciente[2]);
+                FindAndReplace(wordApp, "<secondname>", datosPaciente[3]);
+                FindAndReplace(wordApp, "<cedula>", datosPaciente[5]);
                 FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
                 int y = 0;
                 for (int x = 0; x <= 18; x++)

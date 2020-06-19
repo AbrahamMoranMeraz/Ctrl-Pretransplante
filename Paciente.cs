@@ -99,13 +99,13 @@ namespace Control_PreTransplante_V2
         {
             lisatadeestudios.Items.Clear();
             Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
-            if(categoriadeestudios.SelectedIndex == 0)
+            if (categoriadeestudios.SelectedIndex == 0)//talvez sea mejor cambiar por un swich, est funciona con el indice de la lista no de la bd
             {
                 table = objforma.Vistas("Est_PIR");
             }
             else
             {
-                if(categoriadeestudios.SelectedIndex == 1)
+                if (categoriadeestudios.SelectedIndex == 1)
                 {
                     table = objforma.Vistas("Est_PINR");
                 }
@@ -114,6 +114,8 @@ namespace Control_PreTransplante_V2
             {
                 lisatadeestudios.Items.Add(table.Rows[x].ItemArray[0].ToString());
             }
+            for (int i = 0; i < lisatadeestudios.Items.Count; i++)
+                lisatadeestudios.SetItemChecked(i, true);
             button1.Visible = true;
         }
     }
