@@ -34,6 +34,19 @@ namespace Capa_Negocio
             }
         }
 
+        public DataTable Vistas(string nombrevista)
+        {
+            try
+            {
+                return objPaciente.Vistas(nombrevista);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
         public void Insertar(string num_seg, string curp1, string nom, string ap, string am, string sex, string nac)
         {
             objPaciente.InsertarDatos(num_seg, curp1, nom, ap, am, sex, nac);

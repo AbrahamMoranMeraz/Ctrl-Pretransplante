@@ -14,6 +14,8 @@ namespace Control_PreTransplante_V2
     public partial class Paciente : Form
     {
         string[] datos;
+        DataTable table;
+
         public Paciente()
         {
             InitializeComponent();
@@ -60,6 +62,12 @@ namespace Control_PreTransplante_V2
             lbmaterno.Text = datos[3];
             lbnss.Text = datos[5];
             MostrarEstudios(datos[5]);
+            Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
+            table = objforma.Vistas("Categorias");
+            for(int x = 0; x < table.Rows.Count; x++)
+            {
+                categoriadeestudios.Items.Add(table.Rows[x].ItemArray[0].ToString());
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -72,11 +80,11 @@ namespace Control_PreTransplante_V2
             int x = 0;//Contador de estudios
             int y = 0;//Contador de estudios que si se seleccionaron
             string[] listadeestudios = new string[18];
-            for (x = 0; x < checkedListBox1.Items.Count; x++)
+            for (x = 0; x < lisatadeestudios.Items.Count; x++)
             {
-                if (checkedListBox1.GetItemChecked(x))
+                if (lisatadeestudios.GetItemChecked(x))
                 {
-                    listadeestudios[y] = checkedListBox1.Items[x].ToString();
+                    listadeestudios[y] = lisatadeestudios.Items[x].ToString();
                     y++;
                 }
                 else
@@ -84,8 +92,29 @@ namespace Control_PreTransplante_V2
 
                 }
             }
-            //MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString())/*,Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios,datos,y,comboBox1.SelectedItem.ToString())*/);
-            MessageBox.Show(/*Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString()), */Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString()));
+            MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString()));
+        }
+
+        private void categoriadeestudios_SelectedValueChanged(object sender, EventArgs e)
+        {
+            lisatadeestudios.Items.Clear();
+            Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
+            if(categoriadeestudios.SelectedIndex == 0)
+            {
+                table = objforma.Vistas("Est_PIR");
+            }
+            else
+            {
+                if(categoriadeestudios.SelectedIndex == 1)
+                {
+                    table = objforma.Vistas("Est_PINR");
+                }
+            }
+            for (int x = 0; x < table.Rows.Count; x++)
+            {
+                lisatadeestudios.Items.Add(table.Rows[x].ItemArray[0].ToString());
+            }
+            button1.Visible = true;
         }
     }
 }

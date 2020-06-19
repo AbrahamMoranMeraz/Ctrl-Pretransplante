@@ -38,7 +38,7 @@
             this.categoriadeestudios = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.lisatadeestudios = new System.Windows.Forms.CheckedListBox();
             this.dataestudiosr = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -138,7 +138,7 @@
             this.panel3.Controls.Add(this.categoriadeestudios);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.checkedListBox1);
+            this.panel3.Controls.Add(this.lisatadeestudios);
             this.panel3.Controls.Add(this.dataestudiosr);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label7);
@@ -152,11 +152,14 @@
             // 
             this.categoriadeestudios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.categoriadeestudios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoriadeestudios.FormattingEnabled = true;
             this.categoriadeestudios.Location = new System.Drawing.Point(27, 173);
             this.categoriadeestudios.Name = "categoriadeestudios";
-            this.categoriadeestudios.Size = new System.Drawing.Size(370, 24);
+            this.categoriadeestudios.Size = new System.Drawing.Size(370, 33);
             this.categoriadeestudios.TabIndex = 16;
+            this.categoriadeestudios.Text = "Seleccion de estudios";
+            this.categoriadeestudios.SelectedValueChanged += new System.EventHandler(this.categoriadeestudios_SelectedValueChanged);
             // 
             // comboBox1
             // 
@@ -179,36 +182,19 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Generar Formato";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // checkedListBox1
+            // lisatadeestudios
             // 
-            this.checkedListBox1.CheckOnClick = true;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Estudio 1",
-            "Estudio 2",
-            "Estudio 3",
-            "Estudio 4",
-            "Estudio 5",
-            "Estudio 6",
-            "Estudio 7",
-            "Estudio 8",
-            "Estudio 9",
-            "Estudio 10",
-            "Estudio 11",
-            "Estudio 12",
-            "Estudio 13",
-            "Estudio 14",
-            "Estudio 15",
-            "Estudio 16",
-            "Estudio 17",
-            "Estudio 18"});
-            this.checkedListBox1.Location = new System.Drawing.Point(17, 272);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(781, 140);
-            this.checkedListBox1.TabIndex = 13;
+            this.lisatadeestudios.CheckOnClick = true;
+            this.lisatadeestudios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lisatadeestudios.FormattingEnabled = true;
+            this.lisatadeestudios.Location = new System.Drawing.Point(17, 272);
+            this.lisatadeestudios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lisatadeestudios.Name = "lisatadeestudios";
+            this.lisatadeestudios.Size = new System.Drawing.Size(781, 136);
+            this.lisatadeestudios.TabIndex = 13;
             // 
             // dataestudiosr
             // 
@@ -347,7 +333,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox lisatadeestudios;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox categoriadeestudios;
