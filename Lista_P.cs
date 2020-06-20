@@ -14,6 +14,7 @@ namespace Control_PreTransplante_V2
     {
         string[] datos;
         Capa_Negocio.CN_Paciente objforma;
+        Form formulario;
         public Lista_P()
         {
             InitializeComponent();
@@ -31,17 +32,6 @@ namespace Control_PreTransplante_V2
             datos = new string[7];
         }
 
-        private void Lista_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            /*from.Controls.RemoveAt(0);
-            Estudios p = new Estudios();
-            p.TopLevel = false;
-            p.Dock = DockStyle.Fill;
-            from.Controls.Add(p);
-            from.Tag = p;
-            p.Show();*/
-        }
-        Form formulario;
         private void Lista_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             datos[0] = Lista.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -78,11 +68,6 @@ namespace Control_PreTransplante_V2
         private void pacientes_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             MessageBox.Show(Convert.ToString(tap.SelectedIndex));
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            
         }
 
         private void iconButton1_Click(object sender, EventArgs e)

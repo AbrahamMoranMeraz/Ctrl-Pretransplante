@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tap = new System.Windows.Forms.TabControl();
             this.listapaceintes = new System.Windows.Forms.TabPage();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnactualizar = new FontAwesome.Sharp.IconButton();
             this.Lista = new System.Windows.Forms.DataGridView();
             this.pacientes = new System.Windows.Forms.TabPage();
             this.tap.SuspendLayout();
@@ -54,7 +54,7 @@
             // 
             // listapaceintes
             // 
-            this.listapaceintes.Controls.Add(this.iconButton1);
+            this.listapaceintes.Controls.Add(this.btnactualizar);
             this.listapaceintes.Controls.Add(this.Lista);
             this.listapaceintes.Location = new System.Drawing.Point(4, 25);
             this.listapaceintes.Name = "listapaceintes";
@@ -64,22 +64,22 @@
             this.listapaceintes.Text = "Lista Pacientes";
             this.listapaceintes.UseVisualStyleBackColor = true;
             // 
-            // iconButton1
+            // btnactualizar
             // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconSize = 50;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(3, 435);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(1586, 69);
-            this.iconButton1.TabIndex = 3;
-            this.iconButton1.Text = "Actualizar Lista";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnactualizar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnactualizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnactualizar.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
+            this.btnactualizar.IconColor = System.Drawing.Color.Black;
+            this.btnactualizar.IconSize = 50;
+            this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar.Location = new System.Drawing.Point(3, 435);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Rotation = 0D;
+            this.btnactualizar.Size = new System.Drawing.Size(1586, 69);
+            this.btnactualizar.TabIndex = 3;
+            this.btnactualizar.Text = "Actualizar Lista";
+            this.btnactualizar.UseVisualStyleBackColor = true;
+            this.btnactualizar.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // Lista
             // 
@@ -89,14 +89,14 @@
             this.Lista.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Lista.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Lista.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Lista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Lista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Lista.ColumnHeadersHeight = 29;
             this.Lista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Lista.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -105,22 +105,22 @@
             this.Lista.Location = new System.Drawing.Point(3, 3);
             this.Lista.Name = "Lista";
             this.Lista.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Lista.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Lista.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Lista.RowHeadersVisible = false;
             this.Lista.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.Lista.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Lista.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.Lista.RowTemplate.Height = 24;
             this.Lista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Lista.Size = new System.Drawing.Size(1586, 501);
@@ -145,7 +145,6 @@
             this.ClientSize = new System.Drawing.Size(1600, 536);
             this.Controls.Add(this.tap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1600, 200);
             this.Name = "Lista_P";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Lista_P_Load);
@@ -162,6 +161,6 @@
         private System.Windows.Forms.TabPage listapaceintes;
         private System.Windows.Forms.DataGridView Lista;
         private System.Windows.Forms.TabPage pacientes;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnactualizar;
     }
 }
