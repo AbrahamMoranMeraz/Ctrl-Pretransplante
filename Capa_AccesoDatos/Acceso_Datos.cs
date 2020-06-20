@@ -10,31 +10,6 @@ namespace Capa_AccesoDatos
 {
     public class Acceso_Datos : AD_ConexionMySQL
     {
-        //public bool Logi_Us(string usuario, string pass)
-        //{
-        //    using (var connection = GetMySqlConnection())
-        //    {
-        //        connection.Open();
-        //        using (var command = new MySqlCommand())
-        //        {
-        //            command.Connection = connection;
-        //            command.CommandText = "select * from Usuarios where Usuario=@user and Password=@pass;";
-        //            command.Parameters.AddWithValue("@user", usuario);
-        //            command.Parameters.AddWithValue("@pass", pass);
-        //            command.CommandType = CommandType.Text;
-        //            MySqlDataReader reader = command.ExecuteReader();
-        //            if (reader.HasRows)//Obtiene un valor que especifica si existe
-        //            {
-        //                return true;//Si existe retorna true
-        //            }
-        //            else
-        //            {
-        //                return false;//Si no existe retorna false
-        //            }
-        //        }
-        //    }
-        //}
-
         private ConexionSQL conexion = new ConexionSQL();
         SqlDataReader leerdatos;
         DataTable tabla = new DataTable();
@@ -56,6 +31,16 @@ namespace Capa_AccesoDatos
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = consulta;
             //comando.CommandType = CommandType.StoredProcedure;
+            leerdatos = comando.ExecuteReader();
+            tabla.Load(leerdatos);
+            conexion.CerrarConexion();
+            return tabla;
+        }
+
+        public DataTable Vistas(string nombre)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from " + nombre;
             leerdatos = comando.ExecuteReader();
             tabla.Load(leerdatos);
             conexion.CerrarConexion();

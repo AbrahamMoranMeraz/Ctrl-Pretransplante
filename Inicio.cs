@@ -178,6 +178,16 @@ namespace Control_PreTransplante_V2
 
         private void btnlista_Click(object sender, EventArgs e)
         {
+            Form formulario;
+            formulario = panelcentral.Controls.OfType<Lista_P>().FirstOrDefault();//buscaen la coleccion el formulario
+            if(formulario == null)
+            {
+
+            }
+            else
+            {
+                formulario.Close();
+            }
             AbrirFormulario<Lista_P>();
             OcultarSubmenu();
         }
@@ -222,6 +232,7 @@ namespace Control_PreTransplante_V2
                 formulario.Dock = DockStyle.Fill;
                 panelcentral.Size = formulario.MinimumSize;
                 formulario.Show();
+                formulario.BringToFront();
             }
             else//Si el formulario existe
             {

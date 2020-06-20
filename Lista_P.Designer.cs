@@ -33,7 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tap = new System.Windows.Forms.TabControl();
             this.listapaceintes = new System.Windows.Forms.TabPage();
+<<<<<<< HEAD
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+=======
+            this.btnactualizar = new FontAwesome.Sharp.IconButton();
+>>>>>>> Abraham
             this.Lista = new System.Windows.Forms.DataGridView();
             this.pacientes = new System.Windows.Forms.TabPage();
             this.tap.SuspendLayout();
@@ -54,7 +58,11 @@
             // 
             // listapaceintes
             // 
+<<<<<<< HEAD
             this.listapaceintes.Controls.Add(this.iconButton1);
+=======
+            this.listapaceintes.Controls.Add(this.btnactualizar);
+>>>>>>> Abraham
             this.listapaceintes.Controls.Add(this.Lista);
             this.listapaceintes.Location = new System.Drawing.Point(4, 25);
             this.listapaceintes.Name = "listapaceintes";
@@ -64,6 +72,7 @@
             this.listapaceintes.Text = "Lista Pacientes";
             this.listapaceintes.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
             // iconButton1
             // 
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -80,6 +89,24 @@
             this.iconButton1.Text = "Actualizar Lista";
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+=======
+            // btnactualizar
+            // 
+            this.btnactualizar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnactualizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnactualizar.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
+            this.btnactualizar.IconColor = System.Drawing.Color.Black;
+            this.btnactualizar.IconSize = 50;
+            this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar.Location = new System.Drawing.Point(3, 435);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Rotation = 0D;
+            this.btnactualizar.Size = new System.Drawing.Size(1586, 69);
+            this.btnactualizar.TabIndex = 3;
+            this.btnactualizar.Text = "Actualizar Lista";
+            this.btnactualizar.UseVisualStyleBackColor = true;
+            this.btnactualizar.Click += new System.EventHandler(this.iconButton1_Click);
+>>>>>>> Abraham
             // 
             // Lista
             // 
@@ -145,7 +172,6 @@
             this.ClientSize = new System.Drawing.Size(1600, 536);
             this.Controls.Add(this.tap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1600, 200);
             this.Name = "Lista_P";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Lista_P_Load);
@@ -162,6 +188,10 @@
         private System.Windows.Forms.TabPage listapaceintes;
         private System.Windows.Forms.DataGridView Lista;
         private System.Windows.Forms.TabPage pacientes;
+<<<<<<< HEAD
         private FontAwesome.Sharp.IconButton iconButton1;
+=======
+        private FontAwesome.Sharp.IconButton btnactualizar;
+>>>>>>> Abraham
     }
 }

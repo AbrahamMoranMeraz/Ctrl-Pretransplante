@@ -25,6 +25,7 @@ namespace Capa_Negocio
         {
             try
             {
+<<<<<<< HEAD
                 DataTable tabla2 = new DataTable();
                 tabla2 = objPaciente.MostrarDatos2("select NomForm from Formato join ImprimirFormato on " +
                     "Formato.IdFormato = ImprimirFormato.IdFormato " +
@@ -32,6 +33,25 @@ namespace Capa_Negocio
                 return tabla2;
             }
             catch(SqlException ex)
+=======
+                return objPaciente.MostrarDatos("select NomForm from Formato join ImprimirFormato on " +
+                    "Formato.IdFormato = ImprimirFormato.IdFormato " +
+                    "where ImprimirFormato.IdPaciente = (select IdPaciente from Paciente where NSS = " + nss + ")");
+            }catch(SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public DataTable Vistas(string nombrevista)
+        {
+            try
+            {
+                return objPaciente.Vistas(nombrevista);
+            }
+            catch (SqlException ex)
+>>>>>>> Abraham
             {
                 MessageBox.Show(ex.Message);
                 return null;

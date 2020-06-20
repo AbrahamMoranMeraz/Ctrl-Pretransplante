@@ -14,6 +14,8 @@ namespace Control_PreTransplante_V2
     public partial class Paciente : Form
     {
         string[] datos;
+        DataTable table;
+
         public Paciente()
         {
             InitializeComponent();
@@ -23,6 +25,7 @@ namespace Control_PreTransplante_V2
         {
             Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
             dataestudiosr.DataSource = objforma.Estudios(nss);
+<<<<<<< HEAD
 
             List<object> estudiosBD = new List<object>();
             foreach (DataRow dataRow in objforma.Estudios(nss).Rows)
@@ -34,6 +37,8 @@ namespace Control_PreTransplante_V2
             }
 
             
+=======
+>>>>>>> Abraham
         }
 
         public Paciente(string[] datos)
@@ -71,6 +76,15 @@ namespace Control_PreTransplante_V2
             lbmaterno.Text = datos[3];
             lbnss.Text = datos[5];
             MostrarEstudios(datos[5]);
+<<<<<<< HEAD
+=======
+            Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
+            table = objforma.Vistas("Categorias");
+            for(int x = 0; x < table.Rows.Count; x++)
+            {
+                categoriadeestudios.Items.Add(table.Rows[x].ItemArray[0].ToString());
+            }
+>>>>>>> Abraham
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -83,11 +97,11 @@ namespace Control_PreTransplante_V2
             int x = 0;//Contador de estudios
             int y = 0;//Contador de estudios que si se seleccionaron
             string[] listadeestudios = new string[18];
-            for (x = 0; x < checkedListBox1.Items.Count; x++)
+            for (x = 0; x < lisatadeestudios.Items.Count; x++)
             {
-                if (checkedListBox1.GetItemChecked(x))
+                if (lisatadeestudios.GetItemChecked(x))
                 {
-                    listadeestudios[y] = checkedListBox1.Items[x].ToString();
+                    listadeestudios[y] = lisatadeestudios.Items[x].ToString();
                     y++;
                 }
                 else
@@ -95,8 +109,36 @@ namespace Control_PreTransplante_V2
 
                 }
             }
+<<<<<<< HEAD
             //MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString())/*,Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios,datos,y,comboBox1.SelectedItem.ToString())*/);
             MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString())/*, Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString())*/);
+=======
+            MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString()));
+        }
+
+        private void categoriadeestudios_SelectedValueChanged(object sender, EventArgs e)
+        {
+            lisatadeestudios.Items.Clear();
+            Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
+            if (categoriadeestudios.SelectedIndex == 0)//talvez sea mejor cambiar por un swich, est funciona con el indice de la lista no de la bd
+            {
+                table = objforma.Vistas("Est_PIR");
+            }
+            else
+            {
+                if (categoriadeestudios.SelectedIndex == 1)
+                {
+                    table = objforma.Vistas("Est_PINR");
+                }
+            }
+            for (int x = 0; x < table.Rows.Count; x++)
+            {
+                lisatadeestudios.Items.Add(table.Rows[x].ItemArray[0].ToString());
+            }
+            for (int i = 0; i < lisatadeestudios.Items.Count; i++)
+                lisatadeestudios.SetItemChecked(i, true);
+            button1.Visible = true;
+>>>>>>> Abraham
         }
     }
 }

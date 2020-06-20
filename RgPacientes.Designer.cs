@@ -369,6 +369,42 @@
             this.txt_apellidoM.Size = new System.Drawing.Size(189, 26);
             this.txt_apellidoM.TabIndex = 16;
             // 
+<<<<<<< HEAD
+=======
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txt_fecha);
+            this.panel2.Controls.Add(this.btn_fecha);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 228);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(686, 285);
+            this.panel2.TabIndex = 1;
+            // 
+            // txt_fecha
+            // 
+            this.txt_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_fecha.Location = new System.Drawing.Point(190, 61);
+            this.txt_fecha.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_fecha.Name = "txt_fecha";
+            this.txt_fecha.Size = new System.Drawing.Size(290, 30);
+            this.txt_fecha.TabIndex = 12;
+            // 
+            // btn_fecha
+            // 
+            this.btn_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_fecha.Location = new System.Drawing.Point(245, 4);
+            this.btn_fecha.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_fecha.Name = "btn_fecha";
+            this.btn_fecha.Size = new System.Drawing.Size(191, 49);
+            this.btn_fecha.TabIndex = 13;
+            this.btn_fecha.Text = "Agregar fecha";
+            this.btn_fecha.UseVisualStyleBackColor = true;
+            this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
+            // 
+>>>>>>> Abraham
             // RgPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

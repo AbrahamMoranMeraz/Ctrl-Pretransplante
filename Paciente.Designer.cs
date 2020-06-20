@@ -28,38 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbnss = new System.Windows.Forms.Label();
-            this.lbmaterno = new System.Windows.Forms.Label();
-            this.lbnombre = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbpaterno = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.categoriadeestudios = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lisatadeestudios = new System.Windows.Forms.CheckedListBox();
+            this.categoriadeestudios = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.dataestudiosr = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.label7 = new System.Windows.Forms.Label();
+=======
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbpaterno = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbnombre = new System.Windows.Forms.Label();
+            this.lbmaterno = new System.Windows.Forms.Label();
+            this.lbnss = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+>>>>>>> Abraham
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataestudiosr)).BeginInit();
+=======
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataestudiosr)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
+>>>>>>> Abraham
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbnss
+            // panel3
             // 
-            this.lbnss.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.lisatadeestudios);
+            this.panel3.Controls.Add(this.categoriadeestudios);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.dataestudiosr);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(306, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.MinimumSize = new System.Drawing.Size(803, 551);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(833, 557);
+            this.panel3.TabIndex = 20;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.lbnss.AutoSize = true;
             this.lbnss.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnss.Location = new System.Drawing.Point(165, 110);
@@ -67,11 +101,23 @@
             this.lbnss.Size = new System.Drawing.Size(48, 20);
             this.lbnss.TabIndex = 4;
             this.lbnss.Text = "NSS:";
+=======
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(387, 420);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(434, 126);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Generar Formato";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+>>>>>>> Abraham
             // 
-            // lbmaterno
+            // comboBox1
             // 
-            this.lbmaterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.lbmaterno.AutoSize = true;
             this.lbmaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbmaterno.Location = new System.Drawing.Point(165, 80);
@@ -79,11 +125,22 @@
             this.lbmaterno.Size = new System.Drawing.Size(139, 20);
             this.lbmaterno.TabIndex = 3;
             this.lbmaterno.Text = "Apellido Materno:";
+=======
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(387, 373);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(434, 30);
+            this.comboBox1.TabIndex = 20;
+>>>>>>> Abraham
             // 
-            // lbnombre
+            // lisatadeestudios
             // 
-            this.lbnombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lisatadeestudios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.lbnombre.AutoSize = true;
             this.lbnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnombre.Location = new System.Drawing.Point(165, 20);
@@ -91,12 +148,37 @@
             this.lbnombre.Size = new System.Drawing.Size(73, 20);
             this.lbnombre.TabIndex = 1;
             this.lbnombre.Text = "Nombre:";
+=======
+            this.lisatadeestudios.CheckOnClick = true;
+            this.lisatadeestudios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lisatadeestudios.FormattingEnabled = true;
+            this.lisatadeestudios.Location = new System.Drawing.Point(43, 247);
+            this.lisatadeestudios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lisatadeestudios.Name = "lisatadeestudios";
+            this.lisatadeestudios.Size = new System.Drawing.Size(713, 92);
+            this.lisatadeestudios.TabIndex = 19;
             // 
-            // pictureBox1
+            // categoriadeestudios
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.categoriadeestudios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.categoriadeestudios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoriadeestudios.FormattingEnabled = true;
+            this.categoriadeestudios.Location = new System.Drawing.Point(43, 202);
+            this.categoriadeestudios.Name = "categoriadeestudios";
+            this.categoriadeestudios.Size = new System.Drawing.Size(230, 33);
+            this.categoriadeestudios.TabIndex = 18;
+            this.categoriadeestudios.Text = "Seleccion de categoria";
+            this.categoriadeestudios.SelectedValueChanged += new System.EventHandler(this.categoriadeestudios_SelectedValueChanged);
+>>>>>>> Abraham
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(3, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -104,11 +186,23 @@
             this.pictureBox1.Size = new System.Drawing.Size(157, 147);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+=======
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(38, 165);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(315, 25);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Seleccion de categoria de estudios";
+>>>>>>> Abraham
             // 
-            // lbpaterno
+            // dataestudiosr
             // 
-            this.lbpaterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataestudiosr.AllowUserToAddRows = false;
+            this.dataestudiosr.AllowUserToDeleteRows = false;
+            this.dataestudiosr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.lbpaterno.AutoSize = true;
             this.lbpaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbpaterno.Location = new System.Drawing.Point(165, 50);
@@ -116,6 +210,62 @@
             this.lbpaterno.Size = new System.Drawing.Size(136, 20);
             this.lbpaterno.TabIndex = 2;
             this.lbpaterno.Text = "Apellido Paterno:";
+=======
+            this.dataestudiosr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataestudiosr.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataestudiosr.BackgroundColor = System.Drawing.Color.Green;
+            this.dataestudiosr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataestudiosr.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataestudiosr.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataestudiosr.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataestudiosr.ColumnHeadersHeight = 15;
+            this.dataestudiosr.ColumnHeadersVisible = false;
+            this.dataestudiosr.EnableHeadersVisualStyles = false;
+            this.dataestudiosr.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.dataestudiosr.Location = new System.Drawing.Point(43, 53);
+            this.dataestudiosr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataestudiosr.Name = "dataestudiosr";
+            this.dataestudiosr.ReadOnly = true;
+            this.dataestudiosr.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataestudiosr.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataestudiosr.RowHeadersVisible = false;
+            this.dataestudiosr.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dataestudiosr.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataestudiosr.RowTemplate.Height = 24;
+            this.dataestudiosr.Size = new System.Drawing.Size(713, 98);
+            this.dataestudiosr.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(38, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(188, 25);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Estudios Realizados";
+>>>>>>> Abraham
             // 
             // panel1
             // 
@@ -124,17 +274,25 @@
             this.panel1.Controls.Add(this.lbnombre);
             this.panel1.Controls.Add(this.lbmaterno);
             this.panel1.Controls.Add(this.lbnss);
+<<<<<<< HEAD
             this.panel1.Location = new System.Drawing.Point(9, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(369, 156);
+=======
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(306, 156);
+>>>>>>> Abraham
             this.panel1.TabIndex = 14;
             // 
-            // panel3
+            // lbpaterno
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbpaterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.panel3.Controls.Add(this.categoriadeestudios);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.button1);
@@ -168,10 +326,22 @@
             this.comboBox1.TabIndex = 15;
             // 
             // button1
+=======
+            this.lbpaterno.AutoSize = true;
+            this.lbpaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbpaterno.Location = new System.Drawing.Point(144, 50);
+            this.lbpaterno.Name = "lbpaterno";
+            this.lbpaterno.Size = new System.Drawing.Size(136, 20);
+            this.lbpaterno.TabIndex = 2;
+            this.lbpaterno.Text = "Apellido Paterno:";
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            // pictureBox1
+>>>>>>> Abraham
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.button1.Location = new System.Drawing.Point(432, 430);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
@@ -209,9 +379,19 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(781, 140);
             this.checkedListBox1.TabIndex = 13;
+=======
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(135, 147);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+>>>>>>> Abraham
             // 
-            // dataestudiosr
+            // lbnombre
             // 
+<<<<<<< HEAD
             this.dataestudiosr.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dataestudiosr.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataestudiosr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -223,9 +403,21 @@
             this.dataestudiosr.RowTemplate.Height = 24;
             this.dataestudiosr.Size = new System.Drawing.Size(781, 98);
             this.dataestudiosr.TabIndex = 7;
+=======
+            this.lbnombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbnombre.AutoSize = true;
+            this.lbnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnombre.Location = new System.Drawing.Point(144, 20);
+            this.lbnombre.Name = "lbnombre";
+            this.lbnombre.Size = new System.Drawing.Size(73, 20);
+            this.lbnombre.TabIndex = 1;
+            this.lbnombre.Text = "Nombre:";
+>>>>>>> Abraham
             // 
-            // label6
+            // lbmaterno
             // 
+<<<<<<< HEAD
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label6.Location = new System.Drawing.Point(23, 4);
@@ -245,27 +437,66 @@
             this.label7.Size = new System.Drawing.Size(270, 20);
             this.label7.TabIndex = 10;
             this.label7.Text = "Seleccion de categoria de estudios";
+=======
+            this.lbmaterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbmaterno.AutoSize = true;
+            this.lbmaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbmaterno.Location = new System.Drawing.Point(144, 80);
+            this.lbmaterno.Name = "lbmaterno";
+            this.lbmaterno.Size = new System.Drawing.Size(139, 20);
+            this.lbmaterno.TabIndex = 3;
+            this.lbmaterno.Text = "Apellido Materno:";
+            // 
+            // lbnss
+            // 
+            this.lbnss.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbnss.AutoSize = true;
+            this.lbnss.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnss.Location = new System.Drawing.Point(144, 110);
+            this.lbnss.Name = "lbnss";
+            this.lbnss.Size = new System.Drawing.Size(48, 20);
+            this.lbnss.TabIndex = 4;
+            this.lbnss.Text = "NSS:";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(306, 557);
+            this.panel4.TabIndex = 19;
+>>>>>>> Abraham
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.Controls.Add(this.panel5);
+<<<<<<< HEAD
             this.panel2.Location = new System.Drawing.Point(12, 167);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(365, 374);
+=======
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 156);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(306, 401);
+>>>>>>> Abraham
             this.panel2.TabIndex = 19;
             // 
             // panel5
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.textBox1);
             this.panel5.Controls.Add(this.label5);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
+<<<<<<< HEAD
             this.panel5.Size = new System.Drawing.Size(365, 374);
             this.panel5.TabIndex = 18;
             // 
@@ -281,24 +512,46 @@
             this.panel6.Size = new System.Drawing.Size(355, 341);
             this.panel6.TabIndex = 6;
             // 
+=======
+            this.panel5.Size = new System.Drawing.Size(306, 401);
+            this.panel5.TabIndex = 18;
+            // 
+>>>>>>> Abraham
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(355, 341);
             this.textBox1.TabIndex = 7;
+=======
+            this.textBox1.Location = new System.Drawing.Point(0, 24);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(306, 377);
+            this.textBox1.TabIndex = 9;
+>>>>>>> Abraham
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+<<<<<<< HEAD
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label5.Location = new System.Drawing.Point(0, 2);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 20);
+=======
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 24);
+>>>>>>> Abraham
             this.label5.TabIndex = 5;
             this.label5.Text = "Notas:";
             // 
@@ -306,50 +559,67 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1211, 554);
             this.Controls.Add(this.panel2);
+=======
+            this.ClientSize = new System.Drawing.Size(1139, 557);
+>>>>>>> Abraham
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+<<<<<<< HEAD
+=======
+            this.MinimumSize = new System.Drawing.Size(1139, 557);
+>>>>>>> Abraham
             this.Name = "Paciente";
             this.Text = "Paciente";
             this.Load += new System.EventHandler(this.Estudios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataestudiosr)).EndInit();
+<<<<<<< HEAD
+=======
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+>>>>>>> Abraham
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbnss;
-        private System.Windows.Forms.Label lbmaterno;
-        private System.Windows.Forms.Label lbnombre;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbpaterno;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataestudiosr;
         private System.Windows.Forms.Label label6;
+<<<<<<< HEAD
         private System.Windows.Forms.Label label7;
+=======
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbpaterno;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbnombre;
+        private System.Windows.Forms.Label lbmaterno;
+        private System.Windows.Forms.Label lbnss;
+        private System.Windows.Forms.Panel panel4;
+>>>>>>> Abraham
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
+<<<<<<< HEAD
         private System.Windows.Forms.ComboBox categoriadeestudios;
+=======
+        private System.Windows.Forms.CheckedListBox lisatadeestudios;
+        private System.Windows.Forms.ComboBox categoriadeestudios;
+        private System.Windows.Forms.Label label7;
+>>>>>>> Abraham
     }
 }

@@ -78,7 +78,12 @@
             this.btn_Entrar.FlatAppearance.BorderSize = 0;
             this.btn_Entrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Entrar.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.btn_Entrar.Location = new System.Drawing.Point(206, 200);
+=======
+            this.btn_Entrar.Location = new System.Drawing.Point(275, 246);
+            this.btn_Entrar.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> Abraham
             this.btn_Entrar.Name = "btn_Entrar";
             this.btn_Entrar.Size = new System.Drawing.Size(118, 34);
             this.btn_Entrar.TabIndex = 10;
@@ -116,7 +121,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_contra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_contra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+<<<<<<< HEAD
             this.txt_contra.Location = new System.Drawing.Point(146, 156);
+=======
+            this.txt_contra.Location = new System.Drawing.Point(195, 192);
+            this.txt_contra.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> Abraham
             this.txt_contra.MaxLength = 20;
             this.txt_contra.Name = "txt_contra";
             this.txt_contra.PasswordChar = '*';
@@ -130,7 +140,12 @@
             this.txt_usuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+<<<<<<< HEAD
             this.txt_usuario.Location = new System.Drawing.Point(146, 97);
+=======
+            this.txt_usuario.Location = new System.Drawing.Point(195, 119);
+            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> Abraham
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(238, 29);
             this.txt_usuario.TabIndex = 6;
@@ -152,7 +167,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(162)))), ((int)(((byte)(110)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+<<<<<<< HEAD
             this.panel1.Location = new System.Drawing.Point(0, 544);
+=======
+            this.panel1.Location = new System.Drawing.Point(0, 669);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> Abraham
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(884, 17);
             this.panel1.TabIndex = 8;
