@@ -92,7 +92,14 @@ namespace Control_PreTransplante_V2
 
                 }
             }
-            MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString()));
+            if (categoriadeestudios.SelectedIndex==0 || categoriadeestudios.SelectedIndex == 1)
+            {
+                MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString()));
+            }
+            else if (categoriadeestudios.SelectedIndex==2 || categoriadeestudios.SelectedIndex == 3 || categoriadeestudios.SelectedIndex == 4)
+            {
+                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString()));
+            }
         }
 
         private void categoriadeestudios_SelectedValueChanged(object sender, EventArgs e)
@@ -108,6 +115,27 @@ namespace Control_PreTransplante_V2
                 if (categoriadeestudios.SelectedIndex == 1)
                 {
                     table = objforma.Vistas("Est_PINR");
+                }
+                else
+                {
+                    if (categoriadeestudios.SelectedIndex==2)
+                    {
+                        table = objforma.Vistas("Ser_PI");
+                    }
+                    else
+                    {
+                        if (categoriadeestudios.SelectedIndex==3)
+                        {
+                            table = objforma.Vistas("Ser_2P");
+                        }
+                        else
+                        {
+                            if (categoriadeestudios.SelectedIndex==4)
+                            {
+                                table = objforma.Vistas("Ser_Otros");
+                            }
+                        }
+                    }
                 }
             }
             for (int x = 0; x < table.Rows.Count; x++)
