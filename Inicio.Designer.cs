@@ -75,11 +75,11 @@
             this.panelcentral.AutoScroll = true;
             this.panelcentral.BackColor = System.Drawing.Color.White;
             this.panelcentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelcentral.Location = new System.Drawing.Point(285, 25);
+            this.panelcentral.Location = new System.Drawing.Point(285, 64);
             this.panelcentral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelcentral.MinimumSize = new System.Drawing.Size(1600, 706);
             this.panelcentral.Name = "panelcentral";
-            this.panelcentral.Size = new System.Drawing.Size(1600, 755);
+            this.panelcentral.Size = new System.Drawing.Size(1600, 716);
             this.panelcentral.TabIndex = 4;
             // 
             // panelmenu
@@ -92,10 +92,10 @@
             this.panelmenu.Controls.Add(this.btninicio);
             this.panelmenu.Controls.Add(this.pictureBox1);
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelmenu.Location = new System.Drawing.Point(0, 25);
+            this.panelmenu.Location = new System.Drawing.Point(0, 64);
             this.panelmenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelmenu.Name = "panelmenu";
-            this.panelmenu.Size = new System.Drawing.Size(285, 755);
+            this.panelmenu.Size = new System.Drawing.Size(285, 716);
             this.panelmenu.TabIndex = 3;
             // 
             // btncerrarsecion
@@ -108,7 +108,7 @@
             this.btncerrarsecion.IconColor = System.Drawing.Color.White;
             this.btncerrarsecion.IconSize = 30;
             this.btncerrarsecion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncerrarsecion.Location = new System.Drawing.Point(0, 674);
+            this.btncerrarsecion.Location = new System.Drawing.Point(0, 635);
             this.btncerrarsecion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncerrarsecion.Name = "btncerrarsecion";
             this.btncerrarsecion.Rotation = 0D;
@@ -231,7 +231,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(162)))), ((int)(((byte)(110)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 39);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1800, 25);
@@ -239,13 +239,12 @@
             // 
             // paneltitulo
             // 
-            this.paneltitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.paneltitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(87)))));
             this.paneltitulo.Controls.Add(this.btnrestaurar);
             this.paneltitulo.Controls.Add(this.btnmaximisar);
             this.paneltitulo.Controls.Add(this.btnminimizar);
             this.paneltitulo.Controls.Add(this.btncerrar);
+            this.paneltitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltitulo.Location = new System.Drawing.Point(0, 0);
             this.paneltitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.paneltitulo.Name = "paneltitulo";
@@ -256,15 +255,13 @@
             // 
             // btnrestaurar
             // 
-            this.btnrestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnrestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnrestaurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(87)))));
             this.btnrestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnrestaurar.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
             this.btnrestaurar.IconColor = System.Drawing.Color.White;
             this.btnrestaurar.IconSize = 28;
-            this.btnrestaurar.Location = new System.Drawing.Point(1721, 7);
+            this.btnrestaurar.Location = new System.Drawing.Point(1721, 6);
             this.btnrestaurar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnrestaurar.Name = "btnrestaurar";
             this.btnrestaurar.Size = new System.Drawing.Size(35, 28);
@@ -278,9 +275,7 @@
             // 
             // btnmaximisar
             // 
-            this.btnmaximisar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnmaximisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnmaximisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(87)))));
             this.btnmaximisar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
             this.btnmaximisar.IconColor = System.Drawing.Color.White;
@@ -297,9 +292,7 @@
             // 
             // btnminimizar
             // 
-            this.btnminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnminimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(87)))));
             this.btnminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnminimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
@@ -318,9 +311,7 @@
             // 
             // btncerrar
             // 
-            this.btncerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btncerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btncerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(102)))), ((int)(((byte)(87)))));
             this.btncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btncerrar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
