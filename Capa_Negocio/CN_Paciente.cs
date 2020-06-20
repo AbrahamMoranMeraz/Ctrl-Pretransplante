@@ -6,12 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Capa_Negocio
 {
     public class CN_Paciente
     {
         private Acceso_Datos objPaciente = new Acceso_Datos();
+
         public DataTable MostrarPaci()
         {
             DataTable tabla = new DataTable();
@@ -21,9 +23,19 @@ namespace Capa_Negocio
 
         public DataTable Estudios(string nss)
         {
-            return objPaciente.MostrarDatos("select NomForm from Formato join ImprimirFormato " +
-                "on Formato.IdFormato = ImprimirFormato.IdFormatowhere ImprimirFormato.IdPaciente = " +
-                "(select IdPaciente from Paciente where NSS ="+nss+")");
+            try
+            {
+                DataTable tabla2 = new DataTable();
+                tabla2 = objPaciente.MostrarDatos2("select NomForm from Formato join ImprimirFormato on " +
+                    "Formato.IdFormato = ImprimirFormato.IdFormato " +
+                    "where ImprimirFormato.IdPaciente = (select IdPaciente from Paciente where NSS = " + nss + ")");
+                return tabla2;
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
         }
 
         public void Insertar(string num_seg, string curp1, string nom, string ap, string am, string sex, string nac)

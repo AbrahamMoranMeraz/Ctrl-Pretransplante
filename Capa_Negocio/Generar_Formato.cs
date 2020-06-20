@@ -86,10 +86,10 @@ namespace Capa_Negocio
                 myWordDoc.Activate();
 
                 //find and replace
-                FindAndReplace(wordApp, "<name>", datosPaciente[3]);
-                FindAndReplace(wordApp, "<firstname>", datosPaciente[4]);
-                FindAndReplace(wordApp, "<secondname>", datosPaciente[5]);
-                FindAndReplace(wordApp, "<cedula>", datosPaciente[1]);
+                FindAndReplace(wordApp, "<name>", datosPaciente[1]);
+                FindAndReplace(wordApp, "<firstname>", datosPaciente[2]);
+                FindAndReplace(wordApp, "<secondname>", datosPaciente[3]);
+                FindAndReplace(wordApp, "<cedula>", datosPaciente[5]);
                 FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
                 int y = 0;
                 for (int x = 0; x <= 18; x++)
@@ -116,13 +116,9 @@ namespace Capa_Negocio
                             ref missing, ref missing, ref missing,
                             ref missing, ref missing, ref missing,
                             ref missing, ref missing, ref missing);
-
-            wordApp.ActivePrinter =combobox;
-            //Codigo para impresion de formatos y asi.
-            //if (myWordDoc != null)
-            //if (dialogResult == 1)
-            //int dialogResult = wordApp.Dialogs[Microsoft.Office.Interop.Word.WdWordDialog.wdDialogFilePrint].Show(ref missing);
-            //if (dialogResult == 1)
+            //Seleccion de impreso activada
+            wordApp.ActivePrinter = combobox;
+            //Imprimir por libreria de word
             if (myWordDoc != null)
             {
                 object copies = "1";

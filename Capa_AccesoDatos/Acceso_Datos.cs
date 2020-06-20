@@ -43,7 +43,7 @@ namespace Capa_AccesoDatos
         public DataTable MostrarDatos()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select *from Paciente";
+            comando.CommandText = "select * from Paciente";
             //comando.CommandType = CommandType.StoredProcedure;
             leerdatos = comando.ExecuteReader();
             tabla.Load(leerdatos);
@@ -51,7 +51,7 @@ namespace Capa_AccesoDatos
             return tabla;
         }
 
-        public DataTable MostrarDatos(string consulta)
+        public DataTable MostrarDatos2(string consulta)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = consulta;
@@ -67,13 +67,14 @@ namespace Capa_AccesoDatos
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarDatosPaciente";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@Num_Social_", num_seg);
-            comando.Parameters.AddWithValue("@CURP_", curp1);
-            comando.Parameters.AddWithValue("@Nombre_", nom);
+            comando.Parameters.AddWithValue("@Nombre_ ", nom);
             comando.Parameters.AddWithValue("@ApellidoP_", ap);
             comando.Parameters.AddWithValue("@ApellidoM_", am);
-            comando.Parameters.AddWithValue("@Sexo_ ", sex);
+            comando.Parameters.AddWithValue("@CURP_", curp1);
+            comando.Parameters.AddWithValue("@Num_Social_ ", num_seg);
+            comando.Parameters.AddWithValue("@Donador_", 0);
             comando.Parameters.AddWithValue("@fechaNa_", nac);
+            comando.Parameters.AddWithValue("@Sexo_ ", sex);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
         }
