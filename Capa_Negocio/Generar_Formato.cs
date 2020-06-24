@@ -103,12 +103,12 @@ namespace Capa_Negocio
                 {
                     if (y <= cantidaddeestudiosselect)
                     {
-                        FindAndReplace(wordApp, $"<ex{x}>",estudiosSeleccionados[x]);
+                        FindAndReplace(wordApp, $"<ex{x+1}>",estudiosSeleccionados[x]);
                         y++;
                     }
                     else
                     {
-                        FindAndReplace(wordApp, $"<ex{x}>", "");
+                        FindAndReplace(wordApp, $"<ex{x+1}>", "");
                     }
                 }
             }

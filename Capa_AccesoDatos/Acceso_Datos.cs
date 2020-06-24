@@ -88,6 +88,10 @@ namespace Capa_AccesoDatos
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
         }
+        public void InsertarEstudios()
+        {
+
+        } 
 
     }
 }
