@@ -115,5 +115,9 @@ namespace Control_PreTransplante_V2
             validar(this);
         }
 
+        private void txt_fecha_Click(object sender, EventArgs e)
+        {
+            txt_fecha.Clear();
+        }
     }
 }

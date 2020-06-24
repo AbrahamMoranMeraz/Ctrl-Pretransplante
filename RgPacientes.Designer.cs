@@ -33,8 +33,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.registrarP = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.rdb_femenino = new System.Windows.Forms.RadioButton();
@@ -50,16 +48,14 @@
             this.lbl_curp = new System.Windows.Forms.Label();
             this.txt_apellidoP = new System.Windows.Forms.TextBox();
             this.txt_apellidoM = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.txt_fecha = new System.Windows.Forms.TextBox();
             this.btn_fecha = new System.Windows.Forms.Button();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,7 +66,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1600, 174);
+            this.panel1.Size = new System.Drawing.Size(1215, 174);
             this.panel1.TabIndex = 1;
             // 
             // button1
@@ -98,57 +94,40 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.panel5);
-            this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(0, 174);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1600, 542);
+            this.groupBox1.Size = new System.Drawing.Size(1215, 562);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro Paciente";
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.panel2);
             this.panel5.Controls.Add(this.monthCalendar1);
+            this.panel5.Controls.Add(this.btn_fecha);
+            this.panel5.Controls.Add(this.txt_fecha);
+            this.panel5.Controls.Add(this.registrarP);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(529, 26);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(686, 513);
+            this.panel5.Size = new System.Drawing.Size(683, 533);
             this.panel5.TabIndex = 2;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.monthCalendar1.Location = new System.Drawing.Point(190, 9);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.registrarP);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1215, 26);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(382, 513);
-            this.panel4.TabIndex = 1;
             // 
             // registrarP
             // 
-            this.registrarP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.registrarP.Dock = System.Windows.Forms.DockStyle.Right;
             this.registrarP.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.registrarP.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
             this.registrarP.IconColor = System.Drawing.Color.Black;
             this.registrarP.IconSize = 50;
             this.registrarP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.registrarP.Location = new System.Drawing.Point(0, 0);
+            this.registrarP.Location = new System.Drawing.Point(434, 0);
             this.registrarP.Name = "registrarP";
             this.registrarP.Rotation = 0D;
-            this.registrarP.Size = new System.Drawing.Size(382, 513);
+            this.registrarP.Size = new System.Drawing.Size(249, 533);
             this.registrarP.TabIndex = 0;
             this.registrarP.Text = "Registrar";
             this.registrarP.UseVisualStyleBackColor = true;
@@ -172,7 +151,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(3, 26);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(526, 513);
+            this.panel3.Size = new System.Drawing.Size(526, 533);
             this.panel3.TabIndex = 0;
             // 
             // rdb_femenino
@@ -340,44 +319,43 @@
             this.txt_apellidoM.Size = new System.Drawing.Size(251, 30);
             this.txt_apellidoM.TabIndex = 16;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txt_fecha);
-            this.panel2.Controls.Add(this.btn_fecha);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 228);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(686, 285);
-            this.panel2.TabIndex = 1;
-            // 
             // txt_fecha
             // 
-            this.txt_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_fecha.Location = new System.Drawing.Point(190, 61);
+            this.txt_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_fecha.Location = new System.Drawing.Point(0, 495);
             this.txt_fecha.Margin = new System.Windows.Forms.Padding(4);
             this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(290, 30);
-            this.txt_fecha.TabIndex = 12;
+            this.txt_fecha.Size = new System.Drawing.Size(434, 38);
+            this.txt_fecha.TabIndex = 14;
+            this.txt_fecha.Text = "AÑO-MES-DIA";
+            this.txt_fecha.Click += new System.EventHandler(this.txt_fecha_Click);
             // 
             // btn_fecha
             // 
-            this.btn_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_fecha.Location = new System.Drawing.Point(245, 4);
+            this.btn_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_fecha.Location = new System.Drawing.Point(0, 402);
             this.btn_fecha.Margin = new System.Windows.Forms.Padding(4);
             this.btn_fecha.Name = "btn_fecha";
-            this.btn_fecha.Size = new System.Drawing.Size(191, 49);
-            this.btn_fecha.TabIndex = 13;
+            this.btn_fecha.Size = new System.Drawing.Size(434, 93);
+            this.btn_fecha.TabIndex = 17;
             this.btn_fecha.Text = "Agregar fecha";
             this.btn_fecha.UseVisualStyleBackColor = true;
             this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 2);
+            this.monthCalendar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.monthCalendar1.Location = new System.Drawing.Point(0, 0);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 18;
             // 
             // RgPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 716);
+            this.ClientSize = new System.Drawing.Size(1215, 736);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -387,11 +365,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -403,8 +379,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconButton registrarP;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RadioButton rdb_femenino;
@@ -420,8 +394,8 @@
         private System.Windows.Forms.Label lbl_curp;
         private System.Windows.Forms.TextBox txt_apellidoP;
         private System.Windows.Forms.TextBox txt_apellidoM;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txt_fecha;
         private System.Windows.Forms.Button btn_fecha;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }
