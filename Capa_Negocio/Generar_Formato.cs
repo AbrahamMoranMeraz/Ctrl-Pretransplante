@@ -42,16 +42,20 @@ namespace Capa_Negocio
             estudiosSeleccionados = e;
             datosPaciente = d;
 
-            if ((y % 2) == 0)
+            while (y==0)
             {
-                CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_2.docx", y, comboBox);
+                if ((y % 2) == 0)
+                {//Par
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_2.docx", y, comboBox);
+                    y = y - 2;
+                }
+                else
+                {//Impar
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", y, comboBox);
+                    y = y - 1;
+                }
             }
-            else
-            {
-                CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", y, comboBox);
-            }
-
-            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", y, comboBox);
+            return "Files Created!";
         }
         private static void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
@@ -108,6 +112,12 @@ namespace Capa_Negocio
                 FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
                 //Servicios
                 FindAndReplace(wordApp, "<servicio>", estudiosSeleccionados[cantidaddeestudiosselect]);
+                //Radiologogia 1 en una hoja
+                FindAndReplace(wordApp, "<Tipo>", estudiosSeleccionados[cantidaddeestudiosselect]);
+                FindAndReplace(wordApp, "<Anotaciones>", estudiosSeleccionados[cantidaddeestudiosselect]);
+                //Radiologogia 2 en una hoja
+                FindAndReplace(wordApp, "<Tipo2>", estudiosSeleccionados[cantidaddeestudiosselect]);
+                FindAndReplace(wordApp, "<Anotaciones2>", estudiosSeleccionados[cantidaddeestudiosselect]);
                 //------------//
                 int y = 0;
                 for (int x = 0; x <= 18; x++)
