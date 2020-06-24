@@ -22,7 +22,7 @@ namespace Capa_Negocio
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F1.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "1.docx", y, comboBox);
+            return CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F1.docx", @"C:\Users\moran\Downloads\" + datosPaciente[5] + "1.docx", y, comboBox);
         }
 
         static public String FormatoServicios(string[] e, string[] d, int y, string comboBox)
@@ -32,7 +32,7 @@ namespace Capa_Negocio
             for (int i = 0; i < y; i++)
             {
                 int j = i;
-                CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", j, comboBox);
+                CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F3.docx", @"C:\Users\moran\Downloads\" + datosPaciente[5] + "2.docx", j, comboBox);
             }
             return "Files Created!";
         }
