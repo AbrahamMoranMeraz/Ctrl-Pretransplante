@@ -32,7 +32,7 @@ namespace Capa_Negocio
             for (int i = 0; i < y; i++)
             {
                 int j = i;
-                CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", j, comboBox);
+                CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "3.docx", j, comboBox);
             }
             return "Files Created!";
         }
@@ -41,7 +41,17 @@ namespace Capa_Negocio
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"C:\Users\moran\Downloads\F1_.docx", @"C:\Users\moran\Downloads\" + datosPaciente[1] + "3.docx", y, comboBox);
+
+            if ((y % 2) == 0)
+            {
+                CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_2.docx", y, comboBox);
+            }
+            else
+            {
+                CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", y, comboBox);
+            }
+
+            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", y, comboBox);
         }
         private static void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
@@ -98,6 +108,7 @@ namespace Capa_Negocio
                 FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
                 //Servicios
                 FindAndReplace(wordApp, "<servicio>", estudiosSeleccionados[cantidaddeestudiosselect]);
+                //------------//
                 int y = 0;
                 for (int x = 0; x <= 18; x++)
                 {
