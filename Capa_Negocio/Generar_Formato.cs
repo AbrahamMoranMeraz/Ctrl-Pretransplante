@@ -22,21 +22,26 @@ namespace Capa_Negocio
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"C:\Users\moran\Downloads\F1_.docx", @"C:\Users\moran\Downloads\" + datosPaciente[1] + "1.docx", y, comboBox);
+            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F1.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "1.docx", y, comboBox);
         }
 
         static public String FormatoServicios(string[] e, string[] d, int y, string comboBox)
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"C:\Users\moran\Downloads\F1_.docx", @"C:\Users\moran\Downloads\" + datosPaciente[1] + "3.docx", y, comboBox);
+            for (int i = 0; i < y; i++)
+            {
+                int j = i;
+                CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", j, comboBox);
+            }
+            return "Files Created!";
         }
 
         static public String FormatoRadiologia(string[] e, string[] d, int y, string comboBox)
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"C:\Users\moran\Downloads\F1_.docx", @"C:\Users\moran\Downloads\" + datosPaciente[1] + "2.docx", y, comboBox);
+            return CreateWordDocument(@"C:\Users\moran\Downloads\F1_.docx", @"C:\Users\moran\Downloads\" + datosPaciente[1] + "3.docx", y, comboBox);
         }
         private static void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
@@ -91,6 +96,8 @@ namespace Capa_Negocio
                 FindAndReplace(wordApp, "<secondname>", datosPaciente[3]);
                 FindAndReplace(wordApp, "<cedula>", datosPaciente[5]);
                 FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
+                //Servicios
+                FindAndReplace(wordApp, "<servicio>", estudiosSeleccionados[cantidaddeestudiosselect]);
                 int y = 0;
                 for (int x = 0; x <= 18; x++)
                 {
@@ -142,6 +149,8 @@ namespace Capa_Negocio
 
             myWordDoc.Close();
             wordApp.Quit();
+
+            File.Delete(SaveAs.ToString());
 
             return ("File Created!");
         }
