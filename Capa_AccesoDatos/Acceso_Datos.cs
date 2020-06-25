@@ -88,9 +88,15 @@ namespace Capa_AccesoDatos
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
         }
-        public void InsertarEstudios()
+        public void InsertarEstudios(string nss, int idformato)
         {
-
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "InsertarEstudios";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@NSS_", nss);
+            comando.Parameters.AddWithValue("@Idformato_", idformato);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
         } 
 
     }

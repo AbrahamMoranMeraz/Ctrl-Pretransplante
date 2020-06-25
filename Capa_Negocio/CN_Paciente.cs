@@ -60,6 +60,11 @@ namespace Capa_Negocio
             objPaciente.EliminarDatos(Convert.ToInt16(id));
         }
 
+        public void InsertarStudios(string num_seg, int idformato)
+        {
+            objPaciente.InsertarEstudios(num_seg, idformato);
+        }
+
 
     }
 }

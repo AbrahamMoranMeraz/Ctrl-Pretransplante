@@ -92,6 +92,11 @@ namespace Control_PreTransplante_V2
 
                 }
             }
+            Capa_Negocio.CN_Paciente cN_ = new Capa_Negocio.CN_Paciente();
+            for(int z = 0; z <= y; z++)
+            {
+                cN_.InsertarStudios(datos[1],)
+            }
             if (categoriadeestudios.SelectedIndex==0 || categoriadeestudios.SelectedIndex == 1)
             {
                 MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString()));
