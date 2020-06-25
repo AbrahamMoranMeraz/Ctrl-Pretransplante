@@ -99,11 +99,15 @@ namespace Control_PreTransplante_V2
             }
             if (categoriadeestudios.SelectedIndex==0 || categoriadeestudios.SelectedIndex == 1)
             {
-                MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString()));
+                MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString()));
             }
             else if (categoriadeestudios.SelectedIndex==2 || categoriadeestudios.SelectedIndex == 3 || categoriadeestudios.SelectedIndex == 4)
             {
-                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString()));
+                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString()));
+            }
+            else if (categoriadeestudios.SelectedIndex == 5 || categoriadeestudios.SelectedIndex == 6)
+            {
+                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoRadiologia(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(),categoriadeestudios.SelectedItem.ToString()));
             }
         }
 
@@ -138,6 +142,20 @@ namespace Control_PreTransplante_V2
                             if (categoriadeestudios.SelectedIndex==4)
                             {
                                 table = objforma.Vistas("Ser_Otros");
+                            }
+                            else 
+                            {
+                                if (categoriadeestudios.SelectedIndex==5)
+                                {
+                                    table = objforma.Vistas("Radio_PI");
+                                }
+                                else
+                                {
+                                    if (categoriadeestudios.SelectedIndex==6)
+                                    {
+                                        table = objforma.Vistas("Radio_2P");
+                                    }
+                                }
                             }
                         }
                     }
