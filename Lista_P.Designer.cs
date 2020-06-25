@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tap = new System.Windows.Forms.TabControl();
             this.listapaceintes = new System.Windows.Forms.TabPage();
+            this.btnactualizar = new FontAwesome.Sharp.IconButton();
             this.Lista = new System.Windows.Forms.DataGridView();
             this.pacientes = new System.Windows.Forms.TabPage();
             this.tap.SuspendLayout();
@@ -48,19 +49,37 @@
             this.tap.Location = new System.Drawing.Point(0, 0);
             this.tap.Name = "tap";
             this.tap.SelectedIndex = 0;
-            this.tap.Size = new System.Drawing.Size(1600, 200);
+            this.tap.Size = new System.Drawing.Size(1600, 536);
             this.tap.TabIndex = 0;
             // 
             // listapaceintes
             // 
+            this.listapaceintes.Controls.Add(this.btnactualizar);
             this.listapaceintes.Controls.Add(this.Lista);
             this.listapaceintes.Location = new System.Drawing.Point(4, 25);
             this.listapaceintes.Name = "listapaceintes";
             this.listapaceintes.Padding = new System.Windows.Forms.Padding(3);
-            this.listapaceintes.Size = new System.Drawing.Size(1592, 171);
+            this.listapaceintes.Size = new System.Drawing.Size(1592, 507);
             this.listapaceintes.TabIndex = 0;
             this.listapaceintes.Text = "Lista Pacientes";
             this.listapaceintes.UseVisualStyleBackColor = true;
+            // 
+            // btnactualizar
+            // 
+            this.btnactualizar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnactualizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnactualizar.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
+            this.btnactualizar.IconColor = System.Drawing.Color.Black;
+            this.btnactualizar.IconSize = 50;
+            this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar.Location = new System.Drawing.Point(3, 435);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Rotation = 0D;
+            this.btnactualizar.Size = new System.Drawing.Size(1586, 69);
+            this.btnactualizar.TabIndex = 3;
+            this.btnactualizar.Text = "Actualizar Lista";
+            this.btnactualizar.UseVisualStyleBackColor = true;
+            this.btnactualizar.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // Lista
             // 
@@ -104,7 +123,7 @@
             this.Lista.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.Lista.RowTemplate.Height = 24;
             this.Lista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Lista.Size = new System.Drawing.Size(1586, 165);
+            this.Lista.Size = new System.Drawing.Size(1586, 501);
             this.Lista.TabIndex = 2;
             this.Lista.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Lista_CellMouseDoubleClick);
             // 
@@ -113,7 +132,7 @@
             this.pacientes.Location = new System.Drawing.Point(4, 25);
             this.pacientes.Name = "pacientes";
             this.pacientes.Padding = new System.Windows.Forms.Padding(3);
-            this.pacientes.Size = new System.Drawing.Size(1326, 678);
+            this.pacientes.Size = new System.Drawing.Size(1592, 507);
             this.pacientes.TabIndex = 1;
             this.pacientes.Text = "Pacientes";
             this.pacientes.UseVisualStyleBackColor = true;
@@ -123,10 +142,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 200);
+            this.ClientSize = new System.Drawing.Size(1600, 536);
             this.Controls.Add(this.tap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1600, 200);
             this.Name = "Lista_P";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Lista_P_Load);
@@ -143,5 +161,6 @@
         private System.Windows.Forms.TabPage listapaceintes;
         private System.Windows.Forms.DataGridView Lista;
         private System.Windows.Forms.TabPage pacientes;
+        private FontAwesome.Sharp.IconButton btnactualizar;
     }
 }

@@ -46,6 +46,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::Control_PreTransplante_V2.Properties.Resources.encabezado;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1179, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -64,6 +65,7 @@
             this.panel_IniciarSesion.Controls.Add(this.txt_usuario);
             this.panel_IniciarSesion.Controls.Add(this.lbl_InicioSesion);
             this.panel_IniciarSesion.Location = new System.Drawing.Point(281, 233);
+            this.panel_IniciarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_IniciarSesion.Name = "panel_IniciarSesion";
             this.panel_IniciarSesion.Size = new System.Drawing.Size(689, 305);
             this.panel_IniciarSesion.TabIndex = 1;
@@ -125,18 +127,20 @@
             this.txt_contra.Size = new System.Drawing.Size(316, 34);
             this.txt_contra.TabIndex = 7;
             this.txt_contra.Text = "SUSANA24";
+            this.txt_contra.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_contra_KeyDown_1);
             // 
             // txt_usuario
             // 
             this.txt_usuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.txt_usuario.Location = new System.Drawing.Point(194, 119);
+            this.txt_usuario.Location = new System.Drawing.Point(195, 119);
             this.txt_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(316, 34);
             this.txt_usuario.TabIndex = 6;
             this.txt_usuario.Text = "Abr06";
+            this.txt_usuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_usuario_KeyDown_1);
             // 
             // lbl_InicioSesion
             // 
@@ -168,7 +172,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_IniciarSesion);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

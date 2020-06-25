@@ -18,7 +18,7 @@ namespace Capa_AccesoDatos
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from Usuario where NombreUsuario=@usuario and contraseña=@contra";
+                    command.CommandText = "select * from UsuarioDoctor where Usuario=@usuario and Contraseña=@contra";
                     command.Parameters.AddWithValue("@usuario", usuario);
                     command.Parameters.AddWithValue("@contra", pass);
                     command.CommandType = CommandType.Text;

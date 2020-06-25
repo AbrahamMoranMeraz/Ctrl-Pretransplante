@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Capa_Negocio
 {
@@ -21,7 +22,29 @@ namespace Capa_Negocio
 
         public DataTable Estudios(string nss)
         {
-            return objPaciente.MostrarDatos("Select * from Estudios_P where Num_seg_social = " + nss);
+            try
+            {
+                return objPaciente.MostrarDatos("select NomForm from Formato join ImprimirFormato on " +
+                    "Formato.IdFormato = ImprimirFormato.IdFormato " +
+                    "where ImprimirFormato.IdPaciente = (select IdPaciente from Paciente where NSS = " + nss + ")");
+            }catch(SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public DataTable Vistas(string nombrevista)
+        {
+            try
+            {
+                return objPaciente.Vistas(nombrevista);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
         }
 
         public void Insertar(string num_seg, string curp1, string nom, string ap, string am, string sex, string nac)

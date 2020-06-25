@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using Spire.Doc;
-using Spire.Doc.Documents;
 using Capa_Negocio;
 
 namespace Control_PreTransplante_V2
@@ -24,7 +22,7 @@ namespace Control_PreTransplante_V2
         private void ibtn_enviar_Click(object sender, EventArgs e)  //Método enviar funciona para generar el archivo PDF
         {
 
-            //initialize word object  
+            /*//initialize word object  
             Document document = new Document();
             document.LoadFromFile(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\Formulario-de-atención-PreHospitalaria.docx");
             //get strings to replace  
@@ -62,7 +60,7 @@ namespace Control_PreTransplante_V2
             //MessageBox.Show("All tasks are finished.", "doc processing", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //document.Close();
 
-            Dictionary<string, string> GetReplaceDictionary()
+           Dictionary<string, string> GetReplaceDictionary()
             {
                 Dictionary<string, string> replaceDict = new Dictionary<string, string>();
                 replaceDict.Add("#apellidoP#", txt_apellidoP.Text.Trim());
@@ -70,7 +68,7 @@ namespace Control_PreTransplante_V2
                 replaceDict.Add("#nombre#", txt_nombres.Text.Trim());
 
                 return replaceDict;
-            }
+            }*/
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -79,9 +77,9 @@ namespace Control_PreTransplante_V2
         }
         private void btn_fecha_Click(object sender, EventArgs e)
         {
-            txt_fecha.Text = monthCalendar1.SelectionStart.Day.ToString() + "/" +
-                monthCalendar1.SelectionStart.Month.ToString() + "/" +
-                monthCalendar1.SelectionStart.Year.ToString();
+            txt_fecha.Text = monthCalendar1.SelectionStart.Year.ToString() + "-" +
+                monthCalendar1.SelectionStart.Month.ToString() + "-" +
+                monthCalendar1.SelectionStart.Day.ToString();
         }
         string genero;
         private void rdb_masculino_CheckedChanged(object sender, EventArgs e)
@@ -221,6 +219,11 @@ namespace Control_PreTransplante_V2
                     MessageBox.Show("Favor de llenar todos los campos para editar registro");
                 }
             }
+        }
+
+        private void gbx_Registro_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

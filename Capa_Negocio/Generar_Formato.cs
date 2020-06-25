@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Word = Microsoft.Office.Interop.Word;//Libreria para word
 using System.Reflection;//Libreria para word
 using System.IO;//libreria para archivos
+using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Capa_Negocio
 {
@@ -16,11 +18,64 @@ namespace Capa_Negocio
         static String[] datosPaciente;
         #endregion
 
-        static public String NuevoFormato(string [] e, string [] d, int y)
+        static public String NuevoFormato(string [] e, string [] d, int y, string comboBox, string tipo)
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"C:\Users\moran\source\repos\Pruebas_Doc\bin\Debug\F1.docx", @"C:\Users\moran\source\repos\Pruebas_Doc\bin\Debug\" + datosPaciente[1] + ".docx", y);
+            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F1.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "1.docx", y, comboBox, tipo);
+        }
+
+        static public String FormatoServicios(string[] e, string[] d, int y, string comboBox, string tipo)
+        {
+            estudiosSeleccionados = e;
+            datosPaciente = d;
+            //for (int i = 0; i < y; i++)
+            //{
+            //    int j = i;
+            //    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "3.docx", j, comboBox);
+            //}
+
+            int j = 0;
+
+            while (y > 0)
+            {
+                if (y > 1)
+                {
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_3.docx", j, comboBox, tipo);
+                    j = j + 2;
+                    y = y - 2;
+                }
+                else if (y == 1)
+                {
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "3.docx", j, comboBox, tipo);
+                    y = y - 1;
+                }
+            }
+
+            return "Files Created!";
+        }
+
+        static public String FormatoRadiologia(string[] e, string[] d, int y, string comboBox, string tipo)
+        {
+            estudiosSeleccionados = e;
+            datosPaciente = d;
+            int j = 0;
+
+            while (y > 0)
+            {
+                if (y > 1)
+                {
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_2.docx", j, comboBox, tipo);
+                    j = j + 2;
+                    y = y - 2;
+                }
+                else if (y == 1)
+                {
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", j, comboBox, tipo);
+                    y = y - 1;
+                }
+            }
+            return "Files Created!";
         }
         private static void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
@@ -50,7 +105,7 @@ namespace Capa_Negocio
                 ref matchControl);
         }
 
-        private static String CreateWordDocument(object filename, object SaveAs, int cantidaddeestudiosselect)
+        private static String CreateWordDocument(object filename, object SaveAs, int cantidaddeestudiosselect, string combobox, string tipo)
         {
             Word.Application wordApp = new Word.Application();
             object missing = Missing.Value;
@@ -70,22 +125,34 @@ namespace Capa_Negocio
                 myWordDoc.Activate();
 
                 //find and replace
-                FindAndReplace(wordApp, "<name>", datosPaciente[3]);
-                FindAndReplace(wordApp, "<firstname>", datosPaciente[4]);
-                FindAndReplace(wordApp, "<secondname>", datosPaciente[5]);
-                FindAndReplace(wordApp, "<cedula>", datosPaciente[1]);
+                FindAndReplace(wordApp, "<name>", datosPaciente[1]);
+                FindAndReplace(wordApp, "<firstname>", datosPaciente[2]);
+                FindAndReplace(wordApp, "<secondname>", datosPaciente[3]);
+                FindAndReplace(wordApp, "<cedula>", datosPaciente[5]);
                 FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
+                //Servicios
+                FindAndReplace(wordApp, "<servicio1>", estudiosSeleccionados[cantidaddeestudiosselect]);
+                FindAndReplace(wordApp, "<servicio2>", estudiosSeleccionados[cantidaddeestudiosselect + 1]);
+                //------------//
+                //Radiologogia 1 en una hoja
+                FindAndReplace(wordApp, "<Tipo>", tipo);
+                FindAndReplace(wordApp, "<Anotaciones>", estudiosSeleccionados[cantidaddeestudiosselect]);
+                //Radiologogia 2 en una hoja
+                FindAndReplace(wordApp, "<Tipo2>", tipo);
+                FindAndReplace(wordApp, "<Anotaciones2>", estudiosSeleccionados[cantidaddeestudiosselect + 1]);
+                //-------------//
+                //Codigo para formato de estudios base
                 int y = 0;
                 for (int x = 0; x <= 18; x++)
                 {
                     if (y <= cantidaddeestudiosselect)
                     {
-                        FindAndReplace(wordApp, $"<ex{x}>",estudiosSeleccionados[x]);
+                        FindAndReplace(wordApp, $"<ex{x+1}>",estudiosSeleccionados[x]);
                         y++;
                     }
                     else
                     {
-                        FindAndReplace(wordApp, $"<ex{x}>", "");
+                        FindAndReplace(wordApp, $"<ex{x+1}>", "");
                     }
                 }
             }
@@ -100,9 +167,28 @@ namespace Capa_Negocio
                             ref missing, ref missing, ref missing,
                             ref missing, ref missing, ref missing,
                             ref missing, ref missing, ref missing);
+            //-----------------------------------------------------//
+            wordApp.ActivePrinter =combobox;
+            //Codigo para impresion de formatos y asi.
+            if (myWordDoc != null)
+            {
+                object copies = "1";
+                object pages = "";
+                object range = Word.WdPrintOutRange.wdPrintAllDocument;
+                object items = Word.WdPrintOutItem.wdPrintDocumentContent;
+                object pageType = Word.WdPrintOutPages.wdPrintAllPages;
+                object oTrue = true;
+                object oFalse = false;
+                myWordDoc.PrintOut(ref oTrue, ref oFalse, ref range, ref missing, ref missing, ref missing,
+                                   ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
+                                   ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
+            }
 
             myWordDoc.Close();
             wordApp.Quit();
+
+            File.Delete(SaveAs.ToString());
+
             return ("File Created!");
         }
     }

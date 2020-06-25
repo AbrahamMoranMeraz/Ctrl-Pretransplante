@@ -12,9 +12,9 @@ namespace Capa_AccesoDatos
     {
         protected SqlConnection GetSqlConnection()
         {
-            return new SqlConnection(@"Data Source=LAPTOP-D8KS8FVM;Initial Catalog=SistemaPretrasplante;Integrated Security=True");
+            return new SqlConnection("Server=(local);Database=BDPretransplante;integrated security =true");
         }
-        private SqlConnection conexion = new SqlConnection(@"Data Source=LAPTOP-D8KS8FVM;Initial Catalog=SistemaPretrasplante;Integrated Security=True");
+        private SqlConnection conexion = new SqlConnection("Server=(local);Database=BDPretransplante;integrated security =true");
 
         public SqlConnection AbrirConexion()
         {
