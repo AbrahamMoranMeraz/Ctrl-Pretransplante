@@ -15,6 +15,28 @@ namespace Capa_AccesoDatos
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
+        public DataTable Matricula(string usuario)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select IdUsuario from UsuarioDoctor where UsuarioDoctor.Ususario='"+usuario+"'";
+            //comando.CommandType = CommandType.StoredProcedure;
+            leerdatos = comando.ExecuteReader();
+            tabla.Load(leerdatos);
+            conexion.CerrarConexion();
+            return tabla;
+        }
+
+        public DataTable MedicoDatos(string matricula)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select Nombre, ApellidoP, ApellidoM, matricula from InfoMedico inner join UsuarioDoctor on InfoMedico.IdUsusario=UsuarioDoctor.IdUsuario where UsuarioDoctor.IdUsuario='" + matricula + "'";
+            //comando.CommandType = CommandType.StoredProcedure;
+            leerdatos = comando.ExecuteReader();
+            tabla.Load(leerdatos);
+            conexion.CerrarConexion();
+            return tabla;
+        }
+
         public DataTable MostrarDatos()
         {
             comando.Connection = conexion.AbrirConexion();
