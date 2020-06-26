@@ -355,6 +355,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditarPacientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RgPacientes";
             this.groupBox1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

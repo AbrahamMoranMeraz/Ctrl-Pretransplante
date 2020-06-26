@@ -119,9 +119,9 @@ namespace Control_PreTransplante_V2
                     MessageBox.Show("Se edito correctamente");
                     Close();
                 }
-                catch (Exception ex)
+                catch
                 {
-                    MessageBox.Show("No se pudo modifiar el registro " + ex);
+                    MessageBox.Show("No se pudo modifiar el registro, los numeros de seguro social son unicos y el formato de fecha es año-mes-dia");
                 }
             }
         }

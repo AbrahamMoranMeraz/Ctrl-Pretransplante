@@ -169,7 +169,7 @@ namespace Control_PreTransplante_V2
             }
             editar.TopMost = true;
             editar.TopLevel = true;
-            editar.Show();
+            editar.ShowDialog();
         }
     }
 }
