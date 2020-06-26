@@ -81,19 +81,19 @@ namespace Control_PreTransplante_V2
             int y = 0;//Contador de estudios que si se seleccionaron
             Capa_Negocio.CN_Paciente cN_ = new Capa_Negocio.CN_Paciente();
             //----------------------datos del medico----------------------------------//
-            Capa_AccesoDatos.UsuarioLogin medicos = new Capa_AccesoDatos.UsuarioLogin();
-            DataTable dataTable = new DataTable();
-            dataTable=medicos.DatosMed();
-            string[] medico = new string[4];
-            int i = 0;
-            foreach (DataRow row in dataTable.Rows)
-            {
-                foreach (var item in row.ItemArray)
-                {
-                    medico[i] = item.ToString();
-                    i++;
-                }
-            }
+            //Capa_AccesoDatos.UsuarioLogin medicos = new Capa_AccesoDatos.UsuarioLogin();
+            //DataTable dataTable = new DataTable();
+            //dataTable=medicos.DatosMed();
+            //string[] medico = new string[4];
+            //int i = 0;
+            //foreach (DataRow row in dataTable.Rows)
+            //{
+            ////    foreach (var item in row.ItemArray)
+            //    {
+            //        medico[i] = item.ToString();
+            //        i++;
+            //    }
+            //}
             //-------------------------------------------------------------------------//
             string[] listadeestudios = new string[18];
             for (x = 0; x < lisatadeestudios.Items.Count; x++)

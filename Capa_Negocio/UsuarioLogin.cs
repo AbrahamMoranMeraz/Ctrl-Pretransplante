@@ -18,22 +18,22 @@ namespace Capa_AccesoDatos
             return usuari1.Logi_Us(usuario, pass);
         }
 
-        public void Matricula(string usuario)
-        {
-            DataTable tabla = new DataTable();
-            tabla = Acceso.Matricula(usuario);
-            for (int x = 0; x < tabla.Rows.Count; x++)
-            {
-                matricula = (tabla.Rows[x].ItemArray[0].ToString());
-            }
-        }
+        //public void Matricula(string usuario)
+        //{
+        //    DataTable tabla = new DataTable();
+        //    tabla = Acceso.Matricula(usuario);
+        //    for (int x = 0; x < tabla.Rows.Count; x++)
+        //    {
+        //        matricula = (tabla.Rows[x].ItemArray[0].ToString());
+        //    }
+        //}
 
-        public DataTable DatosMed()
-        {
-            DataTable tabla = new DataTable();
-            tabla = Acceso.MedicoDatos(matricula);
-            return tabla;
-        }
+        //public DataTable DatosMed()
+        //{
+        //    DataTable tabla = new DataTable();
+        //    tabla = Acceso.MedicoDatos(matricula);
+        //    return tabla;
+        //}
 
         //public void DatosMedico()
         //{
