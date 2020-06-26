@@ -18,7 +18,7 @@ namespace Capa_AccesoDatos
         public DataTable MostrarDatos()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select *from Paciente";
+            comando.CommandText = "select * from Paciente";
             //comando.CommandType = CommandType.StoredProcedure;
             leerdatos = comando.ExecuteReader();
             tabla.Load(leerdatos);
@@ -26,13 +26,15 @@ namespace Capa_AccesoDatos
             return tabla;
         }
 
-        public DataTable MostrarDatos(string consulta)
+        public DataTable MostrarDatos(string nss)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = consulta;
-            //comando.CommandType = CommandType.StoredProcedure;
+            comando.CommandText = "EstudiosdelPaciente";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@NSS_", nss);
             leerdatos = comando.ExecuteReader();
             tabla.Load(leerdatos);
+            comando.Parameters.Clear();
             conexion.CerrarConexion();
             return tabla;
         }
@@ -57,7 +59,6 @@ namespace Capa_AccesoDatos
             comando.Parameters.AddWithValue("@ApellidoM_", am);
             comando.Parameters.AddWithValue("@CURP_", curp1);
             comando.Parameters.AddWithValue("@Num_Social_ ", num_seg);
-            comando.Parameters.AddWithValue("@Donador_", 0);
             comando.Parameters.AddWithValue("@fechaNa_", nac);
             comando.Parameters.AddWithValue("@Sexo_ ", sex);
             comando.ExecuteNonQuery();
@@ -88,15 +89,11 @@ namespace Capa_AccesoDatos
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
         }
-        public void InsertarEstudios(string nss, int idformato)
+        public void InsertarEstudios(string nss, string nombre, string matricula)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "InsertarEstudios";
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@NSS_", nss);
-            comando.Parameters.AddWithValue("@Idformato_", idformato);
+            comando.CommandText = "exec InsertarEstudiosP '" + nss + "', '" + nombre + "', '" + matricula + "'";
             comando.ExecuteNonQuery();
-            comando.Parameters.Clear();
         } 
 
     }

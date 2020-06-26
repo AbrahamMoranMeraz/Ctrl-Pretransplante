@@ -24,9 +24,7 @@ namespace Capa_Negocio
         {
             try
             {
-                return objPaciente.MostrarDatos("select NomForm from Formato join ImprimirFormato on " +
-                    "Formato.IdFormato = ImprimirFormato.IdFormato " +
-                    "where ImprimirFormato.IdPaciente = (select IdPaciente from Paciente where NSS = " + nss + ")");
+                return objPaciente.MostrarDatos(nss);
             }catch(SqlException ex)
             {
                 MessageBox.Show(ex.Message);
@@ -60,9 +58,9 @@ namespace Capa_Negocio
             objPaciente.EliminarDatos(Convert.ToInt16(id));
         }
 
-        public void InsertarStudios(string num_seg, int idformato)
+        public void InsertarStudios(string num_seg, string nombre, string matricula)
         {
-            objPaciente.InsertarEstudios(num_seg, idformato);
+            objPaciente.InsertarEstudios(num_seg, nombre, matricula);
         }
 
 

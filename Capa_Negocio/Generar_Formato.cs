@@ -22,7 +22,7 @@ namespace Capa_Negocio
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F1.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "1.docx", y, comboBox, tipo);
+            return CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F1.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "1.docx", y, comboBox, tipo);
         }
 
         static public String FormatoServicios(string[] e, string[] d, int y, string comboBox, string tipo)
@@ -41,13 +41,13 @@ namespace Capa_Negocio
             {
                 if (y > 1)
                 {
-                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_3.docx", j, comboBox, tipo);
+                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F3_2.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_3.docx", j, comboBox, tipo);
                     j = j + 2;
                     y = y - 2;
                 }
                 else if (y == 1)
                 {
-                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "3.docx", j, comboBox, tipo);
+                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F3.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "3.docx", j, comboBox, tipo);
                     y = y - 1;
                 }
             }
@@ -65,13 +65,13 @@ namespace Capa_Negocio
             {
                 if (y > 1)
                 {
-                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_2.docx", j, comboBox, tipo);
+                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F2_2.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_2.docx", j, comboBox, tipo);
                     j = j + 2;
                     y = y - 2;
                 }
                 else if (y == 1)
                 {
-                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", j, comboBox, tipo);
+                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F2.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "2.docx", j, comboBox, tipo);
                     y = y - 1;
                 }
             }
