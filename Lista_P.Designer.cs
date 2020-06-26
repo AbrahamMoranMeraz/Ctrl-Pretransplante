@@ -162,6 +162,7 @@
             this.btneditar.TabIndex = 6;
             this.btneditar.Text = "Editar\r\nPaciente";
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnactualizar
             // 
