@@ -29,5 +29,10 @@ namespace Control_PreTransplante_V2
             Capa_Negocio.CN_Paciente datos = new Capa_Negocio.CN_Paciente();
             labelUsuario.Text = datos.UsuarioActual(usuario);
         }
+
+        private void Blanco_SizeChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

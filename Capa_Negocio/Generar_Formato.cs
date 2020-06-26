@@ -16,13 +16,21 @@ namespace Capa_Negocio
         #region Variables
         static String[] estudiosSeleccionados;
         static String[] datosPaciente;
+        static string estudioespecial;
         #endregion
 
         static public String NuevoFormato(string [] e, string [] d, int y, string comboBox, string tipo, List<string>medico)
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F1.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "1.docx", y, comboBox, tipo, medico);
+            return CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F4.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "4.docx", y, comboBox, tipo, medico);
+        }
+
+        static public String NuevoFormato_2(string estudioespecial_, string[] datosdelpaciente, string comboBox, List<string> medico)
+        {
+            estudioespecial = estudioespecial_;
+            datosPaciente = datosdelpaciente;
+            return CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F4.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "4.docx", comboBox, medico);
         }
 
         static public String FormatoServicios(string[] e, string[] d, int y, string comboBox, string tipo, List<string> medico)
@@ -36,13 +44,13 @@ namespace Capa_Negocio
             {
                 if (y > 1)
                 {
-                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_3.docx", j, comboBox, tipo, medico);
+                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F3_2.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_3.docx", j, comboBox, tipo, medico);
                     j = j + 2;
                     y = y - 2;
                 }
                 else if (y == 1)
                 {
-                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "3.docx", j, comboBox, tipo, medico);
+                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F3.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "3.docx", j, comboBox, tipo, medico);
                     y = y - 1;
                 }
             }
@@ -60,13 +68,13 @@ namespace Capa_Negocio
             {
                 if (y > 1)
                 {
-                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_2.docx", j, comboBox, tipo, medico);
+                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F2_2.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_2.docx", j, comboBox, tipo, medico);
                     j = j + 2;
                     y = y - 2;
                 }
                 else if (y == 1)
                 {
-                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", j, comboBox, tipo, medico);
+                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F2.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "2.docx", j, comboBox, tipo, medico);
                     y = y - 1;
                 }
             }
@@ -173,6 +181,75 @@ namespace Capa_Negocio
                             ref missing, ref missing, ref missing);
             //-----------------------------------------------------//
             wordApp.ActivePrinter =combobox;
+            //Codigo para impresion de formatos y asi.
+            if (myWordDoc != null)
+            {
+                object copies = "1";
+                object pages = "";
+                object range = Word.WdPrintOutRange.wdPrintAllDocument;
+                object items = Word.WdPrintOutItem.wdPrintDocumentContent;
+                object pageType = Word.WdPrintOutPages.wdPrintAllPages;
+                object oTrue = true;
+                object oFalse = false;
+                myWordDoc.PrintOut(ref oTrue, ref oFalse, ref range, ref missing, ref missing, ref missing,
+                                   ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
+                                   ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
+            }
+
+            myWordDoc.Close();
+            wordApp.Quit();
+
+            File.Delete(SaveAs.ToString());
+
+            return ("Formato Impreso!");
+        }
+
+        private static String CreateWordDocument(object filename, object SaveAs, string combobox, List<string> medico)
+        {
+            Word.Application wordApp = new Word.Application();
+            object missing = Missing.Value;
+            Word.Document myWordDoc = null;
+
+            if (File.Exists((string)filename))
+            {
+                object readOnly = false;
+                object isVisible = false;
+                wordApp.Visible = false;
+
+                myWordDoc = wordApp.Documents.Open(ref filename, ref missing, ref readOnly,
+                                        ref missing, ref missing, ref missing,
+                                        ref missing, ref missing, ref missing,
+                                        ref missing, ref missing, ref missing,
+                                        ref missing, ref missing, ref missing, ref missing);
+                myWordDoc.Activate();
+
+                //Encontrar y remplazar daots basicos del paciente
+                FindAndReplace(wordApp, "<name>", datosPaciente[1]);
+                FindAndReplace(wordApp, "<firstname>", datosPaciente[2]);
+                FindAndReplace(wordApp, "<secondname>", datosPaciente[3]);
+                FindAndReplace(wordApp, "<cedula>", datosPaciente[5]);
+                FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
+                //Datos basicos del medico
+                FindAndReplace(wordApp, "<mname>", medico[6]);
+                FindAndReplace(wordApp, "<mfname>", medico[7]);
+                FindAndReplace(wordApp, "<msname>", medico[8]);
+                FindAndReplace(wordApp, "<matricula>", medico[9]);
+                //Codigo para formato de estudios base clinicos
+                FindAndReplace(wordApp, "<ex1>", estudioespecial);
+            }
+            else
+            {
+                return ("File not Found!");
+            }
+
+            //Save as
+            myWordDoc.SaveAs2(ref SaveAs, ref missing, ref missing, ref missing,
+                            ref missing, ref missing, ref missing,
+                            ref missing, ref missing, ref missing,
+                            ref missing, ref missing, ref missing,
+                            ref missing, ref missing, ref missing);
+            //-----------------------------------------------------//
+            wordApp.ActivePrinter = combobox;
             //Codigo para impresion de formatos y asi.
             if (myWordDoc != null)
             {

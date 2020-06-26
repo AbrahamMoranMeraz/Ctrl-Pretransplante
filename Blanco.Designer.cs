@@ -76,7 +76,7 @@
             this.labelUsuario.AutoSize = true;
             this.labelUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuario.ForeColor = System.Drawing.Color.Black;
-            this.labelUsuario.Location = new System.Drawing.Point(308, 567);
+            this.labelUsuario.Location = new System.Drawing.Point(315, 567);
             this.labelUsuario.Name = "labelUsuario";
             this.labelUsuario.Size = new System.Drawing.Size(289, 36);
             this.labelUsuario.TabIndex = 3;
@@ -97,6 +97,7 @@
             this.Name = "Blanco";
             this.Text = "Blanco";
             this.Load += new System.EventHandler(this.Blanco_Load);
+            this.SizeChanged += new System.EventHandler(this.Blanco_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

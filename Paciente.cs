@@ -94,7 +94,7 @@ namespace Control_PreTransplante_V2
             DataTable dataTable = new DataTable();
             dataTable = medicos.DatosMed(matricula);
             List<string> datosmed = new List<string>();
-            
+
             foreach (DataRow row in dataTable.Rows)
             {
                 foreach (var item in row.ItemArray)
@@ -117,17 +117,25 @@ namespace Control_PreTransplante_V2
 
                 }
             }
-            if (categoriadeestudios.SelectedIndex==0 || categoriadeestudios.SelectedIndex == 1)
+            if (categoriadeestudios.SelectedIndex == 0 || categoriadeestudios.SelectedIndex == 1 || categoriadeestudios.SelectedIndex == 7 || categoriadeestudios.SelectedIndex == 8)
             {
                 MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), datosmed));
             }
-            else if (categoriadeestudios.SelectedIndex==2 || categoriadeestudios.SelectedIndex == 3 || categoriadeestudios.SelectedIndex == 4)
+            else if (categoriadeestudios.SelectedIndex == 2 || categoriadeestudios.SelectedIndex == 3 || categoriadeestudios.SelectedIndex == 4)
             {
                 MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), datosmed));
             }
             else if (categoriadeestudios.SelectedIndex == 5 || categoriadeestudios.SelectedIndex == 6)
             {
-                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoRadiologia(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(),categoriadeestudios.SelectedItem.ToString(), datosmed));
+                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoRadiologia(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), datosmed));
+            }
+            else if (categoriadeestudios.SelectedIndex == 9)
+            {
+                for (int p = 0; p < lisatadeestudios.CheckedItems.Count; p++)
+                {
+                    Capa_Negocio.Generar_Formato.NuevoFormato_2(listadeestudios[p], datos, comboBox1.SelectedItem.ToString(), datosmed);
+                }
+                MessageBox.Show("Formatos Impresos");
             }
             MostrarEstudios(datos[5]);
         }
@@ -176,6 +184,28 @@ namespace Control_PreTransplante_V2
                                     {
                                         table = objforma.Vistas("Radio_2P");
                                     }
+                                    else
+                                    {
+                                        if (categoriadeestudios.SelectedIndex == 7)
+                                        {
+                                            table = objforma.Vistas("Pre_Op");
+                                        }
+                                        else
+                                        {
+                                            if (categoriadeestudios.SelectedIndex == 8)
+                                            {
+                                                table = objforma.Vistas("Donador");
+                                            }
+                                            else
+                                            {
+                                                if (categoriadeestudios.SelectedIndex == 9)
+                                                {
+                                                    table = objforma.Vistas("Especiales");
+                                                }
+                                                else { }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -189,11 +219,6 @@ namespace Control_PreTransplante_V2
             for (int i = 0; i < lisatadeestudios.Items.Count; i++)
                 lisatadeestudios.SetItemChecked(i, true);
             btnimprimir.Visible = true;
-        }
-
-        private void dataestudiosr_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbnss = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,7 +49,6 @@
             this.categoriadeestudios = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dataestudiosr = new System.Windows.Forms.DataGridView();
-            this.Est_Realizados = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,11 +80,11 @@
             this.lbnss.AutoEllipsis = true;
             this.lbnss.AutoSize = true;
             this.lbnss.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbnss.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnss.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnss.ForeColor = System.Drawing.Color.Black;
-            this.lbnss.Location = new System.Drawing.Point(744, 25);
+            this.lbnss.Location = new System.Drawing.Point(833, 25);
             this.lbnss.Name = "lbnss";
-            this.lbnss.Size = new System.Drawing.Size(48, 20);
+            this.lbnss.Size = new System.Drawing.Size(57, 24);
             this.lbnss.TabIndex = 23;
             this.lbnss.Text = "NSS:";
             // 
@@ -95,7 +94,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(696, 25);
+            this.label4.Location = new System.Drawing.Point(785, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 20);
             this.label4.TabIndex = 22;
@@ -106,11 +105,11 @@
             this.lbmaterno.AutoEllipsis = true;
             this.lbmaterno.AutoSize = true;
             this.lbmaterno.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbmaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbmaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbmaterno.ForeColor = System.Drawing.Color.Black;
-            this.lbmaterno.Location = new System.Drawing.Point(557, 25);
+            this.lbmaterno.Location = new System.Drawing.Point(610, 25);
             this.lbmaterno.Name = "lbmaterno";
-            this.lbmaterno.Size = new System.Drawing.Size(139, 20);
+            this.lbmaterno.Size = new System.Drawing.Size(175, 24);
             this.lbmaterno.TabIndex = 21;
             this.lbmaterno.Text = "Apellido Materno:";
             // 
@@ -120,7 +119,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Left;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(418, 25);
+            this.label3.Location = new System.Drawing.Point(471, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 20);
             this.label3.TabIndex = 20;
@@ -131,11 +130,11 @@
             this.lbpaterno.AutoEllipsis = true;
             this.lbpaterno.AutoSize = true;
             this.lbpaterno.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbpaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbpaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbpaterno.ForeColor = System.Drawing.Color.Black;
-            this.lbpaterno.Location = new System.Drawing.Point(282, 25);
+            this.lbpaterno.Location = new System.Drawing.Point(300, 25);
             this.lbpaterno.Name = "lbpaterno";
-            this.lbpaterno.Size = new System.Drawing.Size(136, 20);
+            this.lbpaterno.Size = new System.Drawing.Size(171, 24);
             this.lbpaterno.TabIndex = 19;
             this.lbpaterno.Text = "Apellido Paterno:";
             // 
@@ -145,7 +144,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(146, 25);
+            this.label2.Location = new System.Drawing.Point(164, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 20);
             this.label2.TabIndex = 18;
@@ -156,11 +155,11 @@
             this.lbnombre.AutoEllipsis = true;
             this.lbnombre.AutoSize = true;
             this.lbnombre.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnombre.ForeColor = System.Drawing.Color.Black;
             this.lbnombre.Location = new System.Drawing.Point(73, 25);
             this.lbnombre.Name = "lbnombre";
-            this.lbnombre.Size = new System.Drawing.Size(73, 20);
+            this.lbnombre.Size = new System.Drawing.Size(91, 24);
             this.lbnombre.TabIndex = 17;
             this.lbnombre.Text = "Nombre:";
             // 
@@ -195,7 +194,6 @@
             this.panel3.Controls.Add(this.categoriadeestudios);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.dataestudiosr);
-            this.panel3.Controls.Add(this.Est_Realizados);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 57);
@@ -210,10 +208,10 @@
             this.lisatadeestudios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lisatadeestudios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lisatadeestudios.FormattingEnabled = true;
-            this.lisatadeestudios.Location = new System.Drawing.Point(0, 368);
+            this.lisatadeestudios.Location = new System.Drawing.Point(0, 335);
             this.lisatadeestudios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lisatadeestudios.Name = "lisatadeestudios";
-            this.lisatadeestudios.Size = new System.Drawing.Size(1139, 0);
+            this.lisatadeestudios.Size = new System.Drawing.Size(1139, 19);
             this.lisatadeestudios.TabIndex = 27;
             // 
             // panel2
@@ -263,7 +261,7 @@
             this.categoriadeestudios.Dock = System.Windows.Forms.DockStyle.Top;
             this.categoriadeestudios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoriadeestudios.FormattingEnabled = true;
-            this.categoriadeestudios.Location = new System.Drawing.Point(0, 335);
+            this.categoriadeestudios.Location = new System.Drawing.Point(0, 302);
             this.categoriadeestudios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.categoriadeestudios.Name = "categoriadeestudios";
             this.categoriadeestudios.Size = new System.Drawing.Size(1139, 33);
@@ -276,7 +274,7 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(0, 310);
+            this.label7.Location = new System.Drawing.Point(0, 277);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(315, 25);
             this.label7.TabIndex = 24;
@@ -292,55 +290,43 @@
             this.dataestudiosr.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataestudiosr.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataestudiosr.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataestudiosr.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataestudiosr.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataestudiosr.ColumnHeadersHeight = 15;
             this.dataestudiosr.ColumnHeadersVisible = false;
             this.dataestudiosr.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataestudiosr.EnableHeadersVisualStyles = false;
             this.dataestudiosr.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.dataestudiosr.Location = new System.Drawing.Point(0, 58);
+            this.dataestudiosr.Location = new System.Drawing.Point(0, 25);
             this.dataestudiosr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataestudiosr.Name = "dataestudiosr";
             this.dataestudiosr.ReadOnly = true;
             this.dataestudiosr.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataestudiosr.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataestudiosr.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataestudiosr.RowHeadersVisible = false;
             this.dataestudiosr.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataestudiosr.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.dataestudiosr.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataestudiosr.RowTemplate.Height = 24;
             this.dataestudiosr.Size = new System.Drawing.Size(1139, 252);
             this.dataestudiosr.TabIndex = 23;
-            // 
-            // Est_Realizados
-            // 
-            this.Est_Realizados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Est_Realizados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Est_Realizados.FormattingEnabled = true;
-            this.Est_Realizados.Location = new System.Drawing.Point(0, 25);
-            this.Est_Realizados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Est_Realizados.Name = "Est_Realizados";
-            this.Est_Realizados.Size = new System.Drawing.Size(1139, 33);
-            this.Est_Realizados.TabIndex = 22;
-            this.Est_Realizados.Text = "Seleccion de categoria";
             // 
             // label6
             // 
@@ -387,7 +373,6 @@
         private System.Windows.Forms.ComboBox categoriadeestudios;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataestudiosr;
-        private System.Windows.Forms.ComboBox Est_Realizados;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbnss;
         private System.Windows.Forms.Label label4;
