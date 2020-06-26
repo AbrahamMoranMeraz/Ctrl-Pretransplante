@@ -16,6 +16,7 @@ namespace Control_PreTransplante_V2
     {
         //Logica_Secion secion;
         public string usuario;
+
         public Login()
         {
             InitializeComponent();

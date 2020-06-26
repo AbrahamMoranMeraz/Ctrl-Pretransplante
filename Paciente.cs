@@ -14,7 +14,6 @@ namespace Control_PreTransplante_V2
     public partial class Paciente : Form
     {
         string[] datos;
-        string matricula;
         DataTable table;
 
         public Paciente()
@@ -82,26 +81,10 @@ namespace Control_PreTransplante_V2
             int x = 0;//Contador de estudios
             int y = 0;//Contador de estudios que si se seleccionaron
             Capa_Negocio.CN_Paciente cN_ = new Capa_Negocio.CN_Paciente();
-            //----------------------datos del medico----------------------------------//
+            //----------------------Datos del medico----------------------------------//
             Capa_AccesoDatos.UsuarioLogin medicos = new Capa_AccesoDatos.UsuarioLogin();
             Login user = new Login();
-            DataTable tabla = new DataTable();
-            tabla = medicos.Matricula(user.usuario);
-            for (int q = 0; q < tabla.Rows.Count; q++)
-            {
-                matricula = (tabla.Rows[x].ItemArray[0].ToString());
-            }
-            DataTable dataTable = new DataTable();
-            dataTable = medicos.DatosMed(matricula);
-            List<string> datosmed = new List<string>();
-            
-            foreach (DataRow row in dataTable.Rows)
-            {
-                foreach (var item in row.ItemArray)
-                {
-                    datosmed.Add(item.ToString());
-                }
-            }
+            List <string> medico = medicos.infomed(user.usuario);
             //-------------------------------------------------------------------------//
             string[] listadeestudios = new string[18];
             for (x = 0; x < lisatadeestudios.Items.Count; x++)
@@ -119,15 +102,15 @@ namespace Control_PreTransplante_V2
             }
             if (categoriadeestudios.SelectedIndex==0 || categoriadeestudios.SelectedIndex == 1)
             {
-                MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), datosmed));
+                MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), medico));
             }
             else if (categoriadeestudios.SelectedIndex==2 || categoriadeestudios.SelectedIndex == 3 || categoriadeestudios.SelectedIndex == 4)
             {
-                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), datosmed));
+                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), medico));
             }
             else if (categoriadeestudios.SelectedIndex == 5 || categoriadeestudios.SelectedIndex == 6)
             {
-                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoRadiologia(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(),categoriadeestudios.SelectedItem.ToString(), datosmed));
+                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoRadiologia(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(),categoriadeestudios.SelectedItem.ToString(), medico));
             }
             MostrarEstudios(datos[5]);
         }
