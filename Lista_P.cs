@@ -149,5 +149,28 @@ namespace Control_PreTransplante_V2
                 MessageBox.Show("Seleccione solo una fila por favor");
             }
         }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            EditarPacientes editar = new EditarPacientes();
+            editar.txt_nombres.Text = Lista.Rows[Lista.SelectedRows[0].Index].Cells[1].Value.ToString();
+            editar.txt_apellidoP.Text = Lista.Rows[Lista.SelectedRows[0].Index].Cells[2].Value.ToString();
+            editar.txt_apellidoM.Text = Lista.Rows[Lista.SelectedRows[0].Index].Cells[3].Value.ToString();
+            editar.txt_curp.Text = Lista.Rows[Lista.SelectedRows[0].Index].Cells[4].Value.ToString();
+            editar.txt_numseg.Text = Lista.Rows[Lista.SelectedRows[0].Index].Cells[5].Value.ToString();
+            editar.txt_fecha.Text = Lista.Rows[Lista.SelectedRows[0].Index].Cells[6].Value.ToString();
+            editar.id_paciente = Lista.Rows[Lista.SelectedRows[0].Index].Cells[0].Value.ToString();
+            if (Lista.Rows[Lista.SelectedRows[0].Index].Cells[7].Value.ToString() != "F")
+            {
+                editar.rdb_masculino.Checked = true;
+            }
+            else
+            {
+                editar.rdb_femenino.Checked = true;
+            }
+            editar.TopMost = true;
+            editar.TopLevel = true;
+            editar.ShowDialog();
+        }
     }
 }

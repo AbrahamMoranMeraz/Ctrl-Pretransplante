@@ -44,8 +44,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lisatadeestudios = new System.Windows.Forms.CheckedListBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnimprimir = new FontAwesome.Sharp.IconButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.categoriadeestudios = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dataestudiosr = new System.Windows.Forms.DataGridView();
@@ -69,10 +69,11 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(854, 46);
+            this.panel1.Size = new System.Drawing.Size(1139, 57);
             this.panel1.TabIndex = 14;
             // 
             // lbnss
@@ -81,10 +82,10 @@
             this.lbnss.AutoSize = true;
             this.lbnss.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbnss.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnss.Location = new System.Drawing.Point(632, 20);
-            this.lbnss.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbnss.ForeColor = System.Drawing.Color.Black;
+            this.lbnss.Location = new System.Drawing.Point(744, 25);
             this.lbnss.Name = "lbnss";
-            this.lbnss.Size = new System.Drawing.Size(40, 17);
+            this.lbnss.Size = new System.Drawing.Size(48, 20);
             this.lbnss.TabIndex = 23;
             this.lbnss.Text = "NSS:";
             // 
@@ -93,10 +94,10 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(592, 20);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(696, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 17);
+            this.label4.Size = new System.Drawing.Size(48, 20);
             this.label4.TabIndex = 22;
             this.label4.Text = "NSS:";
             // 
@@ -106,10 +107,10 @@
             this.lbmaterno.AutoSize = true;
             this.lbmaterno.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbmaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbmaterno.Location = new System.Drawing.Point(474, 20);
-            this.lbmaterno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbmaterno.ForeColor = System.Drawing.Color.Black;
+            this.lbmaterno.Location = new System.Drawing.Point(557, 25);
             this.lbmaterno.Name = "lbmaterno";
-            this.lbmaterno.Size = new System.Drawing.Size(118, 17);
+            this.lbmaterno.Size = new System.Drawing.Size(139, 20);
             this.lbmaterno.TabIndex = 21;
             this.lbmaterno.Text = "Apellido Materno:";
             // 
@@ -118,10 +119,10 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Left;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(356, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(418, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 17);
+            this.label3.Size = new System.Drawing.Size(139, 20);
             this.label3.TabIndex = 20;
             this.label3.Text = "Apellido Materno:";
             // 
@@ -131,10 +132,10 @@
             this.lbpaterno.AutoSize = true;
             this.lbpaterno.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbpaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbpaterno.Location = new System.Drawing.Point(240, 20);
-            this.lbpaterno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbpaterno.ForeColor = System.Drawing.Color.Black;
+            this.lbpaterno.Location = new System.Drawing.Point(282, 25);
             this.lbpaterno.Name = "lbpaterno";
-            this.lbpaterno.Size = new System.Drawing.Size(116, 17);
+            this.lbpaterno.Size = new System.Drawing.Size(136, 20);
             this.lbpaterno.TabIndex = 19;
             this.lbpaterno.Text = "Apellido Paterno:";
             // 
@@ -143,10 +144,10 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(124, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(146, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 17);
+            this.label2.Size = new System.Drawing.Size(136, 20);
             this.label2.TabIndex = 18;
             this.label2.Text = "Apellido Paterno:";
             // 
@@ -156,10 +157,10 @@
             this.lbnombre.AutoSize = true;
             this.lbnombre.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnombre.Location = new System.Drawing.Point(62, 20);
-            this.lbnombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbnombre.ForeColor = System.Drawing.Color.Black;
+            this.lbnombre.Location = new System.Drawing.Point(73, 25);
             this.lbnombre.Name = "lbnombre";
-            this.lbnombre.Size = new System.Drawing.Size(62, 17);
+            this.lbnombre.Size = new System.Drawing.Size(73, 20);
             this.lbnombre.TabIndex = 17;
             this.lbnombre.Text = "Nombre:";
             // 
@@ -168,10 +169,10 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Left;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(0, 20);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(0, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 17);
+            this.label5.Size = new System.Drawing.Size(73, 20);
             this.label5.TabIndex = 16;
             this.label5.Text = "Nombre:";
             // 
@@ -180,10 +181,10 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 20);
+            this.label1.Size = new System.Drawing.Size(247, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Informacion del paciente";
             // 
@@ -197,10 +198,10 @@
             this.panel3.Controls.Add(this.Est_Realizados);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 46);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(0, 57);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(854, 407);
+            this.panel3.Size = new System.Drawing.Size(1139, 501);
             this.panel3.TabIndex = 30;
             // 
             // lisatadeestudios
@@ -209,55 +210,63 @@
             this.lisatadeestudios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lisatadeestudios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lisatadeestudios.FormattingEnabled = true;
-            this.lisatadeestudios.Location = new System.Drawing.Point(0, 301);
-            this.lisatadeestudios.Margin = new System.Windows.Forms.Padding(2);
+            this.lisatadeestudios.Location = new System.Drawing.Point(0, 368);
+            this.lisatadeestudios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lisatadeestudios.Name = "lisatadeestudios";
-            this.lisatadeestudios.Size = new System.Drawing.Size(854, 0);
+            this.lisatadeestudios.Size = new System.Drawing.Size(1139, 0);
             this.lisatadeestudios.TabIndex = 27;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnimprimir);
             this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 288);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(0, 354);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(854, 119);
+            this.panel2.Size = new System.Drawing.Size(1139, 147);
             this.panel2.TabIndex = 26;
+            // 
+            // btnimprimir
+            // 
+            this.btnimprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnimprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnimprimir.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnimprimir.ForeColor = System.Drawing.Color.Black;
+            this.btnimprimir.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.btnimprimir.IconColor = System.Drawing.Color.Black;
+            this.btnimprimir.IconSize = 40;
+            this.btnimprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnimprimir.Location = new System.Drawing.Point(561, 50);
+            this.btnimprimir.Name = "btnimprimir";
+            this.btnimprimir.Rotation = 0D;
+            this.btnimprimir.Size = new System.Drawing.Size(566, 85);
+            this.btnimprimir.TabIndex = 22;
+            this.btnimprimir.Text = "Generar Formato";
+            this.btnimprimir.UseVisualStyleBackColor = true;
+            this.btnimprimir.Visible = false;
+            this.btnimprimir.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(276, 12);
+            this.comboBox1.Location = new System.Drawing.Point(368, 11);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(570, 28);
+            this.comboBox1.Size = new System.Drawing.Size(759, 33);
             this.comboBox1.TabIndex = 20;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(520, 41);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(325, 69);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Generar Formato";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // categoriadeestudios
             // 
             this.categoriadeestudios.Dock = System.Windows.Forms.DockStyle.Top;
             this.categoriadeestudios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoriadeestudios.FormattingEnabled = true;
-            this.categoriadeestudios.Location = new System.Drawing.Point(0, 273);
-            this.categoriadeestudios.Margin = new System.Windows.Forms.Padding(2);
+            this.categoriadeestudios.Location = new System.Drawing.Point(0, 335);
+            this.categoriadeestudios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.categoriadeestudios.Name = "categoriadeestudios";
-            this.categoriadeestudios.Size = new System.Drawing.Size(854, 28);
+            this.categoriadeestudios.Size = new System.Drawing.Size(1139, 33);
             this.categoriadeestudios.TabIndex = 25;
             this.categoriadeestudios.Text = "Seleccion de categoria";
             this.categoriadeestudios.SelectedIndexChanged += new System.EventHandler(this.categoriadeestudios_SelectedValueChanged);
@@ -267,10 +276,9 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(0, 253);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(0, 310);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(256, 20);
+            this.label7.Size = new System.Drawing.Size(315, 25);
             this.label7.TabIndex = 24;
             this.label7.Text = "Seleccion de categoria de estudios";
             // 
@@ -297,8 +305,8 @@
             this.dataestudiosr.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataestudiosr.EnableHeadersVisualStyles = false;
             this.dataestudiosr.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.dataestudiosr.Location = new System.Drawing.Point(0, 48);
-            this.dataestudiosr.Margin = new System.Windows.Forms.Padding(2);
+            this.dataestudiosr.Location = new System.Drawing.Point(0, 58);
+            this.dataestudiosr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataestudiosr.Name = "dataestudiosr";
             this.dataestudiosr.ReadOnly = true;
             this.dataestudiosr.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -319,7 +327,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dataestudiosr.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataestudiosr.RowTemplate.Height = 24;
-            this.dataestudiosr.Size = new System.Drawing.Size(854, 205);
+            this.dataestudiosr.Size = new System.Drawing.Size(1139, 252);
             this.dataestudiosr.TabIndex = 23;
             // 
             // Est_Realizados
@@ -327,10 +335,10 @@
             this.Est_Realizados.Dock = System.Windows.Forms.DockStyle.Top;
             this.Est_Realizados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Est_Realizados.FormattingEnabled = true;
-            this.Est_Realizados.Location = new System.Drawing.Point(0, 20);
-            this.Est_Realizados.Margin = new System.Windows.Forms.Padding(2);
+            this.Est_Realizados.Location = new System.Drawing.Point(0, 25);
+            this.Est_Realizados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Est_Realizados.Name = "Est_Realizados";
-            this.Est_Realizados.Size = new System.Drawing.Size(854, 28);
+            this.Est_Realizados.Size = new System.Drawing.Size(1139, 33);
             this.Est_Realizados.TabIndex = 22;
             this.Est_Realizados.Text = "Seleccion de categoria";
             // 
@@ -339,23 +347,23 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 20);
+            this.label6.Size = new System.Drawing.Size(188, 25);
             this.label6.TabIndex = 8;
             this.label6.Text = "Estudios Realizados";
             // 
             // Paciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 453);
+            this.ClientSize = new System.Drawing.Size(1139, 558);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(854, 453);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1139, 558);
             this.Name = "Paciente";
             this.Text = "Paciente";
             this.Load += new System.EventHandler(this.Estudios_Load);
@@ -376,7 +384,6 @@
         private System.Windows.Forms.CheckedListBox lisatadeestudios;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox categoriadeestudios;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataestudiosr;
@@ -391,5 +398,6 @@
         private System.Windows.Forms.Label lbnombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton btnimprimir;
     }
 }

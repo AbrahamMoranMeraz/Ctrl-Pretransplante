@@ -119,5 +119,10 @@ namespace Control_PreTransplante_V2
         {
             txt_fecha.Clear();
         }
+
+        private void RgPacientes_Load(object sender, EventArgs e)
+        { 
+
+        }
     }
 }

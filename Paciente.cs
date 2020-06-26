@@ -188,7 +188,7 @@ namespace Control_PreTransplante_V2
             }
             for (int i = 0; i < lisatadeestudios.Items.Count; i++)
                 lisatadeestudios.SetItemChecked(i, true);
-            button1.Visible = true;
+            btnimprimir.Visible = true;
         }
 
         private void dataestudiosr_CellContentClick(object sender, DataGridViewCellEventArgs e)

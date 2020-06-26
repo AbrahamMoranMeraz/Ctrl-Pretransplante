@@ -1,6 +1,6 @@
 ﻿namespace Control_PreTransplante_V2
 {
-    partial class RgPacientes
+    partial class EditarPacientes
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btncancelar = new FontAwesome.Sharp.IconButton();
+            this.btneditar = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.btn_fecha = new System.Windows.Forms.Button();
             this.txt_fecha = new System.Windows.Forms.TextBox();
-            this.registrarP = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.rdb_femenino = new System.Windows.Forms.RadioButton();
             this.rdb_masculino = new System.Windows.Forms.RadioButton();
@@ -55,27 +56,65 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btncancelar);
+            this.groupBox1.Controls.Add(this.btneditar);
             this.groupBox1.Controls.Add(this.panel5);
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.MinimumSize = new System.Drawing.Size(1215, 736);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1215, 736);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro Paciente";
             // 
+            // btncancelar
+            // 
+            this.btncancelar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancelar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btncancelar.IconChar = FontAwesome.Sharp.IconChar.Ban;
+            this.btncancelar.IconColor = System.Drawing.Color.Black;
+            this.btncancelar.IconSize = 40;
+            this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncancelar.Location = new System.Drawing.Point(984, 422);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Rotation = 0D;
+            this.btncancelar.Size = new System.Drawing.Size(228, 311);
+            this.btncancelar.TabIndex = 4;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
+            // 
+            // btneditar
+            // 
+            this.btneditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneditar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btneditar.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
+            this.btneditar.IconColor = System.Drawing.Color.Black;
+            this.btneditar.IconSize = 40;
+            this.btneditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneditar.Location = new System.Drawing.Point(984, 26);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Rotation = 0D;
+            this.btneditar.Size = new System.Drawing.Size(228, 311);
+            this.btneditar.TabIndex = 3;
+            this.btneditar.Text = "Actualizar\r\nDatos\r\n";
+            this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.monthCalendar1);
             this.panel5.Controls.Add(this.btn_fecha);
             this.panel5.Controls.Add(this.txt_fecha);
-            this.panel5.Controls.Add(this.registrarP);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(529, 26);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(564, 26);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(683, 707);
+            this.panel5.Size = new System.Drawing.Size(420, 707);
             this.panel5.TabIndex = 2;
             // 
             // monthCalendar1
@@ -84,16 +123,17 @@
             this.monthCalendar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.monthCalendar1.Location = new System.Drawing.Point(0, 0);
             this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 18;
+            this.monthCalendar1.TabIndex = 19;
             // 
             // btn_fecha
             // 
             this.btn_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_fecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_fecha.ForeColor = System.Drawing.Color.Black;
             this.btn_fecha.Location = new System.Drawing.Point(0, 576);
             this.btn_fecha.Margin = new System.Windows.Forms.Padding(4);
             this.btn_fecha.Name = "btn_fecha";
-            this.btn_fecha.Size = new System.Drawing.Size(434, 93);
+            this.btn_fecha.Size = new System.Drawing.Size(420, 93);
             this.btn_fecha.TabIndex = 17;
             this.btn_fecha.Text = "Agregar fecha";
             this.btn_fecha.UseVisualStyleBackColor = true;
@@ -106,28 +146,10 @@
             this.txt_fecha.Location = new System.Drawing.Point(0, 669);
             this.txt_fecha.Margin = new System.Windows.Forms.Padding(4);
             this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(434, 38);
+            this.txt_fecha.Size = new System.Drawing.Size(420, 38);
             this.txt_fecha.TabIndex = 14;
             this.txt_fecha.Text = "AÑO-MES-DIA";
             this.txt_fecha.Click += new System.EventHandler(this.txt_fecha_Click);
-            // 
-            // registrarP
-            // 
-            this.registrarP.Dock = System.Windows.Forms.DockStyle.Right;
-            this.registrarP.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.registrarP.ForeColor = System.Drawing.Color.Black;
-            this.registrarP.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
-            this.registrarP.IconColor = System.Drawing.Color.Black;
-            this.registrarP.IconSize = 50;
-            this.registrarP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.registrarP.Location = new System.Drawing.Point(434, 0);
-            this.registrarP.Name = "registrarP";
-            this.registrarP.Rotation = 0D;
-            this.registrarP.Size = new System.Drawing.Size(249, 707);
-            this.registrarP.TabIndex = 0;
-            this.registrarP.Text = "Registrar";
-            this.registrarP.UseVisualStyleBackColor = true;
-            this.registrarP.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // panel3
             // 
@@ -148,7 +170,7 @@
             this.panel3.ForeColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(3, 26);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(526, 707);
+            this.panel3.Size = new System.Drawing.Size(561, 707);
             this.panel3.TabIndex = 0;
             // 
             // rdb_femenino
@@ -207,7 +229,7 @@
             this.txt_nombres.MaxLength = 15;
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.ShortcutsEnabled = false;
-            this.txt_nombres.Size = new System.Drawing.Size(251, 30);
+            this.txt_nombres.Size = new System.Drawing.Size(286, 30);
             this.txt_nombres.TabIndex = 14;
             // 
             // lbl_apellidoP
@@ -232,7 +254,7 @@
             this.txt_numseg.Margin = new System.Windows.Forms.Padding(4);
             this.txt_numseg.MaxLength = 11;
             this.txt_numseg.Name = "txt_numseg";
-            this.txt_numseg.Size = new System.Drawing.Size(251, 30);
+            this.txt_numseg.Size = new System.Drawing.Size(286, 30);
             this.txt_numseg.TabIndex = 17;
             // 
             // lbl_apellidoM
@@ -271,7 +293,7 @@
             this.txt_curp.Margin = new System.Windows.Forms.Padding(4);
             this.txt_curp.MaxLength = 18;
             this.txt_curp.Name = "txt_curp";
-            this.txt_curp.Size = new System.Drawing.Size(251, 30);
+            this.txt_curp.Size = new System.Drawing.Size(286, 30);
             this.txt_curp.TabIndex = 18;
             // 
             // lbl_numseg
@@ -310,7 +332,7 @@
             this.txt_apellidoP.Margin = new System.Windows.Forms.Padding(4);
             this.txt_apellidoP.MaxLength = 15;
             this.txt_apellidoP.Name = "txt_apellidoP";
-            this.txt_apellidoP.Size = new System.Drawing.Size(251, 30);
+            this.txt_apellidoP.Size = new System.Drawing.Size(286, 30);
             this.txt_apellidoP.TabIndex = 15;
             // 
             // txt_apellidoM
@@ -321,10 +343,10 @@
             this.txt_apellidoM.Margin = new System.Windows.Forms.Padding(4);
             this.txt_apellidoM.MaxLength = 15;
             this.txt_apellidoM.Name = "txt_apellidoM";
-            this.txt_apellidoM.Size = new System.Drawing.Size(251, 30);
+            this.txt_apellidoM.Size = new System.Drawing.Size(286, 30);
             this.txt_apellidoM.TabIndex = 16;
             // 
-            // RgPacientes
+            // EditarPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -332,9 +354,9 @@
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RgPacientes";
+            this.Name = "EditarPacientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RgPacientes";
-            this.Load += new System.EventHandler(this.RgPacientes_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -347,23 +369,24 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton registrarP;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RadioButton rdb_femenino;
-        private System.Windows.Forms.RadioButton rdb_masculino;
         private System.Windows.Forms.Label lbl_sexo;
-        private System.Windows.Forms.TextBox txt_nombres;
         private System.Windows.Forms.Label lbl_apellidoP;
-        private System.Windows.Forms.TextBox txt_numseg;
         private System.Windows.Forms.Label lbl_apellidoM;
         private System.Windows.Forms.Label lbl_nombres;
-        private System.Windows.Forms.TextBox txt_curp;
         private System.Windows.Forms.Label lbl_numseg;
         private System.Windows.Forms.Label lbl_curp;
-        private System.Windows.Forms.TextBox txt_apellidoP;
-        private System.Windows.Forms.TextBox txt_apellidoM;
-        private System.Windows.Forms.TextBox txt_fecha;
         private System.Windows.Forms.Button btn_fecha;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        public System.Windows.Forms.RadioButton rdb_femenino;
+        public System.Windows.Forms.RadioButton rdb_masculino;
+        public System.Windows.Forms.TextBox txt_nombres;
+        public System.Windows.Forms.TextBox txt_numseg;
+        public System.Windows.Forms.TextBox txt_curp;
+        public System.Windows.Forms.TextBox txt_apellidoP;
+        public System.Windows.Forms.TextBox txt_apellidoM;
+        public System.Windows.Forms.TextBox txt_fecha;
+        private FontAwesome.Sharp.IconButton btncancelar;
+        private FontAwesome.Sharp.IconButton btneditar;
     }
 }
