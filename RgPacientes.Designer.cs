@@ -33,6 +33,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.btn_fecha = new System.Windows.Forms.Button();
+            this.txt_fecha = new System.Windows.Forms.TextBox();
             this.registrarP = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.rdb_femenino = new System.Windows.Forms.RadioButton();
@@ -48,9 +51,6 @@
             this.lbl_curp = new System.Windows.Forms.Label();
             this.txt_apellidoP = new System.Windows.Forms.TextBox();
             this.txt_apellidoM = new System.Windows.Forms.TextBox();
-            this.txt_fecha = new System.Windows.Forms.TextBox();
-            this.btn_fecha = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -65,17 +65,19 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1215, 174);
+            this.panel1.Size = new System.Drawing.Size(911, 141);
             this.panel1.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(236, 116);
+            this.button1.Location = new System.Drawing.Point(177, 94);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(204, 52);
+            this.button1.Size = new System.Drawing.Size(153, 42);
             this.button1.TabIndex = 1;
             this.button1.Text = "Agregar Fotografia";
             this.button1.UseVisualStyleBackColor = true;
@@ -85,9 +87,10 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(162, 167);
+            this.pictureBox1.Size = new System.Drawing.Size(122, 136);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -97,9 +100,11 @@
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(0, 174);
+            this.groupBox1.Location = new System.Drawing.Point(0, 141);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1215, 562);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(911, 457);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro Paciente";
@@ -111,10 +116,42 @@
             this.panel5.Controls.Add(this.txt_fecha);
             this.panel5.Controls.Add(this.registrarP);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(529, 26);
+            this.panel5.Location = new System.Drawing.Point(396, 21);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(683, 533);
+            this.panel5.Size = new System.Drawing.Size(513, 434);
             this.panel5.TabIndex = 2;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 2);
+            this.monthCalendar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.monthCalendar1.Location = new System.Drawing.Point(0, 0);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 18;
+            // 
+            // btn_fecha
+            // 
+            this.btn_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_fecha.Location = new System.Drawing.Point(0, 326);
+            this.btn_fecha.Name = "btn_fecha";
+            this.btn_fecha.Size = new System.Drawing.Size(326, 76);
+            this.btn_fecha.TabIndex = 17;
+            this.btn_fecha.Text = "Agregar fecha";
+            this.btn_fecha.UseVisualStyleBackColor = true;
+            this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
+            // 
+            // txt_fecha
+            // 
+            this.txt_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_fecha.Location = new System.Drawing.Point(0, 402);
+            this.txt_fecha.Name = "txt_fecha";
+            this.txt_fecha.Size = new System.Drawing.Size(326, 32);
+            this.txt_fecha.TabIndex = 14;
+            this.txt_fecha.Text = "AÑO-MES-DIA";
+            this.txt_fecha.Click += new System.EventHandler(this.txt_fecha_Click);
             // 
             // registrarP
             // 
@@ -124,10 +161,11 @@
             this.registrarP.IconColor = System.Drawing.Color.Black;
             this.registrarP.IconSize = 50;
             this.registrarP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.registrarP.Location = new System.Drawing.Point(434, 0);
+            this.registrarP.Location = new System.Drawing.Point(326, 0);
+            this.registrarP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.registrarP.Name = "registrarP";
             this.registrarP.Rotation = 0D;
-            this.registrarP.Size = new System.Drawing.Size(249, 533);
+            this.registrarP.Size = new System.Drawing.Size(187, 434);
             this.registrarP.TabIndex = 0;
             this.registrarP.Text = "Registrar";
             this.registrarP.UseVisualStyleBackColor = true;
@@ -149,9 +187,10 @@
             this.panel3.Controls.Add(this.txt_apellidoP);
             this.panel3.Controls.Add(this.txt_apellidoM);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(3, 26);
+            this.panel3.Location = new System.Drawing.Point(2, 21);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(526, 533);
+            this.panel3.Size = new System.Drawing.Size(394, 434);
             this.panel3.TabIndex = 0;
             // 
             // rdb_femenino
@@ -159,10 +198,9 @@
             this.rdb_femenino.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rdb_femenino.AutoSize = true;
-            this.rdb_femenino.Location = new System.Drawing.Point(87, 364);
-            this.rdb_femenino.Margin = new System.Windows.Forms.Padding(4);
+            this.rdb_femenino.Location = new System.Drawing.Point(65, 296);
             this.rdb_femenino.Name = "rdb_femenino";
-            this.rdb_femenino.Size = new System.Drawing.Size(120, 29);
+            this.rdb_femenino.Size = new System.Drawing.Size(98, 24);
             this.rdb_femenino.TabIndex = 25;
             this.rdb_femenino.Text = "Femenino";
             this.rdb_femenino.UseVisualStyleBackColor = true;
@@ -174,10 +212,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rdb_masculino.AutoSize = true;
             this.rdb_masculino.Checked = true;
-            this.rdb_masculino.Location = new System.Drawing.Point(87, 336);
-            this.rdb_masculino.Margin = new System.Windows.Forms.Padding(4);
+            this.rdb_masculino.Location = new System.Drawing.Point(65, 273);
             this.rdb_masculino.Name = "rdb_masculino";
-            this.rdb_masculino.Size = new System.Drawing.Size(122, 29);
+            this.rdb_masculino.Size = new System.Drawing.Size(98, 24);
             this.rdb_masculino.TabIndex = 24;
             this.rdb_masculino.TabStop = true;
             this.rdb_masculino.Text = "Masculino";
@@ -190,10 +227,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_sexo.AutoSize = true;
             this.lbl_sexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_sexo.Location = new System.Drawing.Point(4, 340);
-            this.lbl_sexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_sexo.Location = new System.Drawing.Point(3, 276);
             this.lbl_sexo.Name = "lbl_sexo";
-            this.lbl_sexo.Size = new System.Drawing.Size(58, 25);
+            this.lbl_sexo.Size = new System.Drawing.Size(45, 20);
             this.lbl_sexo.TabIndex = 23;
             this.lbl_sexo.Text = "Sexo";
             // 
@@ -202,12 +238,11 @@
             this.txt_nombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_nombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_nombres.Location = new System.Drawing.Point(233, 62);
-            this.txt_nombres.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_nombres.Location = new System.Drawing.Point(175, 50);
             this.txt_nombres.MaxLength = 15;
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.ShortcutsEnabled = false;
-            this.txt_nombres.Size = new System.Drawing.Size(251, 30);
+            this.txt_nombres.Size = new System.Drawing.Size(189, 26);
             this.txt_nombres.TabIndex = 14;
             // 
             // lbl_apellidoP
@@ -216,10 +251,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_apellidoP.AutoSize = true;
             this.lbl_apellidoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_apellidoP.Location = new System.Drawing.Point(4, 117);
-            this.lbl_apellidoP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_apellidoP.Location = new System.Drawing.Point(3, 95);
             this.lbl_apellidoP.Name = "lbl_apellidoP";
-            this.lbl_apellidoP.Size = new System.Drawing.Size(153, 25);
+            this.lbl_apellidoP.Size = new System.Drawing.Size(124, 20);
             this.lbl_apellidoP.TabIndex = 13;
             this.lbl_apellidoP.Text = "Apellido paterno";
             // 
@@ -227,11 +261,10 @@
             // 
             this.txt_numseg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_numseg.Location = new System.Drawing.Point(233, 210);
-            this.txt_numseg.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_numseg.Location = new System.Drawing.Point(175, 171);
             this.txt_numseg.MaxLength = 11;
             this.txt_numseg.Name = "txt_numseg";
-            this.txt_numseg.Size = new System.Drawing.Size(251, 30);
+            this.txt_numseg.Size = new System.Drawing.Size(189, 26);
             this.txt_numseg.TabIndex = 17;
             // 
             // lbl_apellidoM
@@ -240,10 +273,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_apellidoM.AutoSize = true;
             this.lbl_apellidoM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_apellidoM.Location = new System.Drawing.Point(4, 166);
-            this.lbl_apellidoM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_apellidoM.Location = new System.Drawing.Point(3, 135);
             this.lbl_apellidoM.Name = "lbl_apellidoM";
-            this.lbl_apellidoM.Size = new System.Drawing.Size(158, 25);
+            this.lbl_apellidoM.Size = new System.Drawing.Size(128, 20);
             this.lbl_apellidoM.TabIndex = 19;
             this.lbl_apellidoM.Text = "Apellido materno";
             // 
@@ -253,10 +285,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_nombres.AutoSize = true;
             this.lbl_nombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombres.Location = new System.Drawing.Point(4, 68);
-            this.lbl_nombres.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_nombres.Location = new System.Drawing.Point(3, 55);
             this.lbl_nombres.Name = "lbl_nombres";
-            this.lbl_nombres.Size = new System.Drawing.Size(110, 25);
+            this.lbl_nombres.Size = new System.Drawing.Size(87, 20);
             this.lbl_nombres.TabIndex = 20;
             this.lbl_nombres.Text = "Nombre (s)";
             // 
@@ -264,11 +295,10 @@
             // 
             this.txt_curp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_curp.Location = new System.Drawing.Point(233, 259);
-            this.txt_curp.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_curp.Location = new System.Drawing.Point(175, 210);
             this.txt_curp.MaxLength = 18;
             this.txt_curp.Name = "txt_curp";
-            this.txt_curp.Size = new System.Drawing.Size(251, 30);
+            this.txt_curp.Size = new System.Drawing.Size(189, 26);
             this.txt_curp.TabIndex = 18;
             // 
             // lbl_numseg
@@ -277,10 +307,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_numseg.AutoSize = true;
             this.lbl_numseg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_numseg.Location = new System.Drawing.Point(4, 215);
-            this.lbl_numseg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_numseg.Location = new System.Drawing.Point(3, 175);
             this.lbl_numseg.Name = "lbl_numseg";
-            this.lbl_numseg.Size = new System.Drawing.Size(153, 25);
+            this.lbl_numseg.Size = new System.Drawing.Size(122, 20);
             this.lbl_numseg.TabIndex = 21;
             this.lbl_numseg.Text = "Num.Seg.Social";
             // 
@@ -290,10 +319,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_curp.AutoSize = true;
             this.lbl_curp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_curp.Location = new System.Drawing.Point(4, 265);
-            this.lbl_curp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_curp.Location = new System.Drawing.Point(3, 215);
             this.lbl_curp.Name = "lbl_curp";
-            this.lbl_curp.Size = new System.Drawing.Size(67, 25);
+            this.lbl_curp.Size = new System.Drawing.Size(54, 20);
             this.lbl_curp.TabIndex = 22;
             this.lbl_curp.Text = "CURP";
             // 
@@ -301,64 +329,31 @@
             // 
             this.txt_apellidoP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_apellidoP.Location = new System.Drawing.Point(233, 112);
-            this.txt_apellidoP.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_apellidoP.Location = new System.Drawing.Point(175, 91);
             this.txt_apellidoP.MaxLength = 15;
             this.txt_apellidoP.Name = "txt_apellidoP";
-            this.txt_apellidoP.Size = new System.Drawing.Size(251, 30);
+            this.txt_apellidoP.Size = new System.Drawing.Size(189, 26);
             this.txt_apellidoP.TabIndex = 15;
             // 
             // txt_apellidoM
             // 
             this.txt_apellidoM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_apellidoM.Location = new System.Drawing.Point(233, 161);
-            this.txt_apellidoM.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_apellidoM.Location = new System.Drawing.Point(175, 131);
             this.txt_apellidoM.MaxLength = 15;
             this.txt_apellidoM.Name = "txt_apellidoM";
-            this.txt_apellidoM.Size = new System.Drawing.Size(251, 30);
+            this.txt_apellidoM.Size = new System.Drawing.Size(189, 26);
             this.txt_apellidoM.TabIndex = 16;
-            // 
-            // txt_fecha
-            // 
-            this.txt_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fecha.Location = new System.Drawing.Point(0, 495);
-            this.txt_fecha.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(434, 38);
-            this.txt_fecha.TabIndex = 14;
-            this.txt_fecha.Text = "AÑO-MES-DIA";
-            this.txt_fecha.Click += new System.EventHandler(this.txt_fecha_Click);
-            // 
-            // btn_fecha
-            // 
-            this.btn_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_fecha.Location = new System.Drawing.Point(0, 402);
-            this.btn_fecha.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_fecha.Name = "btn_fecha";
-            this.btn_fecha.Size = new System.Drawing.Size(434, 93);
-            this.btn_fecha.TabIndex = 17;
-            this.btn_fecha.Text = "Agregar fecha";
-            this.btn_fecha.UseVisualStyleBackColor = true;
-            this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 2);
-            this.monthCalendar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.monthCalendar1.Location = new System.Drawing.Point(0, 0);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 18;
             // 
             // RgPacientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 736);
+            this.ClientSize = new System.Drawing.Size(911, 598);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RgPacientes";
             this.Text = "RgPacientes";
             this.panel1.ResumeLayout(false);

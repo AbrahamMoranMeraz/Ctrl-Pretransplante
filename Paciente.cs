@@ -14,6 +14,7 @@ namespace Control_PreTransplante_V2
     public partial class Paciente : Form
     {
         string[] datos;
+        string matricula;
         DataTable table;
 
         public Paciente()
@@ -33,6 +34,7 @@ namespace Control_PreTransplante_V2
             this.datos = new string[datos.Length];
             this.datos = datos;
         }
+
 
         public void ActualizarDatos(string[] datos)
         {
@@ -81,19 +83,25 @@ namespace Control_PreTransplante_V2
             int y = 0;//Contador de estudios que si se seleccionaron
             Capa_Negocio.CN_Paciente cN_ = new Capa_Negocio.CN_Paciente();
             //----------------------datos del medico----------------------------------//
-            //Capa_AccesoDatos.UsuarioLogin medicos = new Capa_AccesoDatos.UsuarioLogin();
-            //DataTable dataTable = new DataTable();
-            //dataTable=medicos.DatosMed();
-            //string[] medico = new string[4];
-            //int i = 0;
-            //foreach (DataRow row in dataTable.Rows)
-            //{
-            ////    foreach (var item in row.ItemArray)
-            //    {
-            //        medico[i] = item.ToString();
-            //        i++;
-            //    }
-            //}
+            Capa_AccesoDatos.UsuarioLogin medicos = new Capa_AccesoDatos.UsuarioLogin();
+            Login user = new Login();
+            DataTable tabla = new DataTable();
+            tabla = medicos.Matricula(user.usuario);
+            for (int q = 0; q < tabla.Rows.Count; q++)
+            {
+                matricula = (tabla.Rows[x].ItemArray[0].ToString());
+            }
+            DataTable dataTable = new DataTable();
+            dataTable = medicos.DatosMed(matricula);
+            List<string> datosmed = new List<string>();
+            
+            foreach (DataRow row in dataTable.Rows)
+            {
+                foreach (var item in row.ItemArray)
+                {
+                    datosmed.Add(item.ToString());
+                }
+            }
             //-------------------------------------------------------------------------//
             string[] listadeestudios = new string[18];
             for (x = 0; x < lisatadeestudios.Items.Count; x++)
@@ -111,15 +119,15 @@ namespace Control_PreTransplante_V2
             }
             if (categoriadeestudios.SelectedIndex==0 || categoriadeestudios.SelectedIndex == 1)
             {
-                MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString()));
+                MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), datosmed));
             }
             else if (categoriadeestudios.SelectedIndex==2 || categoriadeestudios.SelectedIndex == 3 || categoriadeestudios.SelectedIndex == 4)
             {
-                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString()));
+                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), datosmed));
             }
             else if (categoriadeestudios.SelectedIndex == 5 || categoriadeestudios.SelectedIndex == 6)
             {
-                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoRadiologia(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(),categoriadeestudios.SelectedItem.ToString()));
+                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoRadiologia(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(),categoriadeestudios.SelectedItem.ToString(), datosmed));
             }
             MostrarEstudios(datos[5]);
         }

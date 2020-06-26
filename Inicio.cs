@@ -14,7 +14,6 @@ namespace Control_PreTransplante_V2
 {
     public partial class Inicio : Form
     {
-        public string usuario;
         public Inicio()
         {
             InitializeComponent();
@@ -201,8 +200,9 @@ namespace Control_PreTransplante_V2
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            Login usuario = new Login();
             OcultarSubmenu();
-            Blanco m = new Blanco("Abr06");
+            Blanco m = new Blanco(usuario.usuario);
             m.TopLevel = false;
             panelcentral.Controls.Add(m);
             panelcentral.Tag = m;

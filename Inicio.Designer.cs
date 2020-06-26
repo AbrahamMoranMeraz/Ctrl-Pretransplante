@@ -64,7 +64,7 @@
             this.panelContenedor.Controls.Add(this.paneltitulo);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.MinimumSize = new System.Drawing.Size(1125, 650);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1125, 650);
@@ -75,7 +75,7 @@
             this.panelcentral.BackColor = System.Drawing.Color.White;
             this.panelcentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcentral.Location = new System.Drawing.Point(214, 52);
-            this.panelcentral.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelcentral.Margin = new System.Windows.Forms.Padding(2);
             this.panelcentral.MinimumSize = new System.Drawing.Size(911, 598);
             this.panelcentral.Name = "panelcentral";
             this.panelcentral.Size = new System.Drawing.Size(911, 598);
@@ -92,7 +92,7 @@
             this.panelmenu.Controls.Add(this.pictureBox1);
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelmenu.Location = new System.Drawing.Point(0, 52);
-            this.panelmenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelmenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelmenu.Name = "panelmenu";
             this.panelmenu.Size = new System.Drawing.Size(214, 598);
             this.panelmenu.TabIndex = 3;
@@ -108,7 +108,7 @@
             this.btncerrarsecion.IconSize = 30;
             this.btncerrarsecion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncerrarsecion.Location = new System.Drawing.Point(0, 532);
-            this.btncerrarsecion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btncerrarsecion.Margin = new System.Windows.Forms.Padding(2);
             this.btncerrarsecion.Name = "btncerrarsecion";
             this.btncerrarsecion.Rotation = 0D;
             this.btncerrarsecion.Size = new System.Drawing.Size(214, 66);
@@ -123,7 +123,7 @@
             this.panelsubmenupaciente.Controls.Add(this.btnlista);
             this.panelsubmenupaciente.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelsubmenupaciente.Location = new System.Drawing.Point(0, 210);
-            this.panelsubmenupaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelsubmenupaciente.Margin = new System.Windows.Forms.Padding(2);
             this.panelsubmenupaciente.Name = "panelsubmenupaciente";
             this.panelsubmenupaciente.Size = new System.Drawing.Size(214, 76);
             this.panelsubmenupaciente.TabIndex = 3;
@@ -138,7 +138,7 @@
             this.btnnuevop.IconColor = System.Drawing.Color.White;
             this.btnnuevop.IconSize = 30;
             this.btnnuevop.Location = new System.Drawing.Point(0, 37);
-            this.btnnuevop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnnuevop.Margin = new System.Windows.Forms.Padding(2);
             this.btnnuevop.Name = "btnnuevop";
             this.btnnuevop.Rotation = 0D;
             this.btnnuevop.Size = new System.Drawing.Size(214, 37);
@@ -158,7 +158,7 @@
             this.btnlista.IconColor = System.Drawing.Color.White;
             this.btnlista.IconSize = 30;
             this.btnlista.Location = new System.Drawing.Point(0, 0);
-            this.btnlista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlista.Margin = new System.Windows.Forms.Padding(2);
             this.btnlista.Name = "btnlista";
             this.btnlista.Rotation = 0D;
             this.btnlista.Size = new System.Drawing.Size(214, 37);
@@ -179,7 +179,7 @@
             this.btnpaciente.IconSize = 30;
             this.btnpaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnpaciente.Location = new System.Drawing.Point(0, 173);
-            this.btnpaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnpaciente.Margin = new System.Windows.Forms.Padding(2);
             this.btnpaciente.Name = "btnpaciente";
             this.btnpaciente.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.btnpaciente.Rotation = 0D;
@@ -202,7 +202,7 @@
             this.btninicio.IconSize = 35;
             this.btninicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btninicio.Location = new System.Drawing.Point(0, 136);
-            this.btninicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btninicio.Margin = new System.Windows.Forms.Padding(2);
             this.btninicio.Name = "btninicio";
             this.btninicio.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.btninicio.Rotation = 0D;
@@ -219,7 +219,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::Control_PreTransplante_V2.Properties.Resources.logo_imss;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(214, 136);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -231,7 +231,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(162)))), ((int)(((byte)(110)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 32);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1125, 20);
             this.panel1.TabIndex = 1;
@@ -245,7 +245,7 @@
             this.paneltitulo.Controls.Add(this.btncerrar);
             this.paneltitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltitulo.Location = new System.Drawing.Point(0, 0);
-            this.paneltitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.paneltitulo.Margin = new System.Windows.Forms.Padding(2);
             this.paneltitulo.Name = "paneltitulo";
             this.paneltitulo.Size = new System.Drawing.Size(1125, 32);
             this.paneltitulo.TabIndex = 0;
@@ -261,7 +261,7 @@
             this.btnrestaurar.IconColor = System.Drawing.Color.White;
             this.btnrestaurar.IconSize = 23;
             this.btnrestaurar.Location = new System.Drawing.Point(1065, 5);
-            this.btnrestaurar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnrestaurar.Margin = new System.Windows.Forms.Padding(2);
             this.btnrestaurar.Name = "btnrestaurar";
             this.btnrestaurar.Size = new System.Drawing.Size(26, 23);
             this.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -280,7 +280,7 @@
             this.btnmaximisar.IconColor = System.Drawing.Color.White;
             this.btnmaximisar.IconSize = 23;
             this.btnmaximisar.Location = new System.Drawing.Point(1065, 5);
-            this.btnmaximisar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmaximisar.Margin = new System.Windows.Forms.Padding(2);
             this.btnmaximisar.Name = "btnmaximisar";
             this.btnmaximisar.Size = new System.Drawing.Size(26, 23);
             this.btnmaximisar.TabIndex = 4;
@@ -298,7 +298,7 @@
             this.btnminimizar.IconColor = System.Drawing.Color.White;
             this.btnminimizar.IconSize = 21;
             this.btnminimizar.Location = new System.Drawing.Point(1040, 5);
-            this.btnminimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnminimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnminimizar.Name = "btnminimizar";
             this.btnminimizar.Size = new System.Drawing.Size(21, 23);
             this.btnminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -317,7 +317,7 @@
             this.btncerrar.IconColor = System.Drawing.Color.White;
             this.btncerrar.IconSize = 23;
             this.btncerrar.Location = new System.Drawing.Point(1097, 5);
-            this.btncerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btncerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(26, 23);
             this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -334,7 +334,7 @@
             this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1023, 590);
             this.Name = "Inicio";
             this.ShowIcon = false;

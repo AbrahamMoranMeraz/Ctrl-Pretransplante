@@ -18,14 +18,14 @@ namespace Capa_Negocio
         static String[] datosPaciente;
         #endregion
 
-        static public String NuevoFormato(string [] e, string [] d, int y, string comboBox, string tipo)
+        static public String NuevoFormato(string [] e, string [] d, int y, string comboBox, string tipo, List<string>medico)
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F1.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "1.docx", y, comboBox, tipo);
+            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F1.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "1.docx", y, comboBox, tipo, medico);
         }
 
-        static public String FormatoServicios(string[] e, string[] d, int y, string comboBox, string tipo)
+        static public String FormatoServicios(string[] e, string[] d, int y, string comboBox, string tipo, List<string> medico)
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
@@ -36,13 +36,13 @@ namespace Capa_Negocio
             {
                 if (y > 1)
                 {
-                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_3.docx", j, comboBox, tipo);
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_3.docx", j, comboBox, tipo, medico);
                     j = j + 2;
                     y = y - 2;
                 }
                 else if (y == 1)
                 {
-                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "3.docx", j, comboBox, tipo);
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "3.docx", j, comboBox, tipo, medico);
                     y = y - 1;
                 }
             }
@@ -50,7 +50,7 @@ namespace Capa_Negocio
             return "Formatos Impresos!";
         }
 
-        static public String FormatoRadiologia(string[] e, string[] d, int y, string comboBox, string tipo)
+        static public String FormatoRadiologia(string[] e, string[] d, int y, string comboBox, string tipo, List<string> medico)
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
@@ -60,13 +60,13 @@ namespace Capa_Negocio
             {
                 if (y > 1)
                 {
-                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_2.docx", j, comboBox, tipo);
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_2.docx", j, comboBox, tipo, medico);
                     j = j + 2;
                     y = y - 2;
                 }
                 else if (y == 1)
                 {
-                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", j, comboBox, tipo);
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", j, comboBox, tipo, medico);
                     y = y - 1;
                 }
             }
@@ -100,7 +100,7 @@ namespace Capa_Negocio
                 ref matchControl);
         }
 
-        private static String CreateWordDocument(object filename, object SaveAs, int cantidaddeestudiosselect, string combobox, string tipo)
+        private static String CreateWordDocument(object filename, object SaveAs, int cantidaddeestudiosselect, string combobox, string tipo, List<string> medico)
         {
             Word.Application wordApp = new Word.Application();
             object missing = Missing.Value;
@@ -125,6 +125,11 @@ namespace Capa_Negocio
                 FindAndReplace(wordApp, "<secondname>", datosPaciente[3]);
                 FindAndReplace(wordApp, "<cedula>", datosPaciente[5]);
                 FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
+                //Datos basicos del medico
+                FindAndReplace(wordApp, "<mname>", medico[6]);
+                FindAndReplace(wordApp, "<mfname>", medico[7]);
+                FindAndReplace(wordApp, "<msname>", medico[8]);
+                FindAndReplace(wordApp, "<matricula>", medico[9]);
                 #region Servicios
                 //Servicios
                 FindAndReplace(wordApp, "<servicio1>", estudiosSeleccionados[cantidaddeestudiosselect]);
