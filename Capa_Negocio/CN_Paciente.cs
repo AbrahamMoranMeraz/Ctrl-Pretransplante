@@ -15,9 +15,7 @@ namespace Capa_Negocio
         private Acceso_Datos objPaciente = new Acceso_Datos();
         public DataTable MostrarPaci()
         {
-            DataTable tabla = new DataTable();
-            tabla = objPaciente.MostrarDatos();
-            return tabla;
+            return objPaciente.MostrarDatos();
         }
 
         public DataTable Estudios(string nss)
@@ -63,6 +61,10 @@ namespace Capa_Negocio
             objPaciente.InsertarEstudios(num_seg, nombre, matricula);
         }
 
+        public String UsuarioActual(string usuario)
+        {
+           return objPaciente.UsuarioActual(usuario);
+        }
 
     }
 }

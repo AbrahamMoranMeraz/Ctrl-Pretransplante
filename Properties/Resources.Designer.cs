@@ -89,5 +89,15 @@ namespace Control_PreTransplante_V2.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_IMSS_ {
+            get {
+                object obj = ResourceManager.GetObject("Logo_IMSS_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
