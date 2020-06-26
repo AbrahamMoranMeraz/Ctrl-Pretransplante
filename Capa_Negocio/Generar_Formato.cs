@@ -29,12 +29,7 @@ namespace Capa_Negocio
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            //for (int i = 0; i < y; i++)
-            //{
-            //    int j = i;
-            //    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "3.docx", j, comboBox);
-            //}
-
+            
             int j = 0;
 
             while (y > 0)
@@ -124,16 +119,19 @@ namespace Capa_Negocio
                                         ref missing, ref missing, ref missing, ref missing);
                 myWordDoc.Activate();
 
-                //find and replace
+                //Encontrar y remplazar daots basicos del paciente
                 FindAndReplace(wordApp, "<name>", datosPaciente[1]);
                 FindAndReplace(wordApp, "<firstname>", datosPaciente[2]);
                 FindAndReplace(wordApp, "<secondname>", datosPaciente[3]);
                 FindAndReplace(wordApp, "<cedula>", datosPaciente[5]);
                 FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
+                #region Servicios
                 //Servicios
                 FindAndReplace(wordApp, "<servicio1>", estudiosSeleccionados[cantidaddeestudiosselect]);
                 FindAndReplace(wordApp, "<servicio2>", estudiosSeleccionados[cantidaddeestudiosselect + 1]);
                 //------------//
+                #endregion
+                #region Radiologia
                 //Radiologogia 1 en una hoja
                 FindAndReplace(wordApp, "<Tipo>", tipo);
                 FindAndReplace(wordApp, "<Anotaciones>", estudiosSeleccionados[cantidaddeestudiosselect]);
@@ -141,7 +139,8 @@ namespace Capa_Negocio
                 FindAndReplace(wordApp, "<Tipo2>", tipo);
                 FindAndReplace(wordApp, "<Anotaciones2>", estudiosSeleccionados[cantidaddeestudiosselect + 1]);
                 //-------------//
-                //Codigo para formato de estudios base
+                #endregion
+                //Codigo para formato de estudios base clinicos
                 int y = 0;
                 for (int x = 0; x <= 18; x++)
                 {

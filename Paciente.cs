@@ -110,7 +110,7 @@ namespace Control_PreTransplante_V2
         {
             lisatadeestudios.Items.Clear();
             Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
-            if (categoriadeestudios.SelectedIndex == 0)//talvez sea mejor cambiar por un swich, est funciona con el indice de la lista no de la bd
+            if (categoriadeestudios.SelectedIndex == 0)
             {
                 table = objforma.Vistas("Est_PIR");
             }
