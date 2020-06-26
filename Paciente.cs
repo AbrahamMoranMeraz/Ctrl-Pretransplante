@@ -79,11 +79,14 @@ namespace Control_PreTransplante_V2
         {
             int x = 0;//Contador de estudios
             int y = 0;//Contador de estudios que si se seleccionaron
+            Capa_Negocio.CN_Paciente cN_ = new Capa_Negocio.CN_Paciente();
+            
             string[] listadeestudios = new string[18];
             for (x = 0; x < lisatadeestudios.Items.Count; x++)
             {
                 if (lisatadeestudios.GetItemChecked(x))
                 {
+                    cN_.InsertarStudios(datos[5], lisatadeestudios.Items[x].ToString(), null);
                     listadeestudios[y] = lisatadeestudios.Items[x].ToString();
                     y++;
                 }
@@ -104,6 +107,7 @@ namespace Control_PreTransplante_V2
             {
                 MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoRadiologia(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(),categoriadeestudios.SelectedItem.ToString()));
             }
+            MostrarEstudios(datos[5]);
         }
 
         private void categoriadeestudios_SelectedValueChanged(object sender, EventArgs e)
@@ -163,6 +167,11 @@ namespace Control_PreTransplante_V2
             for (int i = 0; i < lisatadeestudios.Items.Count; i++)
                 lisatadeestudios.SetItemChecked(i, true);
             button1.Visible = true;
+        }
+
+        private void dataestudiosr_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
