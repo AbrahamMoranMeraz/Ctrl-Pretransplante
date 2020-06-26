@@ -15,10 +15,12 @@ namespace Control_PreTransplante_V2
     public partial class Login : Form
     {
         //Logica_Secion secion;
+        public string usuario;
         public Login()
         {
             InitializeComponent();
             txt_contra.Focus();
+            usuario = txt_usuario.Text;
         }
         private void btn_Entrar_Click(object sender, EventArgs e)
         {

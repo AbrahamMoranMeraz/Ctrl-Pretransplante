@@ -18,44 +18,39 @@ namespace Capa_Negocio
         static String[] datosPaciente;
         #endregion
 
-        static public String NuevoFormato(string [] e, string [] d, int y, string comboBox, string tipo)
+        static public String NuevoFormato(string [] e, string [] d, int y, string comboBox, string tipo, List<string>medico)
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F1.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "1.docx", y, comboBox, tipo);
+            return CreateWordDocument(@"E:\Programas TEC\TEC\IS\F1.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "1.docx", y, comboBox, tipo, medico);
         }
 
-        static public String FormatoServicios(string[] e, string[] d, int y, string comboBox, string tipo)
+        static public String FormatoServicios(string[] e, string[] d, int y, string comboBox, string tipo, List<string> medico)
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            //for (int i = 0; i < y; i++)
-            //{
-            //    int j = i;
-            //    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "3.docx", j, comboBox);
-            //}
-
+            
             int j = 0;
 
             while (y > 0)
             {
                 if (y > 1)
                 {
-                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F3_2.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_3.docx", j, comboBox, tipo);
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_3.docx", j, comboBox, tipo, medico);
                     j = j + 2;
                     y = y - 2;
                 }
                 else if (y == 1)
                 {
-                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F3.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "3.docx", j, comboBox, tipo);
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F3.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "3.docx", j, comboBox, tipo, medico);
                     y = y - 1;
                 }
             }
 
-            return "Files Created!";
+            return "Formatos Impresos!";
         }
 
-        static public String FormatoRadiologia(string[] e, string[] d, int y, string comboBox, string tipo)
+        static public String FormatoRadiologia(string[] e, string[] d, int y, string comboBox, string tipo, List<string> medico)
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
@@ -65,17 +60,17 @@ namespace Capa_Negocio
             {
                 if (y > 1)
                 {
-                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F2_2.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_2.docx", j, comboBox, tipo);
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2_2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "_2.docx", j, comboBox, tipo, medico);
                     j = j + 2;
                     y = y - 2;
                 }
                 else if (y == 1)
                 {
-                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F2.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "2.docx", j, comboBox, tipo);
+                    CreateWordDocument(@"E:\Programas TEC\TEC\IS\F2.docx", @"E:\Programas TEC\TEC\IS\" + datosPaciente[5] + "2.docx", j, comboBox, tipo, medico);
                     y = y - 1;
                 }
             }
-            return "Files Created!";
+            return "Formatos Impresos!";
         }
         private static void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
@@ -105,7 +100,7 @@ namespace Capa_Negocio
                 ref matchControl);
         }
 
-        private static String CreateWordDocument(object filename, object SaveAs, int cantidaddeestudiosselect, string combobox, string tipo)
+        private static String CreateWordDocument(object filename, object SaveAs, int cantidaddeestudiosselect, string combobox, string tipo, List<string> medico)
         {
             Word.Application wordApp = new Word.Application();
             object missing = Missing.Value;
@@ -124,16 +119,24 @@ namespace Capa_Negocio
                                         ref missing, ref missing, ref missing, ref missing);
                 myWordDoc.Activate();
 
-                //find and replace
+                //Encontrar y remplazar daots basicos del paciente
                 FindAndReplace(wordApp, "<name>", datosPaciente[1]);
                 FindAndReplace(wordApp, "<firstname>", datosPaciente[2]);
                 FindAndReplace(wordApp, "<secondname>", datosPaciente[3]);
                 FindAndReplace(wordApp, "<cedula>", datosPaciente[5]);
                 FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
+                //Datos basicos del medico
+                FindAndReplace(wordApp, "<mname>", medico[6]);
+                FindAndReplace(wordApp, "<mfname>", medico[7]);
+                FindAndReplace(wordApp, "<msname>", medico[8]);
+                FindAndReplace(wordApp, "<matricula>", medico[9]);
+                #region Servicios
                 //Servicios
                 FindAndReplace(wordApp, "<servicio1>", estudiosSeleccionados[cantidaddeestudiosselect]);
                 FindAndReplace(wordApp, "<servicio2>", estudiosSeleccionados[cantidaddeestudiosselect + 1]);
                 //------------//
+                #endregion
+                #region Radiologia
                 //Radiologogia 1 en una hoja
                 FindAndReplace(wordApp, "<Tipo>", tipo);
                 FindAndReplace(wordApp, "<Anotaciones>", estudiosSeleccionados[cantidaddeestudiosselect]);
@@ -141,7 +144,8 @@ namespace Capa_Negocio
                 FindAndReplace(wordApp, "<Tipo2>", tipo);
                 FindAndReplace(wordApp, "<Anotaciones2>", estudiosSeleccionados[cantidaddeestudiosselect + 1]);
                 //-------------//
-                //Codigo para formato de estudios base
+                #endregion
+                //Codigo para formato de estudios base clinicos
                 int y = 0;
                 for (int x = 0; x <= 18; x++)
                 {
@@ -189,7 +193,7 @@ namespace Capa_Negocio
 
             File.Delete(SaveAs.ToString());
 
-            return ("File Created!");
+            return ("Formato Impreso!");
         }
     }
 }

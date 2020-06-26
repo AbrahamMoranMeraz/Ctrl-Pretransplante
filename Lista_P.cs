@@ -15,6 +15,7 @@ namespace Control_PreTransplante_V2
         string[] datos;
         Capa_Negocio.CN_Paciente objforma;
         Form formulario;
+
         public Lista_P()
         {
             InitializeComponent();
