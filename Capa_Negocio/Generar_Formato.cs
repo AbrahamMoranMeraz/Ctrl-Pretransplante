@@ -134,10 +134,10 @@ namespace Capa_Negocio
                 FindAndReplace(wordApp, "<cedula>", datosPaciente[5]);
                 FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
                 //Datos basicos del medico
-                FindAndReplace(wordApp, "<mname>", medico[1]);
-                FindAndReplace(wordApp, "<mfname>", medico[2]);
-                FindAndReplace(wordApp, "<msname>", medico[3]);
-                FindAndReplace(wordApp, "<matricula>", medico[4]);
+                FindAndReplace(wordApp, "<mname>", medico[6]);
+                FindAndReplace(wordApp, "<mfname>", medico[7]);
+                FindAndReplace(wordApp, "<msname>", medico[8]);
+                FindAndReplace(wordApp, "<matricula>", medico[9]);
                 #region Servicios
                 //Servicios
                 FindAndReplace(wordApp, "<servicio1>", estudiosSeleccionados[cantidaddeestudiosselect]);
