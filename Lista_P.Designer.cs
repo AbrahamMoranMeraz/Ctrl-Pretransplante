@@ -33,16 +33,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tap = new System.Windows.Forms.TabControl();
             this.listapaceintes = new System.Windows.Forms.TabPage();
+            this.Lista = new System.Windows.Forms.DataGridView();
+            this.panellateral = new System.Windows.Forms.Panel();
+            this.btnestudios = new FontAwesome.Sharp.IconButton();
+            this.btneditar = new FontAwesome.Sharp.IconButton();
             this.btnactualizar = new FontAwesome.Sharp.IconButton();
             this.pacientes = new System.Windows.Forms.TabPage();
-            this.panellateral = new System.Windows.Forms.Panel();
-            this.editar_P = new FontAwesome.Sharp.IconButton();
-            this.Estudios = new FontAwesome.Sharp.IconButton();
-            this.Lista = new System.Windows.Forms.DataGridView();
             this.tap.SuspendLayout();
             this.listapaceintes.SuspendLayout();
-            this.panellateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Lista)).BeginInit();
+            this.panellateral.SuspendLayout();
             this.SuspendLayout();
             // 
             // tap
@@ -67,81 +67,6 @@
             this.listapaceintes.TabIndex = 0;
             this.listapaceintes.Text = "Lista Pacientes";
             this.listapaceintes.UseVisualStyleBackColor = true;
-            // 
-            // btnactualizar
-            // 
-            this.btnactualizar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnactualizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnactualizar.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
-            this.btnactualizar.IconColor = System.Drawing.Color.Black;
-            this.btnactualizar.IconSize = 40;
-            this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnactualizar.Location = new System.Drawing.Point(0, 347);
-            this.btnactualizar.Name = "btnactualizar";
-            this.btnactualizar.Rotation = 0D;
-            this.btnactualizar.Size = new System.Drawing.Size(230, 154);
-            this.btnactualizar.TabIndex = 3;
-            this.btnactualizar.Text = " Actualizar\r\nLista";
-            this.btnactualizar.UseVisualStyleBackColor = true;
-            this.btnactualizar.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // pacientes
-            // 
-            this.pacientes.Location = new System.Drawing.Point(4, 25);
-            this.pacientes.Name = "pacientes";
-            this.pacientes.Padding = new System.Windows.Forms.Padding(3);
-            this.pacientes.Size = new System.Drawing.Size(1592, 507);
-            this.pacientes.TabIndex = 1;
-            this.pacientes.Text = "Pacientes";
-            this.pacientes.UseVisualStyleBackColor = true;
-            this.pacientes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pacientes_MouseDoubleClick);
-            // 
-            // panellateral
-            // 
-            this.panellateral.Controls.Add(this.Estudios);
-            this.panellateral.Controls.Add(this.editar_P);
-            this.panellateral.Controls.Add(this.btnactualizar);
-            this.panellateral.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panellateral.Location = new System.Drawing.Point(1359, 3);
-            this.panellateral.Name = "panellateral";
-            this.panellateral.Size = new System.Drawing.Size(230, 501);
-            this.panellateral.TabIndex = 4;
-            // 
-            // editar_P
-            // 
-            this.editar_P.Dock = System.Windows.Forms.DockStyle.Top;
-            this.editar_P.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.editar_P.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editar_P.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
-            this.editar_P.IconColor = System.Drawing.Color.Black;
-            this.editar_P.IconSize = 40;
-            this.editar_P.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.editar_P.Location = new System.Drawing.Point(0, 0);
-            this.editar_P.Name = "editar_P";
-            this.editar_P.Rotation = 0D;
-            this.editar_P.Size = new System.Drawing.Size(230, 160);
-            this.editar_P.TabIndex = 6;
-            this.editar_P.Text = "Editar\r\nPaciente";
-            this.editar_P.UseVisualStyleBackColor = true;
-            // 
-            // Estudios
-            // 
-            this.Estudios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Estudios.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Estudios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Estudios.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
-            this.Estudios.IconColor = System.Drawing.Color.Black;
-            this.Estudios.IconSize = 40;
-            this.Estudios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Estudios.Location = new System.Drawing.Point(0, 160);
-            this.Estudios.Name = "Estudios";
-            this.Estudios.Rotation = 0D;
-            this.Estudios.Size = new System.Drawing.Size(230, 187);
-            this.Estudios.TabIndex = 7;
-            this.Estudios.Text = "Estudios";
-            this.Estudios.UseVisualStyleBackColor = true;
-            this.Estudios.Click += new System.EventHandler(this.Estudios_Click);
             // 
             // Lista
             // 
@@ -188,6 +113,81 @@
             this.Lista.Size = new System.Drawing.Size(1356, 501);
             this.Lista.TabIndex = 6;
             // 
+            // panellateral
+            // 
+            this.panellateral.Controls.Add(this.btnestudios);
+            this.panellateral.Controls.Add(this.btneditar);
+            this.panellateral.Controls.Add(this.btnactualizar);
+            this.panellateral.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panellateral.Location = new System.Drawing.Point(1359, 3);
+            this.panellateral.Name = "panellateral";
+            this.panellateral.Size = new System.Drawing.Size(230, 501);
+            this.panellateral.TabIndex = 4;
+            // 
+            // btnestudios
+            // 
+            this.btnestudios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnestudios.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnestudios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnestudios.IconChar = FontAwesome.Sharp.IconChar.Archive;
+            this.btnestudios.IconColor = System.Drawing.Color.Black;
+            this.btnestudios.IconSize = 40;
+            this.btnestudios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnestudios.Location = new System.Drawing.Point(0, 160);
+            this.btnestudios.Name = "btnestudios";
+            this.btnestudios.Rotation = 0D;
+            this.btnestudios.Size = new System.Drawing.Size(230, 187);
+            this.btnestudios.TabIndex = 7;
+            this.btnestudios.Text = "Estudios";
+            this.btnestudios.UseVisualStyleBackColor = true;
+            this.btnestudios.Click += new System.EventHandler(this.Estudios_Click);
+            // 
+            // btneditar
+            // 
+            this.btneditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btneditar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btneditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btneditar.IconColor = System.Drawing.Color.Black;
+            this.btneditar.IconSize = 40;
+            this.btneditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneditar.Location = new System.Drawing.Point(0, 0);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Rotation = 0D;
+            this.btneditar.Size = new System.Drawing.Size(230, 160);
+            this.btneditar.TabIndex = 6;
+            this.btneditar.Text = "Editar\r\nPaciente";
+            this.btneditar.UseVisualStyleBackColor = true;
+            // 
+            // btnactualizar
+            // 
+            this.btnactualizar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnactualizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
+            this.btnactualizar.IconColor = System.Drawing.Color.Black;
+            this.btnactualizar.IconSize = 40;
+            this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar.Location = new System.Drawing.Point(0, 347);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Rotation = 0D;
+            this.btnactualizar.Size = new System.Drawing.Size(230, 154);
+            this.btnactualizar.TabIndex = 3;
+            this.btnactualizar.Text = " Actualizar\r\nLista";
+            this.btnactualizar.UseVisualStyleBackColor = true;
+            this.btnactualizar.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // pacientes
+            // 
+            this.pacientes.Location = new System.Drawing.Point(4, 25);
+            this.pacientes.Name = "pacientes";
+            this.pacientes.Padding = new System.Windows.Forms.Padding(3);
+            this.pacientes.Size = new System.Drawing.Size(1592, 507);
+            this.pacientes.TabIndex = 1;
+            this.pacientes.Text = "Pacientes";
+            this.pacientes.UseVisualStyleBackColor = true;
+            this.pacientes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pacientes_MouseDoubleClick);
+            // 
             // Lista_P
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -200,8 +200,8 @@
             this.Load += new System.EventHandler(this.Lista_P_Load);
             this.tap.ResumeLayout(false);
             this.listapaceintes.ResumeLayout(false);
-            this.panellateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Lista)).EndInit();
+            this.panellateral.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -213,8 +213,8 @@
         private System.Windows.Forms.TabPage pacientes;
         private FontAwesome.Sharp.IconButton btnactualizar;
         private System.Windows.Forms.Panel panellateral;
-        private FontAwesome.Sharp.IconButton Estudios;
-        private FontAwesome.Sharp.IconButton editar_P;
+        private FontAwesome.Sharp.IconButton btnestudios;
+        private FontAwesome.Sharp.IconButton btneditar;
         private System.Windows.Forms.DataGridView Lista;
     }
 }
