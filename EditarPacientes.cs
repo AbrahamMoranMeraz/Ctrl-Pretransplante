@@ -21,20 +21,7 @@ namespace Control_PreTransplante_V2
         string genero;
         public bool vacio; // Variable utilizada para saber si hay algún TextBox vacio.
         CN_Paciente objFormaPciente = new CN_Paciente(); //Se crea una instancia de la clase Paciente
-        public string id_paciente = null; //Se crea la variable id_paciente para su manipulación
-        private bool editar = false; //Una bandera 
-
-        private void limpiar()
-        {
-            txt_nombres.Clear();
-            txt_apellidoP.Clear();
-            txt_apellidoM.Clear();
-            txt_numseg.Clear();
-            txt_curp.Clear();
-            txt_fecha.Clear();
-            rdb_masculino.Checked = false;
-            rdb_femenino.Checked = false;
-        }
+        public string id_paciente = null; //Se crea la variable id_paciente para su manipulación 
 
         private void rdb_masculino_CheckedChanged(object sender, EventArgs e)
         {
@@ -131,11 +118,6 @@ namespace Control_PreTransplante_V2
             txt_fecha.Text = monthCalendar1.SelectionStart.Year.ToString() + "-" +
                 monthCalendar1.SelectionStart.Month.ToString() + "-" +
                 monthCalendar1.SelectionStart.Day.ToString();
-        }
-
-        private void btn_agregar_Click(object sender, EventArgs e) //Registrar paciente
-        {
-            validar();
         }
 
         private void txt_fecha_Click(object sender, EventArgs e)
