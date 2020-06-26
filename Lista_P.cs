@@ -172,5 +172,19 @@ namespace Control_PreTransplante_V2
             editar.TopLevel = true;
             editar.ShowDialog();
         }
+
+        private void Lista_Resize(object sender, EventArgs e)
+        {
+            if(this.Size.Width < 1365)
+            {
+                Lista.ColumnHeadersDefaultCellStyle.Font = new Font(Lista.ColumnHeadersDefaultCellStyle.Font.Name, 8);
+                Lista.RowsDefaultCellStyle.Font = new Font(Lista.RowsDefaultCellStyle.Font.Name, 12);
+            }
+            else
+            {
+                Lista.ColumnHeadersDefaultCellStyle.Font = new Font(Lista.ColumnHeadersDefaultCellStyle.Font.Name, 14);
+                Lista.RowsDefaultCellStyle.Font = new Font(Lista.RowsDefaultCellStyle.Font.Name, 18);
+            }   
+        }
     }
 }

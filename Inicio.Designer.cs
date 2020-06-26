@@ -76,7 +76,7 @@
             this.panelcentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcentral.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.panelcentral.Location = new System.Drawing.Point(285, 64);
-            this.panelcentral.MinimumSize = new System.Drawing.Size(1215, 736);
+            this.panelcentral.MinimumSize = new System.Drawing.Size(1365, 736);
             this.panelcentral.Name = "panelcentral";
             this.panelcentral.Size = new System.Drawing.Size(1365, 736);
             this.panelcentral.TabIndex = 4;
