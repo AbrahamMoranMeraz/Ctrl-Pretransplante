@@ -74,6 +74,7 @@
             // 
             this.panelcentral.BackColor = System.Drawing.Color.White;
             this.panelcentral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelcentral.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.panelcentral.Location = new System.Drawing.Point(285, 64);
             this.panelcentral.MinimumSize = new System.Drawing.Size(1215, 736);
             this.panelcentral.Name = "panelcentral";
@@ -99,9 +100,10 @@
             // btncerrarsecion
             // 
             this.btncerrarsecion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btncerrarsecion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncerrarsecion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btncerrarsecion.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btncerrarsecion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btncerrarsecion.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btncerrarsecion.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.btncerrarsecion.IconColor = System.Drawing.Color.White;
             this.btncerrarsecion.IconSize = 30;
@@ -130,9 +132,10 @@
             // btnnuevop
             // 
             this.btnnuevop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnnuevop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnnuevop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnnuevop.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnnuevop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnnuevop.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnnuevop.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnnuevop.IconColor = System.Drawing.Color.White;
             this.btnnuevop.IconSize = 30;
@@ -150,9 +153,10 @@
             // btnlista
             // 
             this.btnlista.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnlista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlista.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlista.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnlista.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnlista.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnlista.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
             this.btnlista.IconColor = System.Drawing.Color.White;
             this.btnlista.IconSize = 30;
@@ -170,9 +174,10 @@
             // btnpaciente
             // 
             this.btnpaciente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnpaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnpaciente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnpaciente.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnpaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnpaciente.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnpaciente.IconChar = FontAwesome.Sharp.IconChar.UserInjured;
             this.btnpaciente.IconColor = System.Drawing.Color.White;
             this.btnpaciente.IconSize = 30;
@@ -193,9 +198,10 @@
             // btninicio
             // 
             this.btninicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btninicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btninicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btninicio.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btninicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btninicio.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btninicio.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.btninicio.IconColor = System.Drawing.Color.White;
             this.btninicio.IconSize = 35;

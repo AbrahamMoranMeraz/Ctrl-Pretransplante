@@ -127,8 +127,10 @@
             // btnestudios
             // 
             this.btnestudios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnestudios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnestudios.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnestudios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnestudios.ForeColor = System.Drawing.Color.Black;
             this.btnestudios.IconChar = FontAwesome.Sharp.IconChar.Archive;
             this.btnestudios.IconColor = System.Drawing.Color.Black;
             this.btnestudios.IconSize = 40;
@@ -145,8 +147,10 @@
             // btneditar
             // 
             this.btneditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneditar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btneditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.ForeColor = System.Drawing.Color.Black;
             this.btneditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.btneditar.IconColor = System.Drawing.Color.Black;
             this.btneditar.IconSize = 40;
@@ -162,8 +166,10 @@
             // btnactualizar
             // 
             this.btnactualizar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnactualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnactualizar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.ForeColor = System.Drawing.Color.Black;
             this.btnactualizar.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
             this.btnactualizar.IconColor = System.Drawing.Color.Black;
             this.btnactualizar.IconSize = 40;
