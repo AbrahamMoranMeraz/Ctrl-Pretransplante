@@ -27,14 +27,18 @@ namespace Capa_Negocio
             return CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F1.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "4.docx", y, comboBox, tipo, medico);
         }
 
-        static public String NuevoFormato_2(/*string estudioespecial_*/ string [] e , string[] datosdelpaciente, string comboBox, List<string> medico)
+        static public String NuevoFormato_2(/*string estudioespecial_*/ string[] e, string[] datosdelpaciente, int y, string comboBox, List<string> medico)
         {
             //estudioespecial = estudioespecial_;
             estudiosSeleccionados = e;
             datosPaciente = datosdelpaciente;
-            return CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F4.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_4.docx", comboBox, medico);
+            for (int i = 0; i < y; i++)
+            {
+                int j = i;
+                CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F4.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_4.docx", j, comboBox, medico);
+            }
+            return "Formatos Impresos!";
         }
-
         static public String FormatoServicios(string[] e, string[] d, int y, string comboBox, string tipo, List<string> medico)
         {
             estudiosSeleccionados = e;
@@ -219,7 +223,7 @@ namespace Capa_Negocio
             return ("Formato Impreso!");
         }
 
-        private static String CreateWordDocument(object filename, object SaveAs, string combobox, List<string> medico)
+        private static String CreateWordDocument(object filename, object SaveAs, int y, string combobox, List<string> medico)
         {
             Word.Application wordApp = new Word.Application();
             object missing = Missing.Value;
@@ -250,7 +254,7 @@ namespace Capa_Negocio
                 FindAndReplace(wordApp, "<msname>", medico[3]);
                 FindAndReplace(wordApp, "<matricula>", medico[4]);
                 //Codigo para formato de estudios base clinicos
-                FindAndReplace(wordApp, "<ex1>", estudiosSeleccionados[0]);
+                FindAndReplace(wordApp, "<ex1>", estudiosSeleccionados[y]);
             }
             else
             {

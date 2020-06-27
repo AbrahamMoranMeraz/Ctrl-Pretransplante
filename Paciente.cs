@@ -115,7 +115,7 @@ namespace Control_PreTransplante_V2
             }
             else if (categoriadeestudios.SelectedIndex == 7 || categoriadeestudios.SelectedIndex == 8 || categoriadeestudios.SelectedIndex == 9)
             {
-                MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato_2(listadeestudios, datos, comboBox1.SelectedItem.ToString(), medico));
+                MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato_2(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), medico));
             }
             MostrarEstudios(datos[5]);
         }
