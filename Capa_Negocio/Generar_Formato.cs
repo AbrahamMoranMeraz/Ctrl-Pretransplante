@@ -16,7 +16,8 @@ namespace Capa_Negocio
         #region Variables
         static String[] estudiosSeleccionados;
         static String[] datosPaciente;
-        static string estudioespecial;
+        static bool notaRadiologia;//Nota de impresio validacion
+        //static string estudioespecial;
         #endregion
 
         static public String NuevoFormato(string [] e, string [] d, int y, string comboBox, string tipo, List<string>medico)
@@ -26,9 +27,10 @@ namespace Capa_Negocio
             return CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F1.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "4.docx", y, comboBox, tipo, medico);
         }
 
-        static public String NuevoFormato_2(string estudioespecial_, string[] datosdelpaciente, string comboBox, List<string> medico)
+        static public String NuevoFormato_2(/*string estudioespecial_*/ string [] e , string[] datosdelpaciente, string comboBox, List<string> medico)
         {
-            estudioespecial = estudioespecial_;
+            //estudioespecial = estudioespecial_;
+            estudiosSeleccionados = e;
             datosPaciente = datosdelpaciente;
             return CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F4.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_4.docx", comboBox, medico);
         }
@@ -58,8 +60,9 @@ namespace Capa_Negocio
             return "Formatos Impresos!";
         }
 
-        static public String FormatoRadiologia(string[] e, string[] d, int y, string comboBox, string tipo, List<string> medico)
+        static public String FormatoRadiologia(string[] e, string[] d, int y, string comboBox, string tipo, List<string> medico,bool nota)
         {
+            notaRadiologia = nota;
             estudiosSeleccionados = e;
             datosPaciente = d;
             int j = 0;
@@ -148,6 +151,18 @@ namespace Capa_Negocio
                 //Radiologogia 1 en una hoja
                 FindAndReplace(wordApp, "<Tipo>", tipo);
                 FindAndReplace(wordApp, "<Anotaciones>", estudiosSeleccionados[cantidaddeestudiosselect]);
+                //Nota de impresion en radiologia si esta habilitada el checkbox de paciente
+                if (notaRadiologia)
+                {
+                    FindAndReplace(wordApp, "<nota>", "Impresión diagnóstica: Protocolo de trasplante");
+                    FindAndReplace(wordApp, "<nota2>", "Impresión diagnóstica: Protocolo de trasplante");
+                }
+                else
+                {
+                    FindAndReplace(wordApp, "<nota>", "");
+                    FindAndReplace(wordApp, "<nota2>", "");
+                }
+                //************************************************************************//
                 //Radiologogia 2 en una hoja
                 FindAndReplace(wordApp, "<Tipo2>", tipo);
                 FindAndReplace(wordApp, "<Anotaciones2>", estudiosSeleccionados[cantidaddeestudiosselect + 1]);
@@ -235,7 +250,7 @@ namespace Capa_Negocio
                 FindAndReplace(wordApp, "<msname>", medico[3]);
                 FindAndReplace(wordApp, "<matricula>", medico[4]);
                 //Codigo para formato de estudios base clinicos
-                FindAndReplace(wordApp, "<ex1>", estudioespecial);
+                FindAndReplace(wordApp, "<ex1>", estudiosSeleccionados[0]);
             }
             else
             {

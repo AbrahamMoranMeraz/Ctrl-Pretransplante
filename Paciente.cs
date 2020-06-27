@@ -111,11 +111,11 @@ namespace Control_PreTransplante_V2
             }
             else if (categoriadeestudios.SelectedIndex == 5 || categoriadeestudios.SelectedIndex == 6)
             {
-                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoRadiologia(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(),categoriadeestudios.SelectedItem.ToString(), medico));
+                MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoRadiologia(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(),categoriadeestudios.SelectedItem.ToString(), medico, checkBoxNota.Checked));
             }
             else if (categoriadeestudios.SelectedIndex == 7 || categoriadeestudios.SelectedIndex == 8 || categoriadeestudios.SelectedIndex == 9)
             {
-                MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato_2(lisatadeestudios.Items[0].ToString(), datos, comboBox1.SelectedItem.ToString(), medico));
+                MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato_2(listadeestudios, datos, comboBox1.SelectedItem.ToString(), medico));
             }
             MostrarEstudios(datos[5]);
         }
@@ -164,12 +164,46 @@ namespace Control_PreTransplante_V2
                                     {
                                         table = objforma.Vistas("Radio_2P");
                                     }
+                                    else
+                                    {
+                                        if (categoriadeestudios.SelectedIndex == 7)
+                                        {
+                                            table = objforma.Vistas("Pre_Op");
+                                        }
+                                        else
+                                        {
+                                            if (categoriadeestudios.SelectedIndex == 8)
+                                            {
+                                                table = objforma.Vistas("Donador");
+                                            }
+                                            else
+                                            {
+                                                if (categoriadeestudios.SelectedIndex == 9)
+                                                {
+                                                    table = objforma.Vistas("Especiales");
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
+            //Si es alguna categoria de radiologia muestra checkbox de nota de impresion
+            if (categoriadeestudios.SelectedIndex==5 || categoriadeestudios.SelectedIndex == 6)
+            {
+                checkBoxNota.Visible = true;
+                checkBoxNota.ForeColor = Color.Black;
+                checkBoxNota.Checked = true;
+            }
+            else
+            {
+                checkBoxNota.Visible = false;
+                checkBoxNota.Checked = false;
+            }
+            //**************************************************************************//
             for (int x = 0; x < table.Rows.Count; x++)
             {
                 lisatadeestudios.Items.Add(table.Rows[x].ItemArray[0].ToString());
