@@ -13,9 +13,11 @@ namespace Control_PreTransplante_V2
 {
     public partial class EditarPacientes : Form
     {
-        public EditarPacientes()
+        public string usuario;
+        public EditarPacientes(string usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
         }
 
         string genero;

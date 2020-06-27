@@ -15,14 +15,12 @@ namespace Control_PreTransplante_V2
     public partial class Login : Form
     {
         //Logica_Secion secion;
-        public string usuario;
-
         public Login()
         {
             InitializeComponent();
             txt_contra.Focus();
-            usuario = txt_usuario.Text;
         }
+
         private void btn_Entrar_Click(object sender, EventArgs e)
         {
             Login_();
@@ -65,7 +63,7 @@ namespace Control_PreTransplante_V2
                     var validacion = loginUsuario.LoginUsuario(txt_usuario.Text, txt_contra.Text);
                     if (validacion == true)
                     {
-                        Inicio mostrarInicio = new Inicio();
+                        Inicio mostrarInicio = new Inicio(txt_usuario.Text);
                         mostrarInicio.Show();
                         mostrarInicio.FormClosed += CerrarSesion;
                         this.Hide();

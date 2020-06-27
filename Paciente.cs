@@ -16,6 +16,7 @@ namespace Control_PreTransplante_V2
         string[] datos;
         DataTable table;
 
+        string usuario;
         public Paciente()
         {
             InitializeComponent();
@@ -27,11 +28,12 @@ namespace Control_PreTransplante_V2
             dataestudiosr.DataSource = objforma.Estudios(nss);
         }
 
-        public Paciente(string[] datos)
+        public Paciente(string[] datos, string usuario)
         {
             InitializeComponent();
             this.datos = new string[datos.Length];
             this.datos = datos;
+            this.usuario = usuario;
         }
 
 
@@ -83,8 +85,7 @@ namespace Control_PreTransplante_V2
             Capa_Negocio.CN_Paciente cN_ = new Capa_Negocio.CN_Paciente();
             //----------------------Datos del medico----------------------------------//
             Capa_AccesoDatos.UsuarioLogin medicos = new Capa_AccesoDatos.UsuarioLogin();
-            Login user = new Login();
-            List <string> medico = medicos.infomed(user.usuario);
+            List <string> medico = medicos.infomed(usuario);
             //-------------------------------------------------------------------------//
             string[] listadeestudios = new string[18];
             for (x = 0; x < lisatadeestudios.Items.Count; x++)

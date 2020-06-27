@@ -20,17 +20,19 @@ namespace Capa_AccesoDatos
         public List<string> infomed(string user)
         {
             List<string> datosmed = new List<string>();
+            List<string> matricula = new List<string>();
             DataTable tabla = new DataTable();
-            string matricula="";
             tabla = Acceso.Matricula(user);
-            for (int x = 0; x < tabla.Rows.Count; x++)
-            {
-                matricula = (tabla.Rows[x].ItemArray[0].ToString());
-            }
-            tabla = Acceso.MedicoDatos(matricula);
-            DataRow row = tabla.Rows[1];
+            DataRow row = tabla.Rows[0];
 
             foreach (var item in row.ItemArray)
+            {
+                matricula.Add(item.ToString());
+            }
+            tabla = Acceso.MedicoDatos(matricula[0]);
+            DataRow row2 = tabla.Rows[1];
+
+            foreach (var item in row2.ItemArray)
             {
                 datosmed.Add(item.ToString());
             }

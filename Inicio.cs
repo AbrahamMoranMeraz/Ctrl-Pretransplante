@@ -18,6 +18,12 @@ namespace Control_PreTransplante_V2
         {
             InitializeComponent();
         }
+        public string usuario;
+        public Inicio(string text)
+        {
+            InitializeComponent();
+            usuario = text;
+        }
         #region Funcionalidades Formulario
 
         //Arrarastrar formulario
@@ -178,16 +184,16 @@ namespace Control_PreTransplante_V2
 
         private void btnlista_Click(object sender, EventArgs e)
         {
-            Form formulario;
-            formulario = panelcentral.Controls.OfType<Lista_P>().FirstOrDefault();//buscaen la coleccion el formulario
-            if(formulario == null)
-            {
+            //Form formulario;
+            //formulario = panelcentral.Controls.OfType<Lista_P>().FirstOrDefault();//buscaen la coleccion el formulario
+            //if(formulario == null)
+            //{
 
-            }
-            else
-            {
-                formulario.Close();
-            }
+            //}
+            //else
+            //{
+            //    formulario.Close();
+            //}
             AbrirFormulario<Lista_P>();
             OcultarSubmenu();
         }
@@ -200,15 +206,24 @@ namespace Control_PreTransplante_V2
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            Login usuario = new Login();
+            //Login usuario = new Login();
             OcultarSubmenu();
-            Blanco m = new Blanco(usuario.usuario);
+            Blanco m = new Blanco(usuario);
             m.TopLevel = false;
             panelcentral.Controls.Add(m);
             panelcentral.Tag = m;
             m.Dock = DockStyle.Fill;
             m.Show();
             m.BringToFront();
+            //*************Lista instancia con parametro***********************//
+            Lista_P lista = new Lista_P(usuario);
+            lista.TopLevel = false;
+            panelcentral.Controls.Add(lista);
+            panelcentral.Tag = lista;
+            lista.Dock = DockStyle.Fill;
+            lista.Show();
+            lista.BringToFront();
+            //****************************************************************//
             AbrirFormulario<Lista_P>();
             AbrirFormulario<RgPacientes>();
             AbrirFormulario<Blanco>();

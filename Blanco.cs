@@ -13,6 +13,7 @@ namespace Control_PreTransplante_V2
     public partial class Blanco : Form
     {
         string usuario;
+
         public Blanco(string usuario)
         {
             InitializeComponent();
