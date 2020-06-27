@@ -23,14 +23,14 @@ namespace Capa_Negocio
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F4.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "4.docx", y, comboBox, tipo, medico);
+            return CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F1.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "4.docx", y, comboBox, tipo, medico);
         }
 
         static public String NuevoFormato_2(string estudioespecial_, string[] datosdelpaciente, string comboBox, List<string> medico)
         {
             estudioespecial = estudioespecial_;
             datosPaciente = datosdelpaciente;
-            return CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F4.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "4.docx", comboBox, medico);
+            return CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F4.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_4.docx", comboBox, medico);
         }
 
         static public String FormatoServicios(string[] e, string[] d, int y, string comboBox, string tipo, List<string> medico)
@@ -44,13 +44,13 @@ namespace Capa_Negocio
             {
                 if (y > 1)
                 {
-                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F3_2.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_3.docx", j, comboBox, tipo, medico);
+                    CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F3_2.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_3.docx", j, comboBox, tipo, medico);
                     j = j + 2;
                     y = y - 2;
                 }
                 else if (y == 1)
                 {
-                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F3.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "3.docx", j, comboBox, tipo, medico);
+                    CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F3.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "3.docx", j, comboBox, tipo, medico);
                     y = y - 1;
                 }
             }
@@ -68,13 +68,13 @@ namespace Capa_Negocio
             {
                 if (y > 1)
                 {
-                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F2_2.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_2.docx", j, comboBox, tipo, medico);
+                    CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F2_2.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_2.docx", j, comboBox, tipo, medico);
                     j = j + 2;
                     y = y - 2;
                 }
                 else if (y == 1)
                 {
-                    CreateWordDocument(@"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\F2.docx", @"C:\Users\moran\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "2.docx", j, comboBox, tipo, medico);
+                    CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F2.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "2.docx", j, comboBox, tipo, medico);
                     y = y - 1;
                 }
             }
@@ -134,10 +134,10 @@ namespace Capa_Negocio
                 FindAndReplace(wordApp, "<cedula>", datosPaciente[5]);
                 FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
                 //Datos basicos del medico
-                FindAndReplace(wordApp, "<mname>", medico[6]);
-                FindAndReplace(wordApp, "<mfname>", medico[7]);
-                FindAndReplace(wordApp, "<msname>", medico[8]);
-                FindAndReplace(wordApp, "<matricula>", medico[9]);
+                FindAndReplace(wordApp, "<mname>", medico[1]);
+                FindAndReplace(wordApp, "<mfname>", medico[2]);
+                FindAndReplace(wordApp, "<msname>", medico[3]);
+                FindAndReplace(wordApp, "<matricula>", medico[4]);
                 #region Servicios
                 //Servicios
                 FindAndReplace(wordApp, "<servicio1>", estudiosSeleccionados[cantidaddeestudiosselect]);
@@ -230,10 +230,10 @@ namespace Capa_Negocio
                 FindAndReplace(wordApp, "<cedula>", datosPaciente[5]);
                 FindAndReplace(wordApp, "<date>", DateTime.Now.ToShortDateString());
                 //Datos basicos del medico
-                FindAndReplace(wordApp, "<mname>", medico[6]);
-                FindAndReplace(wordApp, "<mfname>", medico[7]);
-                FindAndReplace(wordApp, "<msname>", medico[8]);
-                FindAndReplace(wordApp, "<matricula>", medico[9]);
+                FindAndReplace(wordApp, "<mname>", medico[1]);
+                FindAndReplace(wordApp, "<mfname>", medico[2]);
+                FindAndReplace(wordApp, "<msname>", medico[3]);
+                FindAndReplace(wordApp, "<matricula>", medico[4]);
                 //Codigo para formato de estudios base clinicos
                 FindAndReplace(wordApp, "<ex1>", estudioespecial);
             }
