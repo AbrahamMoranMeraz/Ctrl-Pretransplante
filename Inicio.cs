@@ -14,15 +14,11 @@ namespace Control_PreTransplante_V2
 {
     public partial class Inicio : Form
     {
-        public Inicio()
-        {
-            InitializeComponent();
-        }
-        public string usuario;
+        public string UsuarioActual;
         public Inicio(string text)
         {
             InitializeComponent();
-            usuario = text;
+            UsuarioActual = text;
         }
         #region Funcionalidades Formulario
 
@@ -73,7 +69,12 @@ namespace Control_PreTransplante_V2
 
         private void label1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Salir de la aplicación, ¿estas seguro?", "Advertencia",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else { }
         }
         //Captura de posicion y tamaño antes de maximisar
         int lx, ly;
@@ -178,52 +179,36 @@ namespace Control_PreTransplante_V2
             if(panelsubmenupaciente.Visible == true)
             {
                 panelsubmenupaciente.Visible = false;
+                PersonalizarFormulario();
             }
             else { }
         }
 
         private void btnlista_Click(object sender, EventArgs e)
         {
-            //Form formulario;
-            //formulario = panelcentral.Controls.OfType<Lista_P>().FirstOrDefault();//buscaen la coleccion el formulario
-            //if(formulario == null)
-            //{
+            Form formulario;
+            formulario = panelcentral.Controls.OfType<Lista_P>().FirstOrDefault();//buscaen la coleccion el formulario
+            if(formulario == null)
+            {
 
-            //}
-            //else
-            //{
-            //    formulario.Close();
-            //}
-            AbrirFormulario<Lista_P>();
+            }
+            else
+            {
+                formulario.Close();
+            }
             OcultarSubmenu();
+            AbrirFormulario<Lista_P>();
         }
 
         private void btnnuevop_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<RgPacientes>();
             OcultarSubmenu();
+            AbrirFormulario<RgPacientes>();
         }
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            //Login usuario = new Login();
             OcultarSubmenu();
-            Blanco m = new Blanco(usuario);
-            m.TopLevel = false;
-            panelcentral.Controls.Add(m);
-            panelcentral.Tag = m;
-            m.Dock = DockStyle.Fill;
-            m.Show();
-            m.BringToFront();
-            //*************Lista instancia con parametro***********************//
-            Lista_P lista = new Lista_P(usuario);
-            lista.TopLevel = false;
-            panelcentral.Controls.Add(lista);
-            panelcentral.Tag = lista;
-            lista.Dock = DockStyle.Fill;
-            lista.Show();
-            lista.BringToFront();
-            //****************************************************************//
             AbrirFormulario<Lista_P>();
             AbrirFormulario<RgPacientes>();
             AbrirFormulario<Blanco>();
@@ -261,8 +246,25 @@ namespace Control_PreTransplante_V2
                 formulario.BringToFront();
             }
         }
+
+        private void panelmenu_MouseLeave(object sender, EventArgs e)
+        {
+            OcultarSubmenu();
+        }
+
+        private void panelsubmenupaciente_MouseLeave(object sender, EventArgs e)
+        {
+            OcultarSubmenu();
+        }
+
+        private void panelcentral_MouseEnter(object sender, EventArgs e)
+        {
+            OcultarSubmenu();
+        }
+
         private void btninicio_Click(object sender, EventArgs e)
         {
+            OcultarSubmenu();
             AbrirFormulario<Blanco>();
         }
 

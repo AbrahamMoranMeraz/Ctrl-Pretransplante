@@ -18,10 +18,12 @@ namespace Capa_AccesoDatos
         public DataTable Matricula(string usuario)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select IdUsuario from UsuarioDoctor where UsuarioDoctor.Ususario='" + usuario + "'";
-            //comando.CommandType = CommandType.StoredProcedure;
-            leerdatos = comando.ExecuteReader();
-            tabla.Load(leerdatos);
+            comando.CommandText = "IDoctor";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@Usuario", usuario);
+            SqlDataReader t = comando.ExecuteReader();
+            tabla.Load(t);
+            comando.Parameters.Clear();
             conexion.CerrarConexion();
             return tabla;
         }
