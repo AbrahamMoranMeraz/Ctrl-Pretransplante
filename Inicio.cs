@@ -206,6 +206,17 @@ namespace Control_PreTransplante_V2
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            if (usuario=="jose")
+            {
+                iconButtonEstudios.Enabled = true;
+                iconButtonEstudios.Visible = true;
+            }
+            else
+            {
+                iconButtonEstudios.Enabled = false;
+                iconButtonEstudios.Visible = false;
+            }
+
             //Login usuario = new Login();
             OcultarSubmenu();
             Blanco m = new Blanco(usuario);
@@ -261,6 +272,13 @@ namespace Control_PreTransplante_V2
                 formulario.BringToFront();
             }
         }
+
+        private void iconButtonEstudios_Click(object sender, EventArgs e)
+        {
+            NuevosEstudiosCate nuevosEstudios = new NuevosEstudiosCate();
+            nuevosEstudios.Show();
+        }
+
         private void btninicio_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Blanco>();

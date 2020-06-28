@@ -15,6 +15,29 @@ namespace Capa_AccesoDatos
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
+        public void GuardarNuevoEstudio(string nombre, int categoria)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "InsetarEstudioNuevo";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@NombreEst ", nombre);
+            comando.Parameters.AddWithValue("@Categoria", categoria);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            comando.Connection = conexion.CerrarConexion();
+        }
+
+        public void BorraEstudio(string nombre)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "BorrarEstudio";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@NombreEst", nombre);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            comando.Connection = conexion.CerrarConexion();
+        }
+
         public DataTable Matricula(string usuario)
         {
             comando.Connection = conexion.AbrirConexion();

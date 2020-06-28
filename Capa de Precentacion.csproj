@@ -80,6 +80,12 @@
     <Compile Include="NPaciente.Designer.cs">
       <DependentUpon>NPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevosEstudiosCate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevosEstudiosCate.Designer.cs">
+      <DependentUpon>NuevosEstudiosCate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NPaciente.resx">
       <DependentUpon>NPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevosEstudiosCate.resx">
+      <DependentUpon>NuevosEstudiosCate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paciente.resx">
       <DependentUpon>Paciente.cs</DependentUpon>
