@@ -63,6 +63,7 @@ namespace Control_PreTransplante_V2
                     var validacion = loginUsuario.LoginUsuario(txt_usuario.Text, txt_contra.Text);
                     if (validacion == true)
                     {
+                        
                         Inicio mostrarInicio = new Inicio(txt_usuario.Text);
                         mostrarInicio.Show();
                         mostrarInicio.FormClosed += CerrarSesion;

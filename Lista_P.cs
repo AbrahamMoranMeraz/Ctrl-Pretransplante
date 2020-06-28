@@ -15,17 +15,10 @@ namespace Control_PreTransplante_V2
         string[] datos;
         Capa_Negocio.CN_Paciente objforma;
         Form formulario;
-        string usuario;
 
         public Lista_P()
         {
             InitializeComponent();
-        }
-
-        public Lista_P(string usuario)
-        {
-            InitializeComponent();
-            this.usuario = usuario;
         }
 
         private void MostrarPa()//Método para vizualizar los registros de la DB
@@ -54,7 +47,7 @@ namespace Control_PreTransplante_V2
             //si el formulario/instancia no existe
             if (formulario == null)
             {
-                formulario = new Paciente(datos, usuario);
+                formulario = new Paciente(datos);
                 formulario.TopLevel = false;
                 pacientes.Controls.Add(formulario);
                 pacientes.Tag = formulario;
@@ -64,7 +57,7 @@ namespace Control_PreTransplante_V2
             else//Si el formulario existe
             {
                 formulario.Close();
-                formulario = new Paciente(datos, usuario);
+                formulario = new Paciente(datos);
                 formulario.TopLevel = false;
                 pacientes.Controls.Add(formulario);
                 pacientes.Tag = formulario;
@@ -97,7 +90,7 @@ namespace Control_PreTransplante_V2
             //si el formulario/instancia no existe
             if (formulario == null)
             {
-                formulario = new Paciente(datos, usuario);
+                formulario = new Paciente(datos);
                 formulario.TopLevel = false;
                 pacientes.Controls.Add(formulario);
                 pacientes.Tag = formulario;
@@ -107,7 +100,7 @@ namespace Control_PreTransplante_V2
             else//Si el formulario existe
             {
                 formulario.Close();
-                formulario = new Paciente(datos,usuario);
+                formulario = new Paciente(datos);
                 formulario.TopLevel = false;
                 pacientes.Controls.Add(formulario);
                 pacientes.Tag = formulario;
@@ -132,7 +125,7 @@ namespace Control_PreTransplante_V2
                                                                                     //si el formulario/instancia no existe
                 if (formulario == null)
                 {
-                    formulario = new Paciente(datos,usuario);
+                    formulario = new Paciente(datos);
                     formulario.TopLevel = false;
                     pacientes.Controls.Add(formulario);
                     pacientes.Tag = formulario;
@@ -142,7 +135,7 @@ namespace Control_PreTransplante_V2
                 else//Si el formulario existe
                 {
                     formulario.Close();
-                    formulario = new Paciente(datos,usuario);
+                    formulario = new Paciente(datos);
                     formulario.TopLevel = false;
                     pacientes.Controls.Add(formulario);
                     pacientes.Tag = formulario;
@@ -159,7 +152,7 @@ namespace Control_PreTransplante_V2
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            EditarPacientes editar = new EditarPacientes(usuario);
+            EditarPacientes editar = new EditarPacientes();
             editar.txt_nombres.Text = Lista.Rows[Lista.SelectedRows[0].Index].Cells[1].Value.ToString();
             editar.txt_apellidoP.Text = Lista.Rows[Lista.SelectedRows[0].Index].Cells[2].Value.ToString();
             editar.txt_apellidoM.Text = Lista.Rows[Lista.SelectedRows[0].Index].Cells[3].Value.ToString();

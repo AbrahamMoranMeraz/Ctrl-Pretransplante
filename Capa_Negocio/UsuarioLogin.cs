@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Capa_AccesoDatos
 {
@@ -21,16 +22,15 @@ namespace Capa_AccesoDatos
         {
             List<string> datosmed = new List<string>();
             List<string> matricula = new List<string>();
-            DataTable tabla = new DataTable();
-            tabla = Acceso.Matricula(user);
-            DataRow row = tabla.Rows[0];
+            DataTable tablab = Acceso.Matricula(user);
+            DataRow row = tablab.Rows[0];
 
             foreach (var item in row.ItemArray)
             {
                 matricula.Add(item.ToString());
             }
-            tabla = Acceso.MedicoDatos(matricula[0]);
-            DataRow row2 = tabla.Rows[1];
+            tablab = Acceso.MedicoDatos(matricula[0]);
+            DataRow row2 = tablab.Rows[1];
 
             foreach (var item in row2.ItemArray)
             {

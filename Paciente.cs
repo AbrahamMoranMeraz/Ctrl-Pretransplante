@@ -28,12 +28,11 @@ namespace Control_PreTransplante_V2
             dataestudiosr.DataSource = objforma.Estudios(nss);
         }
 
-        public Paciente(string[] datos, string usuario)
+        public Paciente(string[] datos)
         {
             InitializeComponent();
             this.datos = new string[datos.Length];
             this.datos = datos;
-            this.usuario = usuario;
         }
 
 
@@ -50,6 +49,7 @@ namespace Control_PreTransplante_V2
         {
             //Llenar combobox con lo tipos de impresoras para seleccionar uno//
             PrintDocument prtdoc = new PrintDocument();
+            usuario = null;
             string strDefaultPrinter = prtdoc.PrinterSettings.PrinterName;
             foreach (String strPrinter in PrinterSettings.InstalledPrinters)
             {
@@ -71,6 +71,19 @@ namespace Control_PreTransplante_V2
             {
                 categoriadeestudios.Items.Add(table.Rows[x].ItemArray[0].ToString());
             }
+            Inicio formulario = null;
+            //Encontrar al usuario actual
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(Inicio))
+                {
+                    formulario = (Inicio)frm;
+                    break;
+                }
+                else { }
+            }
+            usuario = formulario.UsuarioActual;
+            Capa_Negocio.Generar_Formato.CalcularRuta();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -213,9 +226,16 @@ namespace Control_PreTransplante_V2
             btnimprimir.Visible = true;
         }
 
-        private void dataestudiosr_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Paciente_SizeChanged(object sender, EventArgs e)
         {
-
+            if(this.Size.Width <= 1140)
+            {
+                checkBoxNota.Font = new Font(checkBoxNota.Font.Name, 8);
+            }else if(this.Size.Width > 1300)
+            {
+                checkBoxNota.Font = new Font(checkBoxNota.Font.Name, 18);
+            }
+            else { }
         }
     }
 }

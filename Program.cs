@@ -7,7 +7,7 @@ using FontAwesome.Sharp;
 
 namespace Control_PreTransplante_V2
 {
-    static class Program
+    static public class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.

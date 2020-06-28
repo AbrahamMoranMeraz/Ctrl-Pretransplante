@@ -97,7 +97,6 @@
             this.Name = "Blanco";
             this.Text = "Blanco";
             this.Load += new System.EventHandler(this.Blanco_Load);
-            this.SizeChanged += new System.EventHandler(this.Blanco_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

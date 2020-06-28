@@ -41,10 +41,12 @@ namespace Capa_AccesoDatos
         public DataTable Matricula(string usuario)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select IdUsuario from UsuarioDoctor where UsuarioDoctor.Ususario='" + usuario + "'";
-            //comando.CommandType = CommandType.StoredProcedure;
-            leerdatos = comando.ExecuteReader();
-            tabla.Load(leerdatos);
+            comando.CommandText = "IDoctor";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@Usuario", usuario);
+            SqlDataReader t = comando.ExecuteReader();
+            tabla.Load(t);
+            comando.Parameters.Clear();
             conexion.CerrarConexion();
             return tabla;
         }
@@ -52,10 +54,12 @@ namespace Capa_AccesoDatos
         public DataTable MedicoDatos(string matricula)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select Nombre, ApellidoP, ApellidoM, matricula from InfoMedico inner join UsuarioDoctor on InfoMedico.IdUsusario=UsuarioDoctor.IdUsuario where UsuarioDoctor.IdUsuario='" + matricula + "'";
-            //comando.CommandType = CommandType.StoredProcedure;
-            leerdatos = comando.ExecuteReader();
-            tabla.Load(leerdatos);
+            comando.CommandText = "InfoDoc";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@Matricula_", matricula);
+            SqlDataReader t = comando.ExecuteReader();
+            tabla.Load(t);
+            comando.Parameters.Clear();
             conexion.CerrarConexion();
             return tabla;
         }
