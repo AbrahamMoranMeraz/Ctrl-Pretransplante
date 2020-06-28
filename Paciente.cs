@@ -82,8 +82,8 @@ namespace Control_PreTransplante_V2
                 }
                 else { }
             }
-            Capa_Negocio.CN_Paciente usuarioa = new Capa_Negocio.CN_Paciente();
-            usuario = usuarioa.UsuarioActual(formulario.UsuarioActual);
+            usuario = formulario.UsuarioActual;
+            Capa_Negocio.Generar_Formato.CalcularRuta();
         }
 
         private void label1_Click(object sender, EventArgs e)

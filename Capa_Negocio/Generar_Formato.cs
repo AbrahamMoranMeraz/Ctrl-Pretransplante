@@ -17,14 +17,35 @@ namespace Capa_Negocio
         static String[] estudiosSeleccionados;
         static String[] datosPaciente;
         static bool notaRadiologia;//Nota de impresio validacion
+        static string ruta;
         //static string estudioespecial;
         #endregion
 
+        public static void CalcularRuta()
+        {
+            string filePath = AppDomain.CurrentDomain.BaseDirectory;
+            string directoryName = null;
+            int i = 0;
+            while (i != 4)
+            {
+                directoryName = Path.GetDirectoryName(filePath);
+                filePath = directoryName;
+                if (i == 1)
+                {
+                    filePath = directoryName + @"\";  // this will preserve the previous path
+                }
+                else { }
+                i++;
+            }
+            ruta = directoryName + @"\Resources\";
+            MessageBox.Show(ruta);
+        }
+        
         static public String NuevoFormato(string [] e, string [] d, int y, string comboBox, string tipo, List<string>medico)
         {
             estudiosSeleccionados = e;
             datosPaciente = d;
-            return CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F1.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "4.docx", y, comboBox, tipo, medico);
+            return CreateWordDocument($"{ruta}F1.docx", $"{ruta}" + datosPaciente[5] + "4.docx", y, comboBox, tipo, medico);
         }
 
         static public String NuevoFormato_2(/*string estudioespecial_*/ string[] e, string[] datosdelpaciente, int y, string comboBox, List<string> medico)
@@ -35,7 +56,7 @@ namespace Capa_Negocio
             for (int i = 0; i < y; i++)
             {
                 int j = i;
-                CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F4.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_4.docx", j, comboBox, medico);
+                CreateWordDocument($"{ruta}F4.docx", $"{ruta}" + datosPaciente[5] + "_4.docx", j, comboBox, medico);
             }
             return "Formatos Impresos!";
         }
@@ -50,13 +71,13 @@ namespace Capa_Negocio
             {
                 if (y > 1)
                 {
-                    CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F3_2.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_3.docx", j, comboBox, tipo, medico);
+                    CreateWordDocument($"{ruta}F3_2.docx", $"{ruta}" + datosPaciente[5] + "_3.docx", j, comboBox, tipo, medico);
                     j = j + 2;
                     y = y - 2;
                 }
                 else if (y == 1)
                 {
-                    CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F3.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "3.docx", j, comboBox, tipo, medico);
+                    CreateWordDocument($"{ruta}F3.docx", $"{ruta}" + datosPaciente[5] + "3.docx", j, comboBox, tipo, medico);
                     y = y - 1;
                 }
             }
@@ -75,13 +96,13 @@ namespace Capa_Negocio
             {
                 if (y > 1)
                 {
-                    CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F2_2.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "_2.docx", j, comboBox, tipo, medico);
+                    CreateWordDocument($"{ruta}F2_2.docx", $"{ruta}" + datosPaciente[5] + "_2.docx", j, comboBox, tipo, medico);
                     j = j + 2;
                     y = y - 2;
                 }
                 else if (y == 1)
                 {
-                    CreateWordDocument(@"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\F2.docx", @"C:\Users\52664\Documents\GitHub\Ctrl-Pretransplante\Resources\" + datosPaciente[5] + "2.docx", j, comboBox, tipo, medico);
+                    CreateWordDocument($"{ruta}F2.docx", $"{ruta}" + datosPaciente[5] + "2.docx", j, comboBox, tipo, medico);
                     y = y - 1;
                 }
             }
