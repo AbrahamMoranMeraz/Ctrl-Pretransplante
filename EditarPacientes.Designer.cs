@@ -33,7 +33,6 @@
             this.btneditar = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.btn_fecha = new System.Windows.Forms.Button();
             this.txt_fecha = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnborrar = new FontAwesome.Sharp.IconButton();
@@ -114,7 +113,6 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.monthCalendar1);
-            this.panel5.Controls.Add(this.btn_fecha);
             this.panel5.Controls.Add(this.txt_fecha);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(564, 25);
@@ -127,34 +125,21 @@
             // 
             this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 3);
             this.monthCalendar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.monthCalendar1.Location = new System.Drawing.Point(0, 0);
+            this.monthCalendar1.Location = new System.Drawing.Point(0, 38);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 19;
-            // 
-            // btn_fecha
-            // 
-            this.btn_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_fecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_fecha.ForeColor = System.Drawing.Color.Black;
-            this.btn_fecha.Location = new System.Drawing.Point(0, 577);
-            this.btn_fecha.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_fecha.Name = "btn_fecha";
-            this.btn_fecha.Size = new System.Drawing.Size(420, 94);
-            this.btn_fecha.TabIndex = 17;
-            this.btn_fecha.Text = "Agregar fecha";
-            this.btn_fecha.UseVisualStyleBackColor = true;
-            this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // txt_fecha
             // 
-            this.txt_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txt_fecha.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fecha.Location = new System.Drawing.Point(0, 671);
+            this.txt_fecha.Location = new System.Drawing.Point(0, 0);
             this.txt_fecha.Margin = new System.Windows.Forms.Padding(4);
             this.txt_fecha.Name = "txt_fecha";
+            this.txt_fecha.ReadOnly = true;
             this.txt_fecha.Size = new System.Drawing.Size(420, 38);
             this.txt_fecha.TabIndex = 14;
-            this.txt_fecha.Text = "AÑO-MES-DIA";
             this.txt_fecha.Click += new System.EventHandler(this.txt_fecha_Click);
             // 
             // panel3
@@ -405,7 +390,6 @@
         private System.Windows.Forms.Label lbl_nombres;
         private System.Windows.Forms.Label lbl_numseg;
         private System.Windows.Forms.Label lbl_curp;
-        private System.Windows.Forms.Button btn_fecha;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         public System.Windows.Forms.RadioButton rdb_femenino;
         public System.Windows.Forms.RadioButton rdb_masculino;

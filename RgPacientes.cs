@@ -58,7 +58,6 @@ namespace Control_PreTransplante_V2
             {
                 if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio.
                 {
-                    MessageBox.Show(oControls.Name + " Esta vacio");
                     return false; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
                 }
                 else
@@ -66,7 +65,6 @@ namespace Control_PreTransplante_V2
 
                 }
             }
-            MessageBox.Show("Todo bn");
             return true;
         }
     
@@ -80,7 +78,7 @@ namespace Control_PreTransplante_V2
 
         private void btn_agregar_Click(object sender, EventArgs e) //Registrar paciente
         {
-            if(validar(panel3))
+            if(validar(panel3) && validar(panel5))
             {
                 try
                 {

@@ -38,7 +38,6 @@ namespace Capa_Negocio
                 i++;
             }
             ruta = directoryName + @"\Resources\";
-            MessageBox.Show(ruta);
         }
         
         static public String NuevoFormato(string [] e, string [] d, int y, string comboBox, string tipo, List<string>medico)

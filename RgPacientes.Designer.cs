@@ -146,7 +146,7 @@
             this.txt_nombres.MaxLength = 15;
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.ShortcutsEnabled = false;
-            this.txt_nombres.Size = new System.Drawing.Size(212, 30);
+            this.txt_nombres.Size = new System.Drawing.Size(212, 38);
             this.txt_nombres.TabIndex = 14;
             // 
             // lbl_apellidoP
@@ -173,7 +173,7 @@
             this.txt_numseg.MaximumSize = new System.Drawing.Size(500, 30);
             this.txt_numseg.MaxLength = 11;
             this.txt_numseg.Name = "txt_numseg";
-            this.txt_numseg.Size = new System.Drawing.Size(212, 30);
+            this.txt_numseg.Size = new System.Drawing.Size(212, 38);
             this.txt_numseg.TabIndex = 17;
             // 
             // lbl_apellidoM
@@ -214,7 +214,7 @@
             this.txt_curp.MaximumSize = new System.Drawing.Size(500, 30);
             this.txt_curp.MaxLength = 18;
             this.txt_curp.Name = "txt_curp";
-            this.txt_curp.Size = new System.Drawing.Size(212, 30);
+            this.txt_curp.Size = new System.Drawing.Size(212, 38);
             this.txt_curp.TabIndex = 18;
             // 
             // lbl_numseg
@@ -255,7 +255,7 @@
             this.txt_apellidoP.MaximumSize = new System.Drawing.Size(500, 30);
             this.txt_apellidoP.MaxLength = 15;
             this.txt_apellidoP.Name = "txt_apellidoP";
-            this.txt_apellidoP.Size = new System.Drawing.Size(212, 30);
+            this.txt_apellidoP.Size = new System.Drawing.Size(212, 38);
             this.txt_apellidoP.TabIndex = 15;
             // 
             // txt_apellidoM
@@ -268,7 +268,7 @@
             this.txt_apellidoM.MaximumSize = new System.Drawing.Size(500, 30);
             this.txt_apellidoM.MaxLength = 15;
             this.txt_apellidoM.Name = "txt_apellidoM";
-            this.txt_apellidoM.Size = new System.Drawing.Size(212, 30);
+            this.txt_apellidoM.Size = new System.Drawing.Size(212, 38);
             this.txt_apellidoM.TabIndex = 16;
             // 
             // panel5
@@ -300,7 +300,6 @@
             this.txt_fecha.ReadOnly = true;
             this.txt_fecha.Size = new System.Drawing.Size(390, 38);
             this.txt_fecha.TabIndex = 14;
-            this.txt_fecha.Text = "AÑO-MES-DIA";
             this.txt_fecha.Click += new System.EventHandler(this.txt_fecha_Click);
             // 
             // registrarP

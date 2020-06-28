@@ -204,7 +204,6 @@ namespace Control_PreTransplante_V2
         {
             if(Lista.Rows.Count > 1 && Lista.SelectedRows.Count <2)
             {
-                MessageBox.Show($"filas: {Lista.Rows.Count}");
                 return true;
             }
             else

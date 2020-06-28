@@ -190,11 +190,10 @@
             this.pacientes.Location = new System.Drawing.Point(4, 25);
             this.pacientes.Name = "pacientes";
             this.pacientes.Padding = new System.Windows.Forms.Padding(3);
-            this.pacientes.Size = new System.Drawing.Size(1592, 507);
+            this.pacientes.Size = new System.Drawing.Size(1104, 695);
             this.pacientes.TabIndex = 1;
             this.pacientes.Text = "Pacientes";
             this.pacientes.UseVisualStyleBackColor = true;
-            this.pacientes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pacientes_MouseDoubleClick);
             // 
             // Lista_P
             // 
