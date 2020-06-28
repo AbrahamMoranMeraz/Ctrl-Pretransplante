@@ -99,7 +99,7 @@ namespace Control_PreTransplante_V2
             //----------------------Datos del medico----------------------------------//
             Capa_AccesoDatos.UsuarioLogin medicos = new Capa_AccesoDatos.UsuarioLogin();
             List <string> medico = medicos.infomed(usuario);
-            //-------------------------------------------------------------------------//
+            //--------------Insertamos los estudios en la bd---------------------------------//
             string[] listadeestudios = new string[18];
             for (x = 0; x < lisatadeestudios.Items.Count; x++)
             {
@@ -114,6 +114,7 @@ namespace Control_PreTransplante_V2
 
                 }
             }
+            //------------------Generamos los formatos y se imprimen--------------------//
             if (categoriadeestudios.SelectedIndex==0 || categoriadeestudios.SelectedIndex == 1)
             {
                 MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), medico));

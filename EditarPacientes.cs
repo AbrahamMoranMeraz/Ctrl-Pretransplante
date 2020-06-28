@@ -134,5 +134,36 @@ namespace Control_PreTransplante_V2
         {
             validar();
         }
+
+        private void btnborrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnborrar.BackColor = Color.Red;
+            btnborrar.ForeColor = Color.White;
+            btnborrar.IconColor = Color.White;
+        }
+
+        private void btnborrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnborrar.BackColor = Color.Transparent;
+            btnborrar.ForeColor = Color.Black;
+            btnborrar.IconColor = Color.Black;
+        }
+
+        private void btnborrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show($"Desea borrar al paciente con NSS: {txt_numseg.Text} ", "Advertencia",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Capa_Negocio.CN_Paciente eliminar = new CN_Paciente();
+                eliminar.EliminarProd(id_paciente);
+                MessageBox.Show($"Se elimino al paciente con NSS: {txt_numseg.Text}");
+                Close();
+            }
+            else
+            {
+
+            }
+            
+        }
     }
 }

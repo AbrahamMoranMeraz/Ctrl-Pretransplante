@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,8 +22,6 @@ namespace Control_PreTransplante_V2
         string genero;
         public bool vacio; // Variable utilizada para saber si hay algún TextBox vacio.
         CN_Paciente objFormaPciente = new CN_Paciente(); //Se crea una instancia de la clase Paciente
-        private string id_paciente = null; //Se crea la variable id_paciente para su manipulación
-        private bool editar = false; //Una bandera 
 
         private void limpiar()
         {
@@ -45,7 +44,7 @@ namespace Control_PreTransplante_V2
             genero = "F";
         }
 
-        private void validar(Form formulario)
+        private Boolean validar(Panel formulario)
         {
             if (rdb_masculino.Checked == true)
             {
@@ -59,49 +58,18 @@ namespace Control_PreTransplante_V2
             {
                 if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio.
                 {
-                    vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
-                }
-            }
-            if (vacio == true)
-            {
-                MessageBox.Show("Favor de llenar todos los campos antes de finalizar registro."); // Si nuestra variable es verdadera mostramos un mensaje.
-                vacio = false; // Devolvemos el valor original a nuestra variable.
-            }
-            else
-            {
-                if (editar == false)
-                {
-                    try
-                    {
-                        objFormaPciente.Insertar(txt_numseg.Text, txt_curp.Text, txt_nombres.Text, txt_apellidoP.Text, txt_apellidoM.Text, genero, txt_fecha.Text);
-                        MessageBox.Show("Se inserto correctamente");
-                        limpiar();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("No se pudo insertar los datos " + ex);
-                    }
-                }
-                if (editar == true)
-                {
-                    try
-                    {
-                        objFormaPciente.Editar(txt_numseg.Text, txt_curp.Text, txt_nombres.Text, txt_apellidoP.Text, txt_apellidoM.Text, genero, txt_fecha.Text, id_paciente);
-                        MessageBox.Show("Se edito correctamente");
-                        limpiar();
-                        editar = false;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("No se pudo modifiar el registro " + ex);
-                    }
+                    MessageBox.Show(oControls.Name + " Esta vacio");
+                    return false; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
                 }
                 else
                 {
-                    MessageBox.Show("Favor de llenar todos los campos para editar registro");
+
                 }
             }
+            MessageBox.Show("Todo bn");
+            return true;
         }
+    
 
         private void btn_fecha_Click(object sender, EventArgs e)
         {
@@ -112,7 +80,23 @@ namespace Control_PreTransplante_V2
 
         private void btn_agregar_Click(object sender, EventArgs e) //Registrar paciente
         {
-            validar(this);
+            if(validar(panel3))
+            {
+                try
+                {
+                    objFormaPciente.Insertar(txt_numseg.Text, txt_curp.Text, txt_nombres.Text, txt_apellidoP.Text, txt_apellidoM.Text, genero, txt_fecha.Text);
+                    limpiar();
+                    MessageBox.Show("Se inserto correctamente");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor verifique la informacion.");
+            }
         }
 
         private void txt_fecha_Click(object sender, EventArgs e)
@@ -123,6 +107,13 @@ namespace Control_PreTransplante_V2
         private void RgPacientes_Load(object sender, EventArgs e)
         { 
 
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            txt_fecha.Text = e.Start.Year.ToString() + "-" +
+                e.Start.Month.ToString() + "-" +
+                e.Start.Day.ToString();
         }
     }
 }
