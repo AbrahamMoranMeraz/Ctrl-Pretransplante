@@ -208,6 +208,16 @@ namespace Control_PreTransplante_V2
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            if (UsuarioActual == "Abr06")
+            {
+                iconButtonEstudios.Enabled = true;
+                iconButtonEstudios.Visible = true;
+            }
+            else
+            {
+                iconButtonEstudios.Enabled = false;
+                iconButtonEstudios.Visible = false;
+            }
             OcultarSubmenu();
             AbrirFormulario<Lista_P>();
             AbrirFormulario<RgPacientes>();
@@ -260,6 +270,12 @@ namespace Control_PreTransplante_V2
         private void panelcentral_MouseEnter(object sender, EventArgs e)
         {
             OcultarSubmenu();
+        }
+
+        private void iconButtonEstudios_Click(object sender, EventArgs e)
+        {
+            NuevosEstudiosCate nuevosEstudiosCate = new NuevosEstudiosCate();
+            nuevosEstudiosCate.Show();
         }
 
         private void btninicio_Click(object sender, EventArgs e)
