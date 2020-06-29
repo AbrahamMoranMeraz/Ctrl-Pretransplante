@@ -278,6 +278,21 @@ namespace Control_PreTransplante_V2
             nuevosEstudiosCate.Show();
         }
 
+        private void Inicio_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Login formulario = null;
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(Login))
+                {
+                    formulario = (Login)frm;
+                    break;
+                }
+                else { }
+            }
+            formulario.Show();
+        }
+
         private void btninicio_Click(object sender, EventArgs e)
         {
             OcultarSubmenu();

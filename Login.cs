@@ -1,5 +1,6 @@
 ﻿using Capa_AccesoDatos;
 using FontAwesome.Sharp;
+using Spire.Spreadsheet.Forms.Utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,6 @@ namespace Control_PreTransplante_V2
         public Login()
         {
             InitializeComponent();
-            txt_contra.Focus();
         }
 
         private void btn_Entrar_Click(object sender, EventArgs e)
@@ -118,6 +118,11 @@ namespace Control_PreTransplante_V2
             {
 
             }
+        }
+
+        private void Login_VisibleChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

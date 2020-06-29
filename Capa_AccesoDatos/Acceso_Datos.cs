@@ -75,12 +75,12 @@ namespace Capa_AccesoDatos
             return tabla;
         }
 
-        public DataTable MostrarDatos(string nss)
+        public DataTable MostrarDatos(int idpaciente)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "EstudiosdelPaciente";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@NSS_", nss);
+            comando.Parameters.AddWithValue("@IDPaciente", idpaciente);
             leerdatos = comando.ExecuteReader();
             tabla.Load(leerdatos);
             comando.Parameters.Clear();
@@ -141,11 +141,16 @@ namespace Capa_AccesoDatos
             comando.Parameters.Clear();
             comando.Connection = conexion.CerrarConexion();
         }
-        public void InsertarEstudios(string nss, string nombre, string matricula)
+        public void InsertarEstudios(int idpaciente, string nombre, string matricula)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "exec InsertarEstudiosP '" + nss + "', '" + nombre + "', '" + matricula + "'";
+            comando.CommandText = "InsertarEstudiosP";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@IdPaciente", idpaciente);
+            comando.Parameters.AddWithValue("@NombreE", nombre);
+            comando.Parameters.AddWithValue("@mat", matricula);
             comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
             comando.Connection = conexion.CerrarConexion();
         }
         

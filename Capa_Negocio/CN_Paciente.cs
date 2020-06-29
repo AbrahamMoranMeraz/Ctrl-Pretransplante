@@ -18,12 +18,13 @@ namespace Capa_Negocio
             return objPaciente.MostrarDatos();
         }
 
-        public DataTable Estudios(string nss)
+        public DataTable Estudios(int idpaciente)
         {
             try
             {
-                return objPaciente.MostrarDatos(nss);
-            }catch(SqlException ex)
+                return objPaciente.MostrarDatos(idpaciente);
+            }
+            catch(SqlException ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;
@@ -66,9 +67,9 @@ namespace Capa_Negocio
             objPaciente.EliminarDatos(Convert.ToInt16(id));
         }
 
-        public void InsertarStudios(string num_seg, string nombre, string matricula)
+        public void InsertarStudios(int idpaciente, string nombre, string matricula)
         {
-            objPaciente.InsertarEstudios(num_seg, nombre, matricula);
+            objPaciente.InsertarEstudios(idpaciente, nombre, matricula);
         }
 
         public String UsuarioActual(string usuario)

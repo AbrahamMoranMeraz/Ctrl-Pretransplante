@@ -370,6 +370,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Inicio_FormClosed);
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.paneltitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).EndInit();

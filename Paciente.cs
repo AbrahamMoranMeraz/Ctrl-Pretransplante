@@ -22,10 +22,10 @@ namespace Control_PreTransplante_V2
             InitializeComponent();
         }
 
-        private void MostrarEstudios(string nss)//Método para vizualizar los registros de la DB
+        private void MostrarEstudios(string idpaciente)//Método para vizualizar los registros de la DB
         {
             Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
-            dataestudiosr.DataSource = objforma.Estudios(nss);
+            dataestudiosr.DataSource = objforma.Estudios(Convert.ToInt32(datos[0]));
         }
 
         public Paciente(string[] datos)
@@ -105,7 +105,7 @@ namespace Control_PreTransplante_V2
             {
                 if (lisatadeestudios.GetItemChecked(x))
                 {
-                    cN_.InsertarStudios(datos[5], lisatadeestudios.Items[x].ToString(), null);
+                    cN_.InsertarStudios(Convert.ToInt32(datos[0]), lisatadeestudios.Items[x].ToString(), medico[4]);
                     listadeestudios[y] = lisatadeestudios.Items[x].ToString();
                     y++;
                 }
