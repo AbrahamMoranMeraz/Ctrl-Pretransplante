@@ -33,9 +33,9 @@
             this.btneditar = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.btn_fecha = new System.Windows.Forms.Button();
             this.txt_fecha = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnborrar = new FontAwesome.Sharp.IconButton();
             this.rdb_femenino = new System.Windows.Forms.RadioButton();
             this.rdb_masculino = new System.Windows.Forms.RadioButton();
             this.lbl_sexo = new System.Windows.Forms.Label();
@@ -63,11 +63,11 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.MinimumSize = new System.Drawing.Size(911, 598);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.MinimumSize = new System.Drawing.Size(1215, 736);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(911, 598);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1215, 736);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro Paciente";
@@ -81,11 +81,11 @@
             this.btncancelar.IconColor = System.Drawing.Color.Black;
             this.btncancelar.IconSize = 40;
             this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncancelar.Location = new System.Drawing.Point(738, 343);
-            this.btncancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btncancelar.Location = new System.Drawing.Point(984, 423);
+            this.btncancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Rotation = 0D;
-            this.btncancelar.Size = new System.Drawing.Size(171, 253);
+            this.btncancelar.Size = new System.Drawing.Size(228, 311);
             this.btncancelar.TabIndex = 4;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
@@ -100,11 +100,11 @@
             this.btneditar.IconColor = System.Drawing.Color.Black;
             this.btneditar.IconSize = 40;
             this.btneditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btneditar.Location = new System.Drawing.Point(738, 21);
-            this.btneditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btneditar.Location = new System.Drawing.Point(984, 25);
+            this.btneditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btneditar.Name = "btneditar";
             this.btneditar.Rotation = 0D;
-            this.btneditar.Size = new System.Drawing.Size(171, 253);
+            this.btneditar.Size = new System.Drawing.Size(228, 276);
             this.btneditar.TabIndex = 3;
             this.btneditar.Text = "Actualizar\r\nDatos\r\n";
             this.btneditar.UseVisualStyleBackColor = true;
@@ -113,50 +113,38 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.monthCalendar1);
-            this.panel5.Controls.Add(this.btn_fecha);
             this.panel5.Controls.Add(this.txt_fecha);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(423, 21);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Location = new System.Drawing.Point(564, 25);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(315, 575);
+            this.panel5.Size = new System.Drawing.Size(420, 709);
             this.panel5.TabIndex = 2;
             // 
             // monthCalendar1
             // 
             this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 3);
             this.monthCalendar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.monthCalendar1.Location = new System.Drawing.Point(0, 0);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.monthCalendar1.Location = new System.Drawing.Point(0, 38);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 19;
-            // 
-            // btn_fecha
-            // 
-            this.btn_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_fecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_fecha.ForeColor = System.Drawing.Color.Black;
-            this.btn_fecha.Location = new System.Drawing.Point(0, 467);
-            this.btn_fecha.Name = "btn_fecha";
-            this.btn_fecha.Size = new System.Drawing.Size(315, 76);
-            this.btn_fecha.TabIndex = 17;
-            this.btn_fecha.Text = "Agregar fecha";
-            this.btn_fecha.UseVisualStyleBackColor = true;
-            this.btn_fecha.Click += new System.EventHandler(this.btn_fecha_Click);
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // txt_fecha
             // 
-            this.txt_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txt_fecha.Dock = System.Windows.Forms.DockStyle.Top;
             this.txt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fecha.Location = new System.Drawing.Point(0, 543);
+            this.txt_fecha.Location = new System.Drawing.Point(0, 0);
+            this.txt_fecha.Margin = new System.Windows.Forms.Padding(4);
             this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(315, 32);
+            this.txt_fecha.ReadOnly = true;
+            this.txt_fecha.Size = new System.Drawing.Size(420, 38);
             this.txt_fecha.TabIndex = 14;
-            this.txt_fecha.Text = "AÑO-MES-DIA";
             this.txt_fecha.Click += new System.EventHandler(this.txt_fecha_Click);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnborrar);
             this.panel3.Controls.Add(this.rdb_femenino);
             this.panel3.Controls.Add(this.rdb_masculino);
             this.panel3.Controls.Add(this.lbl_sexo);
@@ -172,11 +160,31 @@
             this.panel3.Controls.Add(this.txt_apellidoM);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.ForeColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(2, 21);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(3, 25);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(421, 575);
+            this.panel3.Size = new System.Drawing.Size(561, 709);
             this.panel3.TabIndex = 0;
+            // 
+            // btnborrar
+            // 
+            this.btnborrar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnborrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnborrar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnborrar.IconChar = FontAwesome.Sharp.IconChar.Barcode;
+            this.btnborrar.IconColor = System.Drawing.Color.Black;
+            this.btnborrar.IconSize = 40;
+            this.btnborrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnborrar.Location = new System.Drawing.Point(0, 608);
+            this.btnborrar.Name = "btnborrar";
+            this.btnborrar.Rotation = 0D;
+            this.btnborrar.Size = new System.Drawing.Size(561, 101);
+            this.btnborrar.TabIndex = 26;
+            this.btnborrar.Text = "Eliminar Registro";
+            this.btnborrar.UseVisualStyleBackColor = true;
+            this.btnborrar.Click += new System.EventHandler(this.btnborrar_Click);
+            this.btnborrar.MouseEnter += new System.EventHandler(this.btnborrar_MouseEnter);
+            this.btnborrar.MouseLeave += new System.EventHandler(this.btnborrar_MouseLeave);
             // 
             // rdb_femenino
             // 
@@ -184,9 +192,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rdb_femenino.AutoSize = true;
             this.rdb_femenino.ForeColor = System.Drawing.Color.Black;
-            this.rdb_femenino.Location = new System.Drawing.Point(65, 344);
+            this.rdb_femenino.Location = new System.Drawing.Point(87, 423);
+            this.rdb_femenino.Margin = new System.Windows.Forms.Padding(4);
             this.rdb_femenino.Name = "rdb_femenino";
-            this.rdb_femenino.Size = new System.Drawing.Size(98, 24);
+            this.rdb_femenino.Size = new System.Drawing.Size(120, 29);
             this.rdb_femenino.TabIndex = 25;
             this.rdb_femenino.Text = "Femenino";
             this.rdb_femenino.UseVisualStyleBackColor = true;
@@ -199,9 +208,10 @@
             this.rdb_masculino.AutoSize = true;
             this.rdb_masculino.Checked = true;
             this.rdb_masculino.ForeColor = System.Drawing.Color.Black;
-            this.rdb_masculino.Location = new System.Drawing.Point(65, 322);
+            this.rdb_masculino.Location = new System.Drawing.Point(87, 396);
+            this.rdb_masculino.Margin = new System.Windows.Forms.Padding(4);
             this.rdb_masculino.Name = "rdb_masculino";
-            this.rdb_masculino.Size = new System.Drawing.Size(98, 24);
+            this.rdb_masculino.Size = new System.Drawing.Size(122, 29);
             this.rdb_masculino.TabIndex = 24;
             this.rdb_masculino.TabStop = true;
             this.rdb_masculino.Text = "Masculino";
@@ -215,9 +225,10 @@
             this.lbl_sexo.AutoSize = true;
             this.lbl_sexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_sexo.ForeColor = System.Drawing.Color.Black;
-            this.lbl_sexo.Location = new System.Drawing.Point(3, 325);
+            this.lbl_sexo.Location = new System.Drawing.Point(4, 400);
+            this.lbl_sexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_sexo.Name = "lbl_sexo";
-            this.lbl_sexo.Size = new System.Drawing.Size(45, 20);
+            this.lbl_sexo.Size = new System.Drawing.Size(58, 25);
             this.lbl_sexo.TabIndex = 23;
             this.lbl_sexo.Text = "Sexo";
             // 
@@ -226,11 +237,12 @@
             this.txt_nombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_nombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_nombres.Location = new System.Drawing.Point(175, 50);
+            this.txt_nombres.Location = new System.Drawing.Point(233, 62);
+            this.txt_nombres.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombres.MaxLength = 15;
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.ShortcutsEnabled = false;
-            this.txt_nombres.Size = new System.Drawing.Size(216, 26);
+            this.txt_nombres.Size = new System.Drawing.Size(287, 30);
             this.txt_nombres.TabIndex = 14;
             // 
             // lbl_apellidoP
@@ -240,9 +252,10 @@
             this.lbl_apellidoP.AutoSize = true;
             this.lbl_apellidoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_apellidoP.ForeColor = System.Drawing.Color.Black;
-            this.lbl_apellidoP.Location = new System.Drawing.Point(3, 105);
+            this.lbl_apellidoP.Location = new System.Drawing.Point(4, 129);
+            this.lbl_apellidoP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_apellidoP.Name = "lbl_apellidoP";
-            this.lbl_apellidoP.Size = new System.Drawing.Size(124, 20);
+            this.lbl_apellidoP.Size = new System.Drawing.Size(153, 25);
             this.lbl_apellidoP.TabIndex = 13;
             this.lbl_apellidoP.Text = "Apellido paterno";
             // 
@@ -250,10 +263,11 @@
             // 
             this.txt_numseg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_numseg.Location = new System.Drawing.Point(175, 200);
+            this.txt_numseg.Location = new System.Drawing.Point(233, 246);
+            this.txt_numseg.Margin = new System.Windows.Forms.Padding(4);
             this.txt_numseg.MaxLength = 11;
             this.txt_numseg.Name = "txt_numseg";
-            this.txt_numseg.Size = new System.Drawing.Size(216, 26);
+            this.txt_numseg.Size = new System.Drawing.Size(287, 30);
             this.txt_numseg.TabIndex = 17;
             // 
             // lbl_apellidoM
@@ -263,9 +277,10 @@
             this.lbl_apellidoM.AutoSize = true;
             this.lbl_apellidoM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_apellidoM.ForeColor = System.Drawing.Color.Black;
-            this.lbl_apellidoM.Location = new System.Drawing.Point(3, 154);
+            this.lbl_apellidoM.Location = new System.Drawing.Point(4, 190);
+            this.lbl_apellidoM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_apellidoM.Name = "lbl_apellidoM";
-            this.lbl_apellidoM.Size = new System.Drawing.Size(128, 20);
+            this.lbl_apellidoM.Size = new System.Drawing.Size(158, 25);
             this.lbl_apellidoM.TabIndex = 19;
             this.lbl_apellidoM.Text = "Apellido materno";
             // 
@@ -276,9 +291,10 @@
             this.lbl_nombres.AutoSize = true;
             this.lbl_nombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nombres.ForeColor = System.Drawing.Color.Black;
-            this.lbl_nombres.Location = new System.Drawing.Point(3, 55);
+            this.lbl_nombres.Location = new System.Drawing.Point(4, 68);
+            this.lbl_nombres.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_nombres.Name = "lbl_nombres";
-            this.lbl_nombres.Size = new System.Drawing.Size(87, 20);
+            this.lbl_nombres.Size = new System.Drawing.Size(110, 25);
             this.lbl_nombres.TabIndex = 20;
             this.lbl_nombres.Text = "Nombre (s)";
             // 
@@ -286,10 +302,11 @@
             // 
             this.txt_curp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_curp.Location = new System.Drawing.Point(175, 249);
+            this.txt_curp.Location = new System.Drawing.Point(233, 306);
+            this.txt_curp.Margin = new System.Windows.Forms.Padding(4);
             this.txt_curp.MaxLength = 18;
             this.txt_curp.Name = "txt_curp";
-            this.txt_curp.Size = new System.Drawing.Size(216, 26);
+            this.txt_curp.Size = new System.Drawing.Size(287, 30);
             this.txt_curp.TabIndex = 18;
             // 
             // lbl_numseg
@@ -299,9 +316,10 @@
             this.lbl_numseg.AutoSize = true;
             this.lbl_numseg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_numseg.ForeColor = System.Drawing.Color.Black;
-            this.lbl_numseg.Location = new System.Drawing.Point(3, 204);
+            this.lbl_numseg.Location = new System.Drawing.Point(4, 251);
+            this.lbl_numseg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_numseg.Name = "lbl_numseg";
-            this.lbl_numseg.Size = new System.Drawing.Size(122, 20);
+            this.lbl_numseg.Size = new System.Drawing.Size(153, 25);
             this.lbl_numseg.TabIndex = 21;
             this.lbl_numseg.Text = "Num.Seg.Social";
             // 
@@ -312,9 +330,10 @@
             this.lbl_curp.AutoSize = true;
             this.lbl_curp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_curp.ForeColor = System.Drawing.Color.Black;
-            this.lbl_curp.Location = new System.Drawing.Point(3, 254);
+            this.lbl_curp.Location = new System.Drawing.Point(4, 313);
+            this.lbl_curp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_curp.Name = "lbl_curp";
-            this.lbl_curp.Size = new System.Drawing.Size(54, 20);
+            this.lbl_curp.Size = new System.Drawing.Size(67, 25);
             this.lbl_curp.TabIndex = 22;
             this.lbl_curp.Text = "CURP";
             // 
@@ -322,31 +341,33 @@
             // 
             this.txt_apellidoP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_apellidoP.Location = new System.Drawing.Point(175, 101);
+            this.txt_apellidoP.Location = new System.Drawing.Point(233, 124);
+            this.txt_apellidoP.Margin = new System.Windows.Forms.Padding(4);
             this.txt_apellidoP.MaxLength = 15;
             this.txt_apellidoP.Name = "txt_apellidoP";
-            this.txt_apellidoP.Size = new System.Drawing.Size(216, 26);
+            this.txt_apellidoP.Size = new System.Drawing.Size(287, 30);
             this.txt_apellidoP.TabIndex = 15;
             // 
             // txt_apellidoM
             // 
             this.txt_apellidoM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_apellidoM.Location = new System.Drawing.Point(175, 150);
+            this.txt_apellidoM.Location = new System.Drawing.Point(233, 185);
+            this.txt_apellidoM.Margin = new System.Windows.Forms.Padding(4);
             this.txt_apellidoM.MaxLength = 15;
             this.txt_apellidoM.Name = "txt_apellidoM";
-            this.txt_apellidoM.Size = new System.Drawing.Size(216, 26);
+            this.txt_apellidoM.Size = new System.Drawing.Size(287, 30);
             this.txt_apellidoM.TabIndex = 16;
             // 
             // EditarPacientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 598);
+            this.ClientSize = new System.Drawing.Size(1215, 736);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EditarPacientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RgPacientes";
@@ -369,7 +390,6 @@
         private System.Windows.Forms.Label lbl_nombres;
         private System.Windows.Forms.Label lbl_numseg;
         private System.Windows.Forms.Label lbl_curp;
-        private System.Windows.Forms.Button btn_fecha;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         public System.Windows.Forms.RadioButton rdb_femenino;
         public System.Windows.Forms.RadioButton rdb_masculino;
@@ -381,5 +401,6 @@
         public System.Windows.Forms.TextBox txt_fecha;
         private FontAwesome.Sharp.IconButton btncancelar;
         private FontAwesome.Sharp.IconButton btneditar;
+        private FontAwesome.Sharp.IconButton btnborrar;
     }
 }

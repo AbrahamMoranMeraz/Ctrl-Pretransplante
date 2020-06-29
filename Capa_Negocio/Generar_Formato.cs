@@ -243,7 +243,6 @@ namespace Capa_Negocio
                 i++;
             }
             ruta = directoryName + @"\Resources\";
-            MessageBox.Show(ruta);
         }
 
         

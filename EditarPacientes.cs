@@ -42,75 +42,31 @@ namespace Control_PreTransplante_V2
             {
                 genero = "F";
             }
-            foreach (Control oControls in this.panel5.Controls) // Buscamos en cada TextBox de nuestro Formulario.
-            {
-                if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio.
-                {
-                    vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
-                }
-                else
-                {
-                    if (oControls is TextBox & oControls.Text == " ") // Verificamos que no este vacio.
-                    {
-                        vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
-                    }
-                    else
-                    {
-                        if (oControls is TextBox & oControls.Text == "") // Verificamos que no este vacio.
-                        {
-                            vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
-                        }
-                        else
-                        {
 
-                        }
-                    }
-                }
-            }
+        }
 
-            foreach (Control oControls in this.panel3.Controls) // Buscamos en cada TextBox de nuestro Formulario.
+        private Boolean validar(Panel formulario)
+        {
+            if (rdb_masculino.Checked == true)
             {
-                if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio.
-                {
-                    vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
-                }
-                else
-                {
-                    if (oControls is TextBox & oControls.Text == " ") // Verificamos que no este vacio.
-                    {
-                        vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
-                    }
-                    else
-                    {
-                        if (oControls is TextBox & oControls.Text == "") // Verificamos que no este vacio.
-                        {
-                            vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
-                        }
-                        else
-                        {
-
-                        }
-                    }
-                }
-            }
-            if (vacio == true)
-            {
-                MessageBox.Show("Favor de llenar todos los campos antes de actualizar el registro."); // Si nuestra variable es verdadera mostramos un mensaje.
-                vacio = false; // Devolvemos el valor original a nuestra variable.
+                genero = "M";
             }
             else
-            { 
-                try
+            {
+                genero = "F";
+            }
+            foreach (Control oControls in formulario.Controls) // Buscamos en cada TextBox de nuestro Formulario.
+            {
+                if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio.
                 {
-                    objFormaPciente.Editar(txt_numseg.Text, txt_curp.Text, txt_nombres.Text, txt_apellidoP.Text, txt_apellidoM.Text, genero, txt_fecha.Text, id_paciente);
-                    MessageBox.Show("Se edito correctamente");
-                    Close();
+                    return false; // Si esta vacio el TextBox asignamos el valor True a nuestra variable.
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("No se pudo modifiar el registro, los numeros de seguro social son unicos y el formato de fecha es año-mes-dia");
+
                 }
             }
+            return true;
         }
 
         private void btn_fecha_Click(object sender, EventArgs e)
@@ -132,7 +88,69 @@ namespace Control_PreTransplante_V2
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            validar();
+            if (validar(panel3) && validar(panel5))
+            {
+                try
+                {
+                    if (MessageBox.Show($"Desea editar la informacion del paciente con NSS: {txt_numseg.Text} ", "Advertencia",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        objFormaPciente.Insertar(txt_numseg.Text, txt_curp.Text, txt_nombres.Text, txt_apellidoP.Text, txt_apellidoM.Text, genero, txt_fecha.Text);
+                        MessageBox.Show("Se edito correctamente");
+                        Close();
+                    }
+                    else
+                    {
+
+                    }
+                }
+                catch 
+                {
+                    MessageBox.Show("Error en edicion intente mas tarde.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor verifique la informacion.");
+            }
+        }
+
+        private void btnborrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnborrar.BackColor = Color.Red;
+            btnborrar.ForeColor = Color.White;
+            btnborrar.IconColor = Color.White;
+        }
+
+        private void btnborrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnborrar.BackColor = Color.Transparent;
+            btnborrar.ForeColor = Color.Black;
+            btnborrar.IconColor = Color.Black;
+        }
+
+        private void btnborrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show($"Desea borrar al paciente con NSS: {txt_numseg.Text} ", "Advertencia",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Capa_Negocio.CN_Paciente eliminar = new CN_Paciente();
+                eliminar.EliminarProd(id_paciente);
+                MessageBox.Show($"Se elimino al paciente con NSS: {txt_numseg.Text}");
+                Close();
+            }
+            else
+            {
+
+            }
+            
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            txt_fecha.Text = e.Start.Year.ToString() + "-" +
+                e.Start.Month.ToString() + "-" +
+                e.Start.Day.ToString();
         }
     }
 }

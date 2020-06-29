@@ -74,12 +74,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="NPaciente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NPaciente.Designer.cs">
-      <DependentUpon>NPaciente.cs</DependentUpon>
-    </Compile>
     <Compile Include="NuevosEstudiosCate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,9 +111,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NPaciente.resx">
-      <DependentUpon>NPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevosEstudiosCate.resx">
       <DependentUpon>NuevosEstudiosCate.cs</DependentUpon>
