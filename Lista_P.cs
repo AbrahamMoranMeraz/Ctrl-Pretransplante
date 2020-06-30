@@ -212,5 +212,62 @@ namespace Control_PreTransplante_V2
                 return false;
             }
         }
+
+        private void txt_buscar_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow oControls in Lista.Rows) // Buscamos en cada TextBox de nuestro Formulario.
+                {
+                    foreach(DataGridViewCell cell in oControls.Cells)
+                    {
+                        if(txt_buscar.Text == cell.Value.ToString())
+                        {
+                            Lista.Rows[cell.RowIndex].Selected = true;
+                        }
+                        else { }
+                    }
+                }
+            }catch
+            {
+                MessageBox.Show("No coinicidio la busqueda.");
+            }
+        }
+
+        private void txt_buscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            bool bandera = false;
+            int c_filas = Lista.Rows.Count;
+            if (e.KeyData == Keys.Enter)
+            {
+                foreach (DataGridViewRow oControls in Lista.Rows) // Buscamos en cada TextBox de nuestro Formulario.
+                {
+                    if ((oControls.Index != c_filas-1))
+                    {
+                        foreach (DataGridViewCell cell in oControls.Cells)
+                        {
+                            if (txt_buscar.Text == cell.Value.ToString())
+                            {
+                                Lista.ClearSelection();
+                                Lista.Rows[cell.RowIndex].Selected = true;
+                                bandera = true;
+                                break;
+                            }
+                            else { }
+                        }
+                        if (bandera)
+                        {
+                            break;
+                        }
+                        else { }
+                    }
+                    else { MessageBox.Show("No se encontro coinicidencia"); break; }
+                }
+            }
+            else
+            {
+
+            }
+        }
     }
 }

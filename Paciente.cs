@@ -40,7 +40,7 @@ namespace Control_PreTransplante_V2
             InitializeComponent();
         }
 
-        private void MostrarEstudios(string idpaciente)//Método para vizualizar los registros de la DB
+        private void MostrarEstudios()//Método para vizualizar los registros de la DB
         {
             Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
             dataestudiosr.DataSource = objforma.Estudios(Convert.ToInt32(datos[0]));
@@ -82,13 +82,13 @@ namespace Control_PreTransplante_V2
             lbpaterno.Text = datos[2];
             lbmaterno.Text = datos[3];
             lbnss.Text = datos[5];
-            MostrarEstudios(datos[5]);
+            MostrarEstudios();
             Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
             table = objforma.Vistas("Categorias");
-            for(int x = 0; x < table.Rows.Count; x++)
+            /*for(int x = 0; x < table.Rows.Count; x++)
             {
                 categoriadeestudios.Items.Add(table.Rows[x].ItemArray[0].ToString());
-            }
+            }*/
             Inicio formulario = null;
             //Encontrar al usuario actual
             foreach (Form frm in Application.OpenForms)
@@ -464,7 +464,7 @@ namespace Control_PreTransplante_V2
             ListaPIR, ListaPINR, ListaSPI, ListaS2P, ListaOS, ListaPIRA, ListaSPRA, ListaPREOP, ListaDONA, ListaESPEC, checkBoxNota.Checked));
             //---------------------------------------------------------------------------//
             string[] listadeestudios = new string[18];
-            for (x = 0; x < lisatadeestudios.Items.Count; x++)
+            /*for (x = 0; x < lisatadeestudios.Items.Count; x++)
             {
                 if (lisatadeestudios.GetItemChecked(x))
                 {
@@ -476,7 +476,7 @@ namespace Control_PreTransplante_V2
                 {
 
                 }
-            }
+            }*/
             //if (categoriadeestudios.SelectedIndex==0 || categoriadeestudios.SelectedIndex == 1)
             //{
             //    MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), medico));
@@ -493,7 +493,7 @@ namespace Control_PreTransplante_V2
             //{
             //    MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato_2(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), medico, categoriadeestudios.SelectedItem.ToString()));
             //}
-            MostrarEstudios(datos[5]);
+            MostrarEstudios();
             Cambiostate();
         }
 
@@ -521,7 +521,7 @@ namespace Control_PreTransplante_V2
                 checkedListBox10.SetItemChecked(i, false);
         }
 
-        private void categoriadeestudios_SelectedValueChanged(object sender, EventArgs e)
+        /*private void categoriadeestudios_SelectedValueChanged(object sender, EventArgs e)
         {
             lisatadeestudios.Items.Clear();
             Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
@@ -604,7 +604,7 @@ namespace Control_PreTransplante_V2
                 checkBoxNota.Visible = false;
                 checkBoxNota.Checked = false;
             }
-            //**************************************************************************//
+            //*************************************************************************
             for (int x = 0; x < table.Rows.Count; x++)
             {
                 lisatadeestudios.Items.Add(table.Rows[x].ItemArray[0].ToString());
@@ -612,7 +612,7 @@ namespace Control_PreTransplante_V2
             for (int i = 0; i < lisatadeestudios.Items.Count; i++)
                 lisatadeestudios.SetItemChecked(i, true);
             btnimprimir.Visible = true;
-        }
+        }*/
 
         private void Paciente_SizeChanged(object sender, EventArgs e)
         {

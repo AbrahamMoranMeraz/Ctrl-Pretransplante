@@ -143,7 +143,7 @@
             this.lbl_InicioSesion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_InicioSesion.AutoSize = true;
             this.lbl_InicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_InicioSesion.Location = new System.Drawing.Point(188, 26);
+            this.lbl_InicioSesion.Location = new System.Drawing.Point(272, 24);
             this.lbl_InicioSesion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_InicioSesion.MinimumSize = new System.Drawing.Size(190, 36);
             this.lbl_InicioSesion.Name = "lbl_InicioSesion";

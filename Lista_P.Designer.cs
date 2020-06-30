@@ -34,6 +34,9 @@
             this.tap = new System.Windows.Forms.TabControl();
             this.listapaceintes = new System.Windows.Forms.TabPage();
             this.Lista = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_buscar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panellateral = new System.Windows.Forms.Panel();
             this.btnestudios = new FontAwesome.Sharp.IconButton();
             this.btneditar = new FontAwesome.Sharp.IconButton();
@@ -42,6 +45,7 @@
             this.tap.SuspendLayout();
             this.listapaceintes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Lista)).BeginInit();
+            this.panel1.SuspendLayout();
             this.panellateral.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +63,7 @@
             // listapaceintes
             // 
             this.listapaceintes.Controls.Add(this.Lista);
+            this.listapaceintes.Controls.Add(this.panel1);
             this.listapaceintes.Controls.Add(this.panellateral);
             this.listapaceintes.Location = new System.Drawing.Point(4, 25);
             this.listapaceintes.Name = "listapaceintes";
@@ -89,7 +94,7 @@
             this.Lista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Lista.EnableHeadersVisualStyles = false;
             this.Lista.GridColor = System.Drawing.Color.Teal;
-            this.Lista.Location = new System.Drawing.Point(3, 3);
+            this.Lista.Location = new System.Drawing.Point(3, 40);
             this.Lista.Name = "Lista";
             this.Lista.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -110,9 +115,41 @@
             this.Lista.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.Lista.RowTemplate.Height = 24;
             this.Lista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Lista.Size = new System.Drawing.Size(868, 689);
-            this.Lista.TabIndex = 6;
-            this.Lista.Resize += new System.EventHandler(this.Lista_Resize);
+            this.Lista.Size = new System.Drawing.Size(859, 652);
+            this.Lista.TabIndex = 14;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.txt_buscar);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(859, 37);
+            this.panel1.TabIndex = 13;
+            // 
+            // txt_buscar
+            // 
+            this.txt_buscar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_buscar.Location = new System.Drawing.Point(79, 0);
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.Size = new System.Drawing.Size(780, 34);
+            this.txt_buscar.TabIndex = 18;
+            this.txt_buscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_buscar_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 25);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Buscar:";
             // 
             // panellateral
             // 
@@ -120,9 +157,9 @@
             this.panellateral.Controls.Add(this.btneditar);
             this.panellateral.Controls.Add(this.btnactualizar);
             this.panellateral.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panellateral.Location = new System.Drawing.Point(871, 3);
+            this.panellateral.Location = new System.Drawing.Point(862, 3);
             this.panellateral.Name = "panellateral";
-            this.panellateral.Size = new System.Drawing.Size(230, 689);
+            this.panellateral.Size = new System.Drawing.Size(239, 689);
             this.panellateral.TabIndex = 4;
             // 
             // btnestudios
@@ -139,7 +176,7 @@
             this.btnestudios.Location = new System.Drawing.Point(0, 160);
             this.btnestudios.Name = "btnestudios";
             this.btnestudios.Rotation = 0D;
-            this.btnestudios.Size = new System.Drawing.Size(230, 375);
+            this.btnestudios.Size = new System.Drawing.Size(239, 375);
             this.btnestudios.TabIndex = 7;
             this.btnestudios.Text = "Estudios";
             this.btnestudios.UseVisualStyleBackColor = true;
@@ -159,7 +196,7 @@
             this.btneditar.Location = new System.Drawing.Point(0, 0);
             this.btneditar.Name = "btneditar";
             this.btneditar.Rotation = 0D;
-            this.btneditar.Size = new System.Drawing.Size(230, 160);
+            this.btneditar.Size = new System.Drawing.Size(239, 160);
             this.btneditar.TabIndex = 6;
             this.btneditar.Text = "Editar\r\nPaciente";
             this.btneditar.UseVisualStyleBackColor = true;
@@ -179,7 +216,7 @@
             this.btnactualizar.Location = new System.Drawing.Point(0, 535);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Rotation = 0D;
-            this.btnactualizar.Size = new System.Drawing.Size(230, 154);
+            this.btnactualizar.Size = new System.Drawing.Size(239, 154);
             this.btnactualizar.TabIndex = 3;
             this.btnactualizar.Text = " Actualizar\r\nLista";
             this.btnactualizar.UseVisualStyleBackColor = true;
@@ -208,6 +245,8 @@
             this.tap.ResumeLayout(false);
             this.listapaceintes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Lista)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panellateral.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -223,5 +262,8 @@
         private FontAwesome.Sharp.IconButton btnestudios;
         private FontAwesome.Sharp.IconButton btneditar;
         private System.Windows.Forms.DataGridView Lista;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_buscar;
     }
 }

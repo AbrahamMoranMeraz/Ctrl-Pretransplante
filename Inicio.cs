@@ -288,7 +288,7 @@ namespace Control_PreTransplante_V2
                     formulario = (Login)frm;
                     break;
                 }
-                else { }
+                else { return; }
             }
             formulario.Show();
         }
