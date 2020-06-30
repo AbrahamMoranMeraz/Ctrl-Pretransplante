@@ -324,7 +324,7 @@ namespace Control_PreTransplante_V2
             int categoria = 7;
             //****************************//
 
-            //Ciclo para llenar la tabla que contiene el nombre del estudio y el numero de categoria
+            //Ciclo para llenar listas que contiene el nombre del estudio y el numero de categoria
             for (int i = 0; i < categoria; i++)
             {
                 if (i == 1)
@@ -409,7 +409,7 @@ namespace Control_PreTransplante_V2
             //-------------------------imprimir por lista--------------------------------//
             MultiplesListas();
             MessageBox.Show(Capa_Negocio.Generar_Formato.ImpresioEnLista(comboBox1.SelectedItem.ToString(), medico, datos, Contadores,
-            ListaPIR, ListaPINR, ListaServicios/*, ListaS2P, ListaOS*/, ListaPIRA, ListaSPRA, ListaOtros/*ListaPREOP, ListaDONA, ListaESPEC*/, checkBoxNota.Checked));
+            ListaPIR, ListaPINR, ListaServicios, ListaPIRA, ListaSPRA, ListaOtros, checkBoxNota.Checked));
             //---------------------------------------------------------------------------//
             string[] listadeestudios = new string[18];
             for (x = 0; x < lisatadeestudios.Items.Count; x++)
