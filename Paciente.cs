@@ -15,23 +15,20 @@ namespace Control_PreTransplante_V2
     {
         string[] datos;
         DataTable table;
-        //TAbla para los los seleccionados
-        //DataTable listTable = new DataTable();
 
         //Listas para las 10 categorias
         List<string> ListaPIR;//Protocolo Inicial Relacionado
         List<string> ListaPINR;//Protocolo Inicial No Relacionado
-        List<string> ListaSPI;//Protocolo Inicial (Servicios)
-        List<string> ListaS2P;//2do Protocolo (Servicios)
-        List<string> ListaOS;//Otros (Servicios)
+
+        //*****Unir en una lista solo para servicios*************//
+        List<string> ListaServicios;
         List<string> ListaPIRA;//Protocolo Inicial (Radiología)
         List<string> ListaSPRA;//2do Protocolo (Radiología)
-        List<string> ListaPREOP;//PREOPERATORIOS
-        List<string> ListaDONA;//DONADOR
-        List<string> ListaESPEC;//ESPECIALES
+        //Unir en una lista solo para pre, dona, espec
+        List<string> ListaOtros;
 
         //Lista de contadores de categorias
-        List<int> Contadores;/*=new List<int>();*/
+        List<int> Contadores;
 
 
         string usuario;
@@ -102,7 +99,7 @@ namespace Control_PreTransplante_V2
             }
             usuario = formulario.UsuarioActual;
             Capa_Negocio.Generar_Formato.CalcularRuta();
-            //llenar listcheckbox
+            //llenar listcheckboxes
             llenarlistasCheck();
         }
 
@@ -212,14 +209,14 @@ namespace Control_PreTransplante_V2
             DataTable listTable = new DataTable();
             ListaPIR = new List<string>();
             ListaPINR = new List<string>();
-            ListaSPI = new List<string>();
-            ListaS2P = new List<string>();
-            ListaOS = new List<string>();
+
+            //*******Una sola lista Servicios************//
+            ListaServicios = new List<string>();
+            //********************************//
             ListaPIRA = new List<string>();
             ListaSPRA = new List<string>();
-            ListaPREOP = new List<string>();
-            ListaDONA = new List<string>();
-            ListaESPEC = new List<string>();
+            //*******Una sola lista Otros************//
+            ListaOtros = new List<string>();
             //*********************************//
 
             //Nombre y tipo a la tabla
@@ -259,7 +256,7 @@ namespace Control_PreTransplante_V2
             {
                 for (int x = 0; x < checkedListBox4.CheckedItems.Count; x++)
                 {
-                    listTable.Rows.Add(checkedListBox4.CheckedItems[x].ToString(), 4);
+                    listTable.Rows.Add(checkedListBox4.CheckedItems[x].ToString(), 3);
                 }
             }
 
@@ -267,7 +264,7 @@ namespace Control_PreTransplante_V2
             {
                 for (int x = 0; x < checkedListBox5.CheckedItems.Count; x++)
                 {
-                    listTable.Rows.Add(checkedListBox5.CheckedItems[x].ToString(), 5);
+                    listTable.Rows.Add(checkedListBox5.CheckedItems[x].ToString(), 3);
                 }
             }
 
@@ -275,7 +272,7 @@ namespace Control_PreTransplante_V2
             {
                 for (int x = 0; x < checkedListBox6.CheckedItems.Count; x++)
                 {
-                    listTable.Rows.Add(checkedListBox6.CheckedItems[x].ToString(), 6);
+                    listTable.Rows.Add(checkedListBox6.CheckedItems[x].ToString(), 4);
                 }
             }
 
@@ -283,7 +280,7 @@ namespace Control_PreTransplante_V2
             {
                 for (int x = 0; x < checkedListBox7.CheckedItems.Count; x++)
                 {
-                    listTable.Rows.Add(checkedListBox7.CheckedItems[x].ToString(), 7);
+                    listTable.Rows.Add(checkedListBox7.CheckedItems[x].ToString(), 5);
                 }
             }
 
@@ -291,7 +288,7 @@ namespace Control_PreTransplante_V2
             {
                 for (int x = 0; x < checkedListBox8.CheckedItems.Count; x++)
                 {
-                    listTable.Rows.Add(checkedListBox8.CheckedItems[x].ToString(), 8);
+                    listTable.Rows.Add(checkedListBox8.CheckedItems[x].ToString(), 6);
                 }
             }
 
@@ -299,7 +296,7 @@ namespace Control_PreTransplante_V2
             {
                 for (int x = 0; x < checkedListBox9.CheckedItems.Count; x++)
                 {
-                    listTable.Rows.Add(checkedListBox9.CheckedItems[x].ToString(), 9);
+                    listTable.Rows.Add(checkedListBox9.CheckedItems[x].ToString(), 6);
                 }
             }
 
@@ -307,7 +304,7 @@ namespace Control_PreTransplante_V2
             {
                 for (int x = 0; x < checkedListBox10.CheckedItems.Count; x++)
                 {
-                    listTable.Rows.Add(checkedListBox10.CheckedItems[x].ToString(), 10);
+                    listTable.Rows.Add(checkedListBox10.CheckedItems[x].ToString(), 6);
                 }
             }
             //*****************************************************************************//
@@ -320,16 +317,11 @@ namespace Control_PreTransplante_V2
             int categoria4 = 0;
             int categoria5 = 0;
             int categoria6 = 0;
-            int categoria7 = 0;
-            int categoria8 = 0;
-            int categoria9 = 0;
-            int categoria10 = 0;
-
 
             //*****************************************//
 
             //Contador para llenar tabla
-            int categoria = 11;
+            int categoria = 7;
             //****************************//
 
             //Ciclo para llenar la tabla que contiene el nombre del estudio y el numero de categoria
@@ -359,7 +351,7 @@ namespace Control_PreTransplante_V2
                     foreach (DataRow row in result)
                     {
                         categoria3 = categoria3 + 1;
-                        ListaSPI.Add(row["Estudio"].ToString());
+                        ListaServicios.Add(row["Estudio"].ToString());
                     }
                 }
 
@@ -369,7 +361,7 @@ namespace Control_PreTransplante_V2
                     foreach (DataRow row in result)
                     {
                         categoria4 = categoria4 + 1;
-                        ListaS2P.Add(row["Estudio"].ToString());
+                        ListaPIRA.Add(row["Estudio"].ToString());
                     }
                 }
 
@@ -379,7 +371,7 @@ namespace Control_PreTransplante_V2
                     foreach (DataRow row in result)
                     {
                         categoria5 = categoria5 + 1;
-                        ListaOS.Add(row["Estudio"].ToString());
+                        ListaSPRA.Add(row["Estudio"].ToString());
                     }
                 }
 
@@ -389,47 +381,7 @@ namespace Control_PreTransplante_V2
                     foreach (DataRow row in result)
                     {
                         categoria6 = categoria6 + 1;
-                        ListaPIRA.Add(row["Estudio"].ToString());
-                    }
-                }
-
-                if (i == 7)
-                {
-                    DataRow[] result = listTable.Select("Categoria = 7");
-                    foreach (DataRow row in result)
-                    {
-                        categoria7 = categoria7 + 1;
-                        ListaSPRA.Add(row["Estudio"].ToString());
-                    }
-                }
-
-                if (i == 8)
-                {
-                    DataRow[] result = listTable.Select("Categoria = 8");
-                    foreach (DataRow row in result)
-                    {
-                        categoria8 = categoria8 + 1;
-                        ListaPREOP.Add(row["Estudio"].ToString());
-                    }
-                }
-
-                if (i == 9)
-                {
-                    DataRow[] result = listTable.Select("Categoria = 9");
-                    foreach (DataRow row in result)
-                    {
-                        categoria9 = categoria9 + 1;
-                        ListaDONA.Add(row["Estudio"].ToString());
-                    }
-                }
-
-                if (i == 10)
-                {
-                    DataRow[] result = listTable.Select("Categoria = 10");
-                    foreach (DataRow row in result)
-                    {
-                        categoria10 = categoria10 + 1;
-                        ListaESPEC.Add(row["Estudio"].ToString());
+                        ListaOtros.Add(row["Estudio"].ToString());
                     }
                 }
             }
@@ -442,10 +394,6 @@ namespace Control_PreTransplante_V2
             Contadores.Add(categoria4);
             Contadores.Add(categoria5);
             Contadores.Add(categoria6);
-            Contadores.Add(categoria7);
-            Contadores.Add(categoria8);
-            Contadores.Add(categoria9);
-            Contadores.Add(categoria10);
             //************************//
         }
 
@@ -461,7 +409,7 @@ namespace Control_PreTransplante_V2
             //-------------------------imprimir por lista--------------------------------//
             MultiplesListas();
             MessageBox.Show(Capa_Negocio.Generar_Formato.ImpresioEnLista(comboBox1.SelectedItem.ToString(), medico, datos, Contadores,
-            ListaPIR, ListaPINR, ListaSPI, ListaS2P, ListaOS, ListaPIRA, ListaSPRA, ListaPREOP, ListaDONA, ListaESPEC, checkBoxNota.Checked));
+            ListaPIR, ListaPINR, ListaServicios/*, ListaS2P, ListaOS*/, ListaPIRA, ListaSPRA, ListaOtros/*ListaPREOP, ListaDONA, ListaESPEC*/, checkBoxNota.Checked));
             //---------------------------------------------------------------------------//
             string[] listadeestudios = new string[18];
             for (x = 0; x < lisatadeestudios.Items.Count; x++)
@@ -497,7 +445,7 @@ namespace Control_PreTransplante_V2
             Cambiostate();
         }
 
-        private void Cambiostate()
+        private void Cambiostate()//Borrar los estodos pasados al precionar el boton de generar
         {
             for (int i = 0; i < checkedListBox1.Items.Count; i++)
                 checkedListBox1.SetItemChecked(i, false);
@@ -637,7 +585,6 @@ namespace Control_PreTransplante_V2
             else
             {
                 checkBoxNota.Visible = false;
-                checkBoxNota.Checked = false;
             }
         }
     }
