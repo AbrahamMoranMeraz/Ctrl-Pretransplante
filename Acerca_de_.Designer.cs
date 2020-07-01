@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Acerca_de_));
             this.btncerrar = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -83,6 +83,73 @@
             this.panel1.Size = new System.Drawing.Size(723, 263);
             this.panel1.TabIndex = 9;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(0, 144);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(192, 90);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Moran Meraz Abraham\r\nFlores Gonzales Luis Diego\r\nAguilar Lopez Jose Miguel\r\n\r\n\r\n";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 126);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(134, 18);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Desarrolladores:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(0, 72);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(526, 54);
+            this.label5.TabIndex = 3;
+            this.label5.Text = resources.GetString("label5.Text");
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(0, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 18);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Desarrollo:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(0, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(499, 36);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Plataforma para realizar estudios pretrasnplante a donadores y receptores,\r\nla cu" +
+    "al registra todos los estudios solicitados para los mismos.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Descripción:";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
@@ -124,74 +191,7 @@
             this.label1.Size = new System.Drawing.Size(373, 100);
             this.label1.TabIndex = 0;
             this.label1.Text = "Proyecto desarrollado en colaboración con el \r\nTecnológico de México\r\nInstituto T" +
-    "ecnológico de Tijuana,\r\nInginieria de Siftware 2020-1.\r\n ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Descripción:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(499, 36);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Plataforma para realizar estudios pretrasnplante a donadores y receptores,\r\nla cu" +
-    "al registra todos los estudios solicitados para los mismos.";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(0, 54);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 18);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Desarrollo:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(0, 72);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(526, 54);
-            this.label5.TabIndex = 3;
-            this.label5.Text = resources.GetString("label5.Text");
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(0, 126);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 18);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Desarrolladores:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(0, 144);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(192, 90);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Moran Meraz Abraham\r\nFlores Gonzales Luis Diego\r\nAguilar Lopez Jose Miguel\r\n\r\n\r\n";
+    "ecnológico de Tijuana,\r\nInginiería de Software 2020-1.\r\n ";
             // 
             // Acerca_de_
             // 

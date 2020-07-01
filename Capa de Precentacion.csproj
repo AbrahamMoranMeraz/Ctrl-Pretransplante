@@ -50,12 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Acerca_de.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Acerca_de.Designer.cs">
-      <DependentUpon>Acerca_de.cs</DependentUpon>
-    </Compile>
     <Compile Include="Acerca_de_.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,9 +106,6 @@
     <Compile Include="RgPacientes.Designer.cs">
       <DependentUpon>RgPacientes.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Acerca_de.resx">
-      <DependentUpon>Acerca_de.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Acerca_de_.resx">
       <DependentUpon>Acerca_de_.cs</DependentUpon>
     </EmbeddedResource>

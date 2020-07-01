@@ -462,9 +462,46 @@ namespace Control_PreTransplante_V2
             if(this.Size.Width <= 1140)
             {
                 checkBoxNota.Font = new Font(checkBoxNota.Font.Name, 14);
+                //Adecuar el tamaño de letra para los chekedlistbox dependiendo del tamaño del formulario
+                foreach(TabPage pagina in tabControlClinicos.Controls)
+                {
+                    foreach(TabControl control in pagina.Controls)
+                    {
+                        foreach(TabPage page in control.Controls)
+                        {
+                            foreach(Control lista in page.Controls)
+                            {
+                                if (lista.GetType() == typeof(CheckedListBox))
+                                {
+                                    
+                                    lista.Font = new Font(lista.Font.Name, 12);
+                                }
+                                else { }
+                            }
+                        } 
+                    }
+                }
             }else if(this.Size.Width > 1300)
             {
                 checkBoxNota.Font = new Font(checkBoxNota.Font.Name, 18);
+                foreach (TabPage pagina in tabControlClinicos.Controls)
+                {
+                    foreach (TabControl control in pagina.Controls)
+                    {
+                        foreach (TabPage page in control.Controls)
+                        {
+                            foreach (Control lista in page.Controls)
+                            {
+                                if (lista.GetType() == typeof(CheckedListBox))
+                                {
+
+                                    lista.Font = new Font(lista.Font.Name, 16);
+                                }
+                                else { }
+                            }
+                        }
+                    }
+                }
             }
             else { }
         }
@@ -508,11 +545,6 @@ namespace Control_PreTransplante_V2
         private void button1_Click_1(object sender, EventArgs e)
         {
             Marcar_Desmarcar(0, checkedListBox1,btnaal_1);
-        }
-
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnall_2_Click(object sender, EventArgs e)
