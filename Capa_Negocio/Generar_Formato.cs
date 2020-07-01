@@ -47,14 +47,7 @@ namespace Capa_Negocio
 
             datosPaciente = paciente;
 
-            string algo = "";
-
-            if (Contadores[0] == 0 && Contadores[1] == 0 && Contadores[2] == 0 && Contadores[3] == 0 && Contadores[4] == 0 && Contadores[5] == 0)
-            {
-                algo = "Seleccione Elementos!";
-            }
-            else
-            {
+            string algo = "Archivos Impresos!";
 
             #region Union de dos formatos impares
             //1-PIR-PINR
@@ -329,9 +322,6 @@ namespace Capa_Negocio
                 }
             }
             #endregion
-
-                algo = "Archivos Impresos!";
-            }
 
             return algo;
         }
