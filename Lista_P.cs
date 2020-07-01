@@ -202,7 +202,7 @@ namespace Control_PreTransplante_V2
 
         private Boolean Filas()
         {
-            if(Lista.Rows.Count > 1 && Lista.SelectedRows.Count <2)
+            if (Lista.SelectedRows.Count < 2 && Lista.SelectedRows[0].Index < (Lista.Rows.Count - 1))
             {
                 return true;
             }

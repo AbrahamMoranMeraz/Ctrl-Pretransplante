@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spire.Xls.Core.Spreadsheet.Tables;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace Control_PreTransplante_V2
 {
     public partial class Paciente : Form
     {
+        #region Variables
         string[] datos;
         DataTable table;
 
@@ -29,18 +31,23 @@ namespace Control_PreTransplante_V2
 
         //Lista de contadores de categorias
         List<int> Contadores;
-
-
+        //objeto para la siguiente capa
+        Capa_Negocio.CN_Paciente cN_;
         string usuario;
+        List<string> medico;
+        //arreglo de banderas para los botones de marcar/desmarcar
+        Boolean[] bandera;
+        #endregion
+
         public Paciente()
         {
             InitializeComponent();
         }
 
-        private void MostrarEstudios(string nss)//Método para vizualizar los registros de la DB
+        private void MostrarEstudios()//Método para vizualizar los registros de la DB
         {
             Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
-            dataestudiosr.DataSource = objforma.Estudios(nss);
+            dataestudiosr.DataSource = objforma.Estudios(Convert.ToInt16(datos[0]));
         }
 
         public Paciente(string[] datos)
@@ -79,13 +86,9 @@ namespace Control_PreTransplante_V2
             lbpaterno.Text = datos[2];
             lbmaterno.Text = datos[3];
             lbnss.Text = datos[5];
-            MostrarEstudios(datos[5]);
+            MostrarEstudios();
             Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
             table = objforma.Vistas("Categorias");
-            for(int x = 0; x < table.Rows.Count; x++)
-            {
-                categoriadeestudios.Items.Add(table.Rows[x].ItemArray[0].ToString());
-            }
             Inicio formulario = null;
             //Encontrar al usuario actual
             foreach (Form frm in Application.OpenForms)
@@ -96,6 +99,11 @@ namespace Control_PreTransplante_V2
                     break;
                 }
                 else { }
+            }
+            bandera = new Boolean[9];
+            for(int x = 0; x < 9; x++)
+            {
+                bandera[x] = true;
             }
             usuario = formulario.UsuarioActual;
             Capa_Negocio.Generar_Formato.CalcularRuta();
@@ -233,6 +241,7 @@ namespace Control_PreTransplante_V2
                 for (int x = 0; x < checkedListBox1.CheckedItems.Count; x++)
                 {
                     listTable.Rows.Add(checkedListBox1.CheckedItems[x].ToString(), 1);
+                    cN_.InsertarStudios(Convert.ToInt32(datos[0]), checkedListBox1.CheckedItems[x].ToString(), medico[4]);
                 }
             }
 
@@ -241,6 +250,7 @@ namespace Control_PreTransplante_V2
                 for (int x = 0; x < checkedListBox2.CheckedItems.Count; x++)
                 {
                     listTable.Rows.Add(checkedListBox2.CheckedItems[x].ToString(), 2);
+                    cN_.InsertarStudios(Convert.ToInt32(datos[0]), checkedListBox2.CheckedItems[x].ToString(), medico[4]);
                 }
             }
 
@@ -249,6 +259,7 @@ namespace Control_PreTransplante_V2
                 for (int x = 0; x < checkedListBox3.CheckedItems.Count; x++)
                 {
                     listTable.Rows.Add(checkedListBox3.CheckedItems[x].ToString(), 3);
+                    cN_.InsertarStudios(Convert.ToInt32(datos[0]), checkedListBox3.CheckedItems[x].ToString(), medico[4]);
                 }
             }
 
@@ -257,6 +268,7 @@ namespace Control_PreTransplante_V2
                 for (int x = 0; x < checkedListBox4.CheckedItems.Count; x++)
                 {
                     listTable.Rows.Add(checkedListBox4.CheckedItems[x].ToString(), 3);
+                    cN_.InsertarStudios(Convert.ToInt32(datos[0]), checkedListBox4.CheckedItems[x].ToString(), medico[4]);
                 }
             }
 
@@ -265,6 +277,7 @@ namespace Control_PreTransplante_V2
                 for (int x = 0; x < checkedListBox5.CheckedItems.Count; x++)
                 {
                     listTable.Rows.Add(checkedListBox5.CheckedItems[x].ToString(), 3);
+                    cN_.InsertarStudios(Convert.ToInt32(datos[0]), checkedListBox5.CheckedItems[x].ToString(), medico[4]);
                 }
             }
 
@@ -273,6 +286,7 @@ namespace Control_PreTransplante_V2
                 for (int x = 0; x < checkedListBox6.CheckedItems.Count; x++)
                 {
                     listTable.Rows.Add(checkedListBox6.CheckedItems[x].ToString(), 4);
+                    cN_.InsertarStudios(Convert.ToInt32(datos[0]), checkedListBox6.CheckedItems[x].ToString(), medico[4]);
                 }
             }
 
@@ -281,6 +295,7 @@ namespace Control_PreTransplante_V2
                 for (int x = 0; x < checkedListBox7.CheckedItems.Count; x++)
                 {
                     listTable.Rows.Add(checkedListBox7.CheckedItems[x].ToString(), 5);
+                    cN_.InsertarStudios(Convert.ToInt32(datos[0]), checkedListBox7.CheckedItems[x].ToString(), medico[4]);
                 }
             }
 
@@ -289,6 +304,7 @@ namespace Control_PreTransplante_V2
                 for (int x = 0; x < checkedListBox8.CheckedItems.Count; x++)
                 {
                     listTable.Rows.Add(checkedListBox8.CheckedItems[x].ToString(), 6);
+                    cN_.InsertarStudios(Convert.ToInt32(datos[0]), checkedListBox8.CheckedItems[x].ToString(), medico[4]);
                 }
             }
 
@@ -297,6 +313,7 @@ namespace Control_PreTransplante_V2
                 for (int x = 0; x < checkedListBox9.CheckedItems.Count; x++)
                 {
                     listTable.Rows.Add(checkedListBox9.CheckedItems[x].ToString(), 6);
+                    cN_.InsertarStudios(Convert.ToInt32(datos[0]), checkedListBox9.CheckedItems[x].ToString(), medico[4]);
                 }
             }
 
@@ -305,6 +322,7 @@ namespace Control_PreTransplante_V2
                 for (int x = 0; x < checkedListBox10.CheckedItems.Count; x++)
                 {
                     listTable.Rows.Add(checkedListBox10.CheckedItems[x].ToString(), 6);
+                    cN_.InsertarStudios(Convert.ToInt32(datos[0]), checkedListBox10.CheckedItems[x].ToString(), medico[4]);
                 }
             }
             //*****************************************************************************//
@@ -401,47 +419,17 @@ namespace Control_PreTransplante_V2
         {
             int x = 0;//Contador de estudios
             int y = 0;//Contador de estudios que si se seleccionaron
-            Capa_Negocio.CN_Paciente cN_ = new Capa_Negocio.CN_Paciente();
+            cN_ = new Capa_Negocio.CN_Paciente();
             //----------------------Datos del medico----------------------------------//
             Capa_AccesoDatos.UsuarioLogin medicos = new Capa_AccesoDatos.UsuarioLogin();
-            List <string> medico = medicos.infomed(usuario);
+            medico = medicos.infomed(usuario);
             //-------------------------------------------------------------------------//
             //-------------------------imprimir por lista--------------------------------//
             MultiplesListas();
             MessageBox.Show(Capa_Negocio.Generar_Formato.ImpresioEnLista(comboBox1.SelectedItem.ToString(), medico, datos, Contadores,
             ListaPIR, ListaPINR, ListaServicios, ListaPIRA, ListaSPRA, ListaOtros, checkBoxNota.Checked));
             //---------------------------------------------------------------------------//
-            string[] listadeestudios = new string[18];
-            for (x = 0; x < lisatadeestudios.Items.Count; x++)
-            {
-                if (lisatadeestudios.GetItemChecked(x))
-                {
-                    cN_.InsertarStudios(datos[5], lisatadeestudios.Items[x].ToString(), null);
-                    listadeestudios[y] = lisatadeestudios.Items[x].ToString();
-                    y++;
-                }
-                else
-                {
-
-                }
-            }
-            //if (categoriadeestudios.SelectedIndex==0 || categoriadeestudios.SelectedIndex == 1)
-            //{
-            //    MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), medico));
-            //}
-            //else if (categoriadeestudios.SelectedIndex==2 || categoriadeestudios.SelectedIndex == 3 || categoriadeestudios.SelectedIndex == 4)
-            //{
-            //    MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoServicios(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), categoriadeestudios.SelectedItem.ToString(), medico));
-            //}
-            //else if (categoriadeestudios.SelectedIndex == 5 || categoriadeestudios.SelectedIndex == 6)
-            //{
-            //    MessageBox.Show(Capa_Negocio.Generar_Formato.FormatoRadiologia(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(),categoriadeestudios.SelectedItem.ToString(), medico, checkBoxNota.Checked));
-            //}
-            //else if (categoriadeestudios.SelectedIndex == 7 || categoriadeestudios.SelectedIndex == 8 || categoriadeestudios.SelectedIndex == 9)
-            //{
-            //    MessageBox.Show(Capa_Negocio.Generar_Formato.NuevoFormato_2(listadeestudios, datos, y, comboBox1.SelectedItem.ToString(), medico, categoriadeestudios.SelectedItem.ToString()));
-            //}
-            MostrarEstudios(datos[5]);
+            MostrarEstudios();
             Cambiostate();
         }
 
@@ -469,104 +457,11 @@ namespace Control_PreTransplante_V2
                 checkedListBox10.SetItemChecked(i, false);
         }
 
-        private void categoriadeestudios_SelectedValueChanged(object sender, EventArgs e)
-        {
-            lisatadeestudios.Items.Clear();
-            Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
-            if (categoriadeestudios.SelectedIndex == 0)
-            {
-                table = objforma.Vistas("Est_PIR");
-            }
-            else
-            {
-                if (categoriadeestudios.SelectedIndex == 1)
-                {
-                    table = objforma.Vistas("Est_PINR");
-                }
-                else
-                {
-                    if (categoriadeestudios.SelectedIndex==2)
-                    {
-                        table = objforma.Vistas("Ser_PI");
-                    }
-                    else
-                    {
-                        if (categoriadeestudios.SelectedIndex==3)
-                        {
-                            table = objforma.Vistas("Ser_2P");
-                        }
-                        else
-                        {
-                            if (categoriadeestudios.SelectedIndex==4)
-                            {
-                                table = objforma.Vistas("Ser_Otros");
-                            }
-                            else 
-                            {
-                                if (categoriadeestudios.SelectedIndex==5)
-                                {
-                                    table = objforma.Vistas("Radio_PI");
-                                }
-                                else
-                                {
-                                    if (categoriadeestudios.SelectedIndex==6)
-                                    {
-                                        table = objforma.Vistas("Radio_2P");
-                                    }
-                                    else
-                                    {
-                                        if (categoriadeestudios.SelectedIndex == 7)
-                                        {
-                                            table = objforma.Vistas("Pre_Op");
-                                        }
-                                        else
-                                        {
-                                            if (categoriadeestudios.SelectedIndex == 8)
-                                            {
-                                                table = objforma.Vistas("Donador");
-                                            }
-                                            else
-                                            {
-                                                if (categoriadeestudios.SelectedIndex == 9)
-                                                {
-                                                    table = objforma.Vistas("Especiales");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            //Si es alguna categoria de radiologia muestra checkbox de nota de impresion
-            if (categoriadeestudios.SelectedIndex==5 || categoriadeestudios.SelectedIndex == 6)
-            {
-                checkBoxNota.Visible = true;
-                checkBoxNota.ForeColor = Color.Black;
-                checkBoxNota.Checked = true;
-            }
-            else
-            {
-                checkBoxNota.Visible = false;
-                checkBoxNota.Checked = false;
-            }
-            //**************************************************************************//
-            for (int x = 0; x < table.Rows.Count; x++)
-            {
-                lisatadeestudios.Items.Add(table.Rows[x].ItemArray[0].ToString());
-            }
-            for (int i = 0; i < lisatadeestudios.Items.Count; i++)
-                lisatadeestudios.SetItemChecked(i, true);
-            btnimprimir.Visible = true;
-        }
-
         private void Paciente_SizeChanged(object sender, EventArgs e)
         {
             if(this.Size.Width <= 1140)
             {
-                checkBoxNota.Font = new Font(checkBoxNota.Font.Name, 8);
+                checkBoxNota.Font = new Font(checkBoxNota.Font.Name, 14);
             }else if(this.Size.Width > 1300)
             {
                 checkBoxNota.Font = new Font(checkBoxNota.Font.Name, 18);
@@ -586,6 +481,78 @@ namespace Control_PreTransplante_V2
             {
                 checkBoxNota.Visible = false;
             }
+        }
+
+        public void Marcar_Desmarcar(int indice, CheckedListBox lista, Button btn)
+        {
+            if (bandera[indice])
+            {
+                for (int x = 0; x < lista.Items.Count; x++)
+                {
+                    lista.SetItemChecked(x, true);
+                }
+                bandera[indice] = false;
+                btn.Text = "Desmarcar todos.";
+            }
+            else
+            {
+                for (int x = 0; x < lista.Items.Count; x++)
+                {
+                    lista.SetItemChecked(x, false);
+                }
+                bandera[indice] = true;
+                btn.Text = "Marcar todos.";
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Marcar_Desmarcar(0, checkedListBox1,btnaal_1);
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnall_2_Click(object sender, EventArgs e)
+        {
+            Marcar_Desmarcar(1, checkedListBox2, btnall_2);
+        }
+
+        private void btnall_3_Click(object sender, EventArgs e)
+        {
+            Marcar_Desmarcar(2, checkedListBox3, btnall_3);
+        }
+
+        private void btnall_4_Click(object sender, EventArgs e)
+        {
+            Marcar_Desmarcar(3, checkedListBox4, btnall_4);
+        }
+
+        private void btnall_5_Click(object sender, EventArgs e)
+        {
+            Marcar_Desmarcar(4, checkedListBox5, btnall_5);
+        }
+
+        private void btnall_7_Click(object sender, EventArgs e)
+        {
+            Marcar_Desmarcar(6, checkedListBox7, btnall_7);
+        }
+
+        private void btnall_6_Click(object sender, EventArgs e)
+        {
+            Marcar_Desmarcar(5, checkedListBox6, btnall_6);
+        }
+
+        private void btnall_8_Click(object sender, EventArgs e)
+        {
+            Marcar_Desmarcar(7, checkedListBox8, btnall_8);
+        }
+
+        private void btnall_9_Click(object sender, EventArgs e)
+        {
+            Marcar_Desmarcar(8, checkedListBox9, btnall_9);
         }
     }
 }

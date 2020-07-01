@@ -55,9 +55,10 @@
             this.tap.Controls.Add(this.pacientes);
             this.tap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tap.Location = new System.Drawing.Point(0, 0);
+            this.tap.Margin = new System.Windows.Forms.Padding(2);
             this.tap.Name = "tap";
             this.tap.SelectedIndex = 0;
-            this.tap.Size = new System.Drawing.Size(1112, 724);
+            this.tap.Size = new System.Drawing.Size(834, 588);
             this.tap.TabIndex = 0;
             // 
             // listapaceintes
@@ -65,10 +66,11 @@
             this.listapaceintes.Controls.Add(this.Lista);
             this.listapaceintes.Controls.Add(this.panel1);
             this.listapaceintes.Controls.Add(this.panellateral);
-            this.listapaceintes.Location = new System.Drawing.Point(4, 25);
+            this.listapaceintes.Location = new System.Drawing.Point(4, 22);
+            this.listapaceintes.Margin = new System.Windows.Forms.Padding(2);
             this.listapaceintes.Name = "listapaceintes";
-            this.listapaceintes.Padding = new System.Windows.Forms.Padding(3);
-            this.listapaceintes.Size = new System.Drawing.Size(1104, 695);
+            this.listapaceintes.Padding = new System.Windows.Forms.Padding(2);
+            this.listapaceintes.Size = new System.Drawing.Size(826, 562);
             this.listapaceintes.TabIndex = 0;
             this.listapaceintes.Text = "Lista Pacientes";
             this.listapaceintes.UseVisualStyleBackColor = true;
@@ -94,7 +96,8 @@
             this.Lista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Lista.EnableHeadersVisualStyles = false;
             this.Lista.GridColor = System.Drawing.Color.Teal;
-            this.Lista.Location = new System.Drawing.Point(3, 40);
+            this.Lista.Location = new System.Drawing.Point(2, 32);
+            this.Lista.Margin = new System.Windows.Forms.Padding(2);
             this.Lista.Name = "Lista";
             this.Lista.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -115,7 +118,7 @@
             this.Lista.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.Lista.RowTemplate.Height = 24;
             this.Lista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Lista.Size = new System.Drawing.Size(859, 652);
+            this.Lista.Size = new System.Drawing.Size(643, 528);
             this.Lista.TabIndex = 14;
             // 
             // panel1
@@ -124,18 +127,21 @@
             this.panel1.Controls.Add(this.txt_buscar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(859, 37);
+            this.panel1.Size = new System.Drawing.Size(643, 30);
             this.panel1.TabIndex = 13;
             // 
             // txt_buscar
             // 
+            this.txt_buscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_buscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_buscar.Location = new System.Drawing.Point(79, 0);
+            this.txt_buscar.Location = new System.Drawing.Point(63, 0);
+            this.txt_buscar.Margin = new System.Windows.Forms.Padding(2);
             this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(780, 34);
+            this.txt_buscar.Size = new System.Drawing.Size(580, 28);
             this.txt_buscar.TabIndex = 18;
             this.txt_buscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_buscar_KeyDown);
             // 
@@ -146,8 +152,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 25);
+            this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "Buscar:";
             // 
@@ -157,9 +164,10 @@
             this.panellateral.Controls.Add(this.btneditar);
             this.panellateral.Controls.Add(this.btnactualizar);
             this.panellateral.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panellateral.Location = new System.Drawing.Point(862, 3);
+            this.panellateral.Location = new System.Drawing.Point(645, 2);
+            this.panellateral.Margin = new System.Windows.Forms.Padding(2);
             this.panellateral.Name = "panellateral";
-            this.panellateral.Size = new System.Drawing.Size(239, 689);
+            this.panellateral.Size = new System.Drawing.Size(179, 558);
             this.panellateral.TabIndex = 4;
             // 
             // btnestudios
@@ -173,10 +181,11 @@
             this.btnestudios.IconColor = System.Drawing.Color.Black;
             this.btnestudios.IconSize = 40;
             this.btnestudios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnestudios.Location = new System.Drawing.Point(0, 160);
+            this.btnestudios.Location = new System.Drawing.Point(0, 130);
+            this.btnestudios.Margin = new System.Windows.Forms.Padding(2);
             this.btnestudios.Name = "btnestudios";
             this.btnestudios.Rotation = 0D;
-            this.btnestudios.Size = new System.Drawing.Size(239, 375);
+            this.btnestudios.Size = new System.Drawing.Size(179, 303);
             this.btnestudios.TabIndex = 7;
             this.btnestudios.Text = "Estudios";
             this.btnestudios.UseVisualStyleBackColor = true;
@@ -194,9 +203,10 @@
             this.btneditar.IconSize = 40;
             this.btneditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneditar.Location = new System.Drawing.Point(0, 0);
+            this.btneditar.Margin = new System.Windows.Forms.Padding(2);
             this.btneditar.Name = "btneditar";
             this.btneditar.Rotation = 0D;
-            this.btneditar.Size = new System.Drawing.Size(239, 160);
+            this.btneditar.Size = new System.Drawing.Size(179, 130);
             this.btneditar.TabIndex = 6;
             this.btneditar.Text = "Editar\r\nPaciente";
             this.btneditar.UseVisualStyleBackColor = true;
@@ -213,10 +223,11 @@
             this.btnactualizar.IconColor = System.Drawing.Color.Black;
             this.btnactualizar.IconSize = 40;
             this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnactualizar.Location = new System.Drawing.Point(0, 535);
+            this.btnactualizar.Location = new System.Drawing.Point(0, 433);
+            this.btnactualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Rotation = 0D;
-            this.btnactualizar.Size = new System.Drawing.Size(239, 154);
+            this.btnactualizar.Size = new System.Drawing.Size(179, 125);
             this.btnactualizar.TabIndex = 3;
             this.btnactualizar.Text = " Actualizar\r\nLista";
             this.btnactualizar.UseVisualStyleBackColor = true;
@@ -224,21 +235,23 @@
             // 
             // pacientes
             // 
-            this.pacientes.Location = new System.Drawing.Point(4, 25);
+            this.pacientes.Location = new System.Drawing.Point(4, 22);
+            this.pacientes.Margin = new System.Windows.Forms.Padding(2);
             this.pacientes.Name = "pacientes";
-            this.pacientes.Padding = new System.Windows.Forms.Padding(3);
-            this.pacientes.Size = new System.Drawing.Size(1104, 695);
+            this.pacientes.Padding = new System.Windows.Forms.Padding(2);
+            this.pacientes.Size = new System.Drawing.Size(826, 562);
             this.pacientes.TabIndex = 1;
             this.pacientes.Text = "Pacientes";
             this.pacientes.UseVisualStyleBackColor = true;
             // 
             // Lista_P
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 724);
+            this.ClientSize = new System.Drawing.Size(834, 588);
             this.Controls.Add(this.tap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Lista_P";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Lista_P_Load);

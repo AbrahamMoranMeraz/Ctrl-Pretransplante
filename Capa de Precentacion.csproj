@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acerca_de.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Acerca_de.Designer.cs">
+      <DependentUpon>Acerca_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acerca_de_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acerca_de_.Designer.cs">
+      <DependentUpon>Acerca_de_.cs</DependentUpon>
+    </Compile>
     <Compile Include="Blanco.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,12 @@
     <Compile Include="RgPacientes.Designer.cs">
       <DependentUpon>RgPacientes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Acerca_de.resx">
+      <DependentUpon>Acerca_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acerca_de_.resx">
+      <DependentUpon>Acerca_de_.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Blanco.resx">
       <DependentUpon>Blanco.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +193,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo_IMSS_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITTlogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoTecNMBlanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logotecnm.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

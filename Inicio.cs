@@ -293,6 +293,24 @@ namespace Control_PreTransplante_V2
             formulario.Show();
         }
 
+        private void acercade_Click(object sender, EventArgs e)
+        {
+            Acerca_de_ editar = new Acerca_de_();
+            editar.TopMost = true;
+            editar.TopLevel = true;
+            editar.ShowDialog();
+        }
+
+        private void acercade_MouseEnter(object sender, EventArgs e)
+        {
+            acercade.BackColor = Color.FromArgb(197, 162, 110);
+        }
+
+        private void acercade_MouseLeave(object sender, EventArgs e)
+        {
+            acercade.BackColor = Color.FromArgb(13, 102, 87);
+        }
+
         private void btninicio_Click(object sender, EventArgs e)
         {
             OcultarSubmenu();
