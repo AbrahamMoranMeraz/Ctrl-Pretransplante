@@ -12,7 +12,6 @@ namespace Control_PreTransplante_V2
 {
     public partial class NuevosEstudiosCate : Form
     {
-        DataTable table;
 
         public NuevosEstudiosCate()
         {
@@ -21,6 +20,7 @@ namespace Control_PreTransplante_V2
 
         private void NuevosEstudiosCate_Load(object sender, EventArgs e)
         {
+            DataTable table = new DataTable();
             Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
             table = objforma.Vistas("Categorias");
             for (int x = 0; x < table.Rows.Count; x++)
@@ -31,7 +31,7 @@ namespace Control_PreTransplante_V2
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtEstudio.Text != "")
+            if (txtEstudio.Text != "" && cmbxCategorias.SelectedItem != null)
             {
                 Capa_Negocio.CN_Paciente cN = new Capa_Negocio.CN_Paciente();
                 if (MessageBox.Show("Agregar Estudio '" + txtEstudio.Text + "' a la categoria '" + categoria() + "', ¿estas seguro?", "Advertencia",
@@ -45,13 +45,14 @@ namespace Control_PreTransplante_V2
             }
             else
             {
-                MessageBox.Show("Agregar nombre del estudios primero");
+                MessageBox.Show("Agregar nombre del estudio nuevo y seleccionar una categoria", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtEstudio.Focus();
             }
         }
 
         private void llenarList()
         {
+            DataTable table = new DataTable();
             lisatadeestudios.Items.Clear();
             Capa_Negocio.CN_Paciente objforma = new Capa_Negocio.CN_Paciente();
             if (cmbxCategorias.SelectedIndex == 0)
@@ -138,6 +139,8 @@ namespace Control_PreTransplante_V2
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
+            if (lisatadeestudios.CheckedItems.Count != 0)
+            {
                 Capa_Negocio.CN_Paciente cN_ = new Capa_Negocio.CN_Paciente();
                 int x = 0;
                 for (x = 0; x < lisatadeestudios.Items.Count; x++)
@@ -151,7 +154,13 @@ namespace Control_PreTransplante_V2
                         }
                     }
                 }
-            llenarList();
+                llenarList();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una categoria y algun elemento de la lista", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+                
         }
 
         private string categoria()
