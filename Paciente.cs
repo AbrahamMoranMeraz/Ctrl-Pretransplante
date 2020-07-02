@@ -431,6 +431,28 @@ namespace Control_PreTransplante_V2
             //---------------------------------------------------------------------------//
             MostrarEstudios();
             Cambiostate();
+            Desmarcar();
+        }
+
+        public void Desmarcar()
+        {
+            foreach (TabPage pagina in tabControlClinicos.Controls)
+            {
+                foreach (TabControl control in pagina.Controls)
+                {
+                    foreach (TabPage page in control.Controls)
+                    {
+                        foreach (Control lista in page.Controls)
+                        {
+                            if (lista.GetType() == typeof(Button))
+                            {
+                                lista.Text = "Marcar todos.";
+                            }
+                            else { }
+                        }
+                    }
+                }
+            }
         }
 
         private void Cambiostate()//Borrar los estodos pasados al precionar el boton de generar
@@ -544,7 +566,7 @@ namespace Control_PreTransplante_V2
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Marcar_Desmarcar(0, checkedListBox1,btnaal_1);
+            Marcar_Desmarcar(0, checkedListBox1, btnall_1);
         }
 
         private void btnall_2_Click(object sender, EventArgs e)
