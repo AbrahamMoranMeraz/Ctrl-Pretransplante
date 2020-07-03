@@ -78,7 +78,7 @@ namespace Control_PreTransplante_V2
 
         private void btn_agregar_Click(object sender, EventArgs e) //Registrar paciente
         {
-            if(validar(panel3) && validar(panel5))
+            if(validar(panel1))
             {
                 try
                 {
@@ -112,6 +112,18 @@ namespace Control_PreTransplante_V2
             txt_fecha.Text = e.Start.Year.ToString() + "-" +
                 e.Start.Month.ToString() + "-" +
                 e.Start.Day.ToString();
+        }
+
+        private void RgPacientes_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.Size.Width < 900)
+            {
+                panel1.Size = new Size(400, Size.Height);
+            }
+            else if (this.Size.Width > 1300)
+            {
+                panel1.Size = new Size(800, Size.Height);
+            }
         }
     }
 }

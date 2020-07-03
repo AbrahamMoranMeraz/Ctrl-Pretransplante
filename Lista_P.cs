@@ -28,97 +28,18 @@ namespace Control_PreTransplante_V2
             Lista.Columns[0].Visible = false;
         }
 
-        private void Lista_P_Load(object sender, EventArgs e)
+        private void Lista_P_Load(object sender, EventArgs e)//Actualisa la lista de pacientes
         {
             MostrarPa();
             datos = new string[7];
         }
 
-        private void Lista_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (Filas())
-            {
-                datos[0] = Lista.Rows[e.RowIndex].Cells[0].Value.ToString();
-                datos[1] = Lista.Rows[e.RowIndex].Cells[1].Value.ToString();
-                datos[2] = Lista.Rows[e.RowIndex].Cells[2].Value.ToString();
-                datos[3] = Lista.Rows[e.RowIndex].Cells[3].Value.ToString();
-                datos[4] = Lista.Rows[e.RowIndex].Cells[4].Value.ToString();
-                datos[5] = Lista.Rows[e.RowIndex].Cells[5].Value.ToString();
-                datos[6] = Lista.Rows[e.RowIndex].Cells[6].Value.ToString();
-                formulario = pacientes.Controls.OfType<Paciente>().FirstOrDefault();//buscaen la coleccion el formulario
-                                                                                    //si el formulario/instancia no existe
-                if (formulario == null)
-                {
-                    formulario = new Paciente(datos);
-                    formulario.TopLevel = false;
-                    pacientes.Controls.Add(formulario);
-                    pacientes.Tag = formulario;
-                    formulario.Dock = DockStyle.Fill;
-                    formulario.Show();
-                }
-                else//Si el formulario existe
-                {
-                    formulario.Close();
-                    formulario = new Paciente(datos);
-                    formulario.TopLevel = false;
-                    pacientes.Controls.Add(formulario);
-                    pacientes.Tag = formulario;
-                    formulario.Dock = DockStyle.Fill;
-                    formulario.Show();
-                }
-                tap.DeselectTab(0);//Cambia a la siguiente pagina del tap desde la pagina 0
-            }
-            else { }
-        }
-
-        private void pacientes_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            MessageBox.Show(Convert.ToString(tap.SelectedIndex));
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void iconButton1_Click(object sender, EventArgs e)//boton de actualizar lista de pacientes
         {
             MostrarPa();
         }
 
-        private void Lista_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (Filas())
-            {
-                datos[0] = Lista.Rows[e.RowIndex].Cells[0].Value.ToString();
-                datos[1] = Lista.Rows[e.RowIndex].Cells[1].Value.ToString();
-                datos[2] = Lista.Rows[e.RowIndex].Cells[2].Value.ToString();
-                datos[3] = Lista.Rows[e.RowIndex].Cells[3].Value.ToString();
-                datos[4] = Lista.Rows[e.RowIndex].Cells[4].Value.ToString();
-                datos[5] = Lista.Rows[e.RowIndex].Cells[5].Value.ToString();
-                datos[6] = Lista.Rows[e.RowIndex].Cells[6].Value.ToString();
-                formulario = pacientes.Controls.OfType<Paciente>().FirstOrDefault();//buscaen la coleccion el formulario
-                                                                                    //si el formulario/instancia no existe
-                if (formulario == null)
-                {
-                    formulario = new Paciente(datos);
-                    formulario.TopLevel = false;
-                    pacientes.Controls.Add(formulario);
-                    pacientes.Tag = formulario;
-                    formulario.Dock = DockStyle.Fill;
-                    formulario.Show();
-                }
-                else//Si el formulario existe
-                {
-                    formulario.Close();
-                    formulario = new Paciente(datos);
-                    formulario.TopLevel = false;
-                    pacientes.Controls.Add(formulario);
-                    pacientes.Tag = formulario;
-                    formulario.Dock = DockStyle.Fill;
-                    formulario.Show();
-                }
-                tap.DeselectTab(0);//Cambia a la siguiente pagina del tap desde la pagina 0
-            }
-            else { }
-        }
-
-        private void Estudios_Click(object sender, EventArgs e)
+        private void Estudios_Click(object sender, EventArgs e)//Seleccionamos un apcientes y mandamos la informacion a otro formulario en un arreglo 
         {
             if (Filas())
             {
@@ -155,7 +76,7 @@ namespace Control_PreTransplante_V2
             else { }
         }
 
-        private void btneditar_Click(object sender, EventArgs e)
+        private void btneditar_Click(object sender, EventArgs e)//Seleccionamos un pacientes y pasomos los datos a otro formulario con propiedades publicas
         {
             if (Filas())
             {
@@ -186,7 +107,7 @@ namespace Control_PreTransplante_V2
             }
         }
 
-        private void Lista_Resize(object sender, EventArgs e)
+        private void Lista_Resize(object sender, EventArgs e)//Adaptamos el tamaño de letra segun el tamaño de la ventana
         {
             if(this.Size.Width < 1120)
             {
@@ -200,7 +121,7 @@ namespace Control_PreTransplante_V2
             }   
         }
 
-        private Boolean Filas()
+        private Boolean Filas()//Verificar que solo sekeccione una fila y esta no sea fila null
         {
             if (Lista.SelectedRows.Count < 2 && Lista.SelectedRows[0].Index < (Lista.Rows.Count - 1))
             {
@@ -213,28 +134,7 @@ namespace Control_PreTransplante_V2
             }
         }
 
-        private void txt_buscar_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                foreach (DataGridViewRow oControls in Lista.Rows) // Buscamos en cada TextBox de nuestro Formulario.
-                {
-                    foreach(DataGridViewCell cell in oControls.Cells)
-                    {
-                        if(txt_buscar.Text == cell.Value.ToString())
-                        {
-                            Lista.Rows[cell.RowIndex].Selected = true;
-                        }
-                        else { }
-                    }
-                }
-            }catch
-            {
-                MessageBox.Show("No coinicidio la busqueda.");
-            }
-        }
-
-        private void txt_buscar_KeyDown(object sender, KeyEventArgs e)
+        private void txt_buscar_KeyDown(object sender, KeyEventArgs e)//Metodo de filtrar paceintes por textbox
         {
             bool bandera = false;
             int c_filas = Lista.Rows.Count;
