@@ -137,10 +137,10 @@
             this.lbnss.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbnss.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnss.ForeColor = System.Drawing.Color.Black;
-            this.lbnss.Location = new System.Drawing.Point(833, 25);
+            this.lbnss.Location = new System.Drawing.Point(684, 20);
             this.lbnss.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbnss.Name = "lbnss";
-            this.lbnss.Size = new System.Drawing.Size(57, 24);
+            this.lbnss.Size = new System.Drawing.Size(47, 18);
             this.lbnss.TabIndex = 23;
             this.lbnss.Text = "NSS:";
             // 
@@ -150,10 +150,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(785, 25);
+            this.label4.Location = new System.Drawing.Point(644, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 20);
+            this.label4.Size = new System.Drawing.Size(40, 17);
             this.label4.TabIndex = 22;
             this.label4.Text = "NSS:";
             // 
@@ -164,10 +164,10 @@
             this.lbmaterno.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbmaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbmaterno.ForeColor = System.Drawing.Color.Black;
-            this.lbmaterno.Location = new System.Drawing.Point(610, 25);
+            this.lbmaterno.Location = new System.Drawing.Point(505, 20);
             this.lbmaterno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbmaterno.Name = "lbmaterno";
-            this.lbmaterno.Size = new System.Drawing.Size(175, 24);
+            this.lbmaterno.Size = new System.Drawing.Size(139, 18);
             this.lbmaterno.TabIndex = 21;
             this.lbmaterno.Text = "Apellido Materno:";
             // 
@@ -177,10 +177,10 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Left;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(471, 25);
+            this.label3.Location = new System.Drawing.Point(387, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 20);
+            this.label3.Size = new System.Drawing.Size(118, 17);
             this.label3.TabIndex = 20;
             this.label3.Text = "Apellido Materno:";
             // 
@@ -191,10 +191,10 @@
             this.lbpaterno.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbpaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbpaterno.ForeColor = System.Drawing.Color.Black;
-            this.lbpaterno.Location = new System.Drawing.Point(300, 25);
+            this.lbpaterno.Location = new System.Drawing.Point(251, 20);
             this.lbpaterno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbpaterno.Name = "lbpaterno";
-            this.lbpaterno.Size = new System.Drawing.Size(171, 24);
+            this.lbpaterno.Size = new System.Drawing.Size(136, 18);
             this.lbpaterno.TabIndex = 19;
             this.lbpaterno.Text = "Apellido Paterno:";
             // 
@@ -204,10 +204,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(164, 25);
+            this.label2.Location = new System.Drawing.Point(135, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 20);
+            this.label2.Size = new System.Drawing.Size(116, 17);
             this.label2.TabIndex = 18;
             this.label2.Text = "Apellido Paterno:";
             // 
@@ -218,10 +218,10 @@
             this.lbnombre.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnombre.ForeColor = System.Drawing.Color.Black;
-            this.lbnombre.Location = new System.Drawing.Point(73, 25);
+            this.lbnombre.Location = new System.Drawing.Point(62, 20);
             this.lbnombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbnombre.Name = "lbnombre";
-            this.lbnombre.Size = new System.Drawing.Size(91, 24);
+            this.lbnombre.Size = new System.Drawing.Size(73, 18);
             this.lbnombre.TabIndex = 17;
             this.lbnombre.Text = "Nombre:";
             // 
@@ -231,10 +231,10 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Left;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(0, 25);
+            this.label5.Location = new System.Drawing.Point(0, 20);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 20);
+            this.label5.Size = new System.Drawing.Size(62, 17);
             this.label5.TabIndex = 16;
             this.label5.Text = "Nombre:";
             // 
@@ -247,7 +247,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 25);
+            this.label1.Size = new System.Drawing.Size(207, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Informacion del paciente";
             // 
@@ -272,20 +272,20 @@
             this.tabControlClinicos.Controls.Add(this.tabPageOtros);
             this.tabControlClinicos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlClinicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlClinicos.Location = new System.Drawing.Point(0, 173);
+            this.tabControlClinicos.Location = new System.Drawing.Point(0, 168);
             this.tabControlClinicos.Name = "tabControlClinicos";
             this.tabControlClinicos.SelectedIndex = 0;
-            this.tabControlClinicos.Size = new System.Drawing.Size(854, 116);
+            this.tabControlClinicos.Size = new System.Drawing.Size(854, 121);
             this.tabControlClinicos.TabIndex = 29;
             this.tabControlClinicos.Click += new System.EventHandler(this.tabControlClinicos_Click);
             // 
             // tabPageClinicos
             // 
             this.tabPageClinicos.Controls.Add(this.tabControl1);
-            this.tabPageClinicos.Location = new System.Drawing.Point(4, 31);
+            this.tabPageClinicos.Location = new System.Drawing.Point(4, 26);
             this.tabPageClinicos.Name = "tabPageClinicos";
             this.tabPageClinicos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageClinicos.Size = new System.Drawing.Size(846, 81);
+            this.tabPageClinicos.Size = new System.Drawing.Size(846, 91);
             this.tabPageClinicos.TabIndex = 0;
             this.tabPageClinicos.Text = "Clinicos";
             this.tabPageClinicos.UseVisualStyleBackColor = true;
@@ -299,17 +299,17 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(840, 75);
+            this.tabControl1.Size = new System.Drawing.Size(840, 85);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.checkedListBox1);
             this.tabPage1.Controls.Add(this.btnall_1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 31);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(832, 40);
+            this.tabPage1.Size = new System.Drawing.Size(832, 55);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Protocolo Inicial Relacionado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -321,7 +321,7 @@
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(3, 33);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(826, 4);
+            this.checkedListBox1.Size = new System.Drawing.Size(826, 19);
             this.checkedListBox1.TabIndex = 2;
             // 
             // btnall_1
@@ -342,10 +342,10 @@
             // 
             this.tabPage2.Controls.Add(this.checkedListBox2);
             this.tabPage2.Controls.Add(this.btnall_2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(832, 40);
+            this.tabPage2.Size = new System.Drawing.Size(832, 45);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Protocolo Inicial No Relacionado";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -357,7 +357,7 @@
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.Location = new System.Drawing.Point(3, 33);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(826, 4);
+            this.checkedListBox2.Size = new System.Drawing.Size(826, 9);
             this.checkedListBox2.TabIndex = 3;
             // 
             // btnall_2
@@ -377,10 +377,10 @@
             // tabPageServicios
             // 
             this.tabPageServicios.Controls.Add(this.tabControl2);
-            this.tabPageServicios.Location = new System.Drawing.Point(4, 31);
+            this.tabPageServicios.Location = new System.Drawing.Point(4, 26);
             this.tabPageServicios.Name = "tabPageServicios";
             this.tabPageServicios.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageServicios.Size = new System.Drawing.Size(846, 81);
+            this.tabPageServicios.Size = new System.Drawing.Size(846, 91);
             this.tabPageServicios.TabIndex = 1;
             this.tabPageServicios.Text = "Servicios";
             this.tabPageServicios.UseVisualStyleBackColor = true;
@@ -394,17 +394,17 @@
             this.tabControl2.Location = new System.Drawing.Point(3, 3);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(840, 75);
+            this.tabControl2.Size = new System.Drawing.Size(840, 85);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.checkedListBox3);
             this.tabPage3.Controls.Add(this.btnall_3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 31);
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(832, 40);
+            this.tabPage3.Size = new System.Drawing.Size(832, 55);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Protocolo Inicial";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -416,7 +416,7 @@
             this.checkedListBox3.FormattingEnabled = true;
             this.checkedListBox3.Location = new System.Drawing.Point(3, 33);
             this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(826, 4);
+            this.checkedListBox3.Size = new System.Drawing.Size(826, 19);
             this.checkedListBox3.TabIndex = 3;
             // 
             // btnall_3
@@ -437,10 +437,10 @@
             // 
             this.tabPage4.Controls.Add(this.checkedListBox4);
             this.tabPage4.Controls.Add(this.btnall_4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 31);
+            this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(832, 40);
+            this.tabPage4.Size = new System.Drawing.Size(832, 45);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "2do Protocolo";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -452,7 +452,7 @@
             this.checkedListBox4.FormattingEnabled = true;
             this.checkedListBox4.Location = new System.Drawing.Point(3, 33);
             this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(826, 4);
+            this.checkedListBox4.Size = new System.Drawing.Size(826, 9);
             this.checkedListBox4.TabIndex = 4;
             // 
             // btnall_4
@@ -473,9 +473,9 @@
             // 
             this.tabPage5.Controls.Add(this.checkedListBox5);
             this.tabPage5.Controls.Add(this.btnall_5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 31);
+            this.tabPage5.Location = new System.Drawing.Point(4, 26);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(832, 40);
+            this.tabPage5.Size = new System.Drawing.Size(832, 45);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Otros";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -487,7 +487,7 @@
             this.checkedListBox5.FormattingEnabled = true;
             this.checkedListBox5.Location = new System.Drawing.Point(0, 30);
             this.checkedListBox5.Name = "checkedListBox5";
-            this.checkedListBox5.Size = new System.Drawing.Size(832, 10);
+            this.checkedListBox5.Size = new System.Drawing.Size(832, 15);
             this.checkedListBox5.TabIndex = 5;
             // 
             // btnall_5
@@ -507,10 +507,10 @@
             // tabPageRadiologicos
             // 
             this.tabPageRadiologicos.Controls.Add(this.tabControl3);
-            this.tabPageRadiologicos.Location = new System.Drawing.Point(4, 31);
+            this.tabPageRadiologicos.Location = new System.Drawing.Point(4, 26);
             this.tabPageRadiologicos.Name = "tabPageRadiologicos";
             this.tabPageRadiologicos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRadiologicos.Size = new System.Drawing.Size(846, 81);
+            this.tabPageRadiologicos.Size = new System.Drawing.Size(846, 91);
             this.tabPageRadiologicos.TabIndex = 2;
             this.tabPageRadiologicos.Text = "Radiologicos";
             this.tabPageRadiologicos.UseVisualStyleBackColor = true;
@@ -523,17 +523,17 @@
             this.tabControl3.Location = new System.Drawing.Point(3, 3);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(840, 75);
+            this.tabControl3.Size = new System.Drawing.Size(840, 85);
             this.tabControl3.TabIndex = 0;
             // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.checkedListBox6);
             this.tabPage6.Controls.Add(this.btnall_6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 31);
+            this.tabPage6.Location = new System.Drawing.Point(4, 26);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(832, 40);
+            this.tabPage6.Size = new System.Drawing.Size(832, 55);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "Protocolo Inicial";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -545,7 +545,7 @@
             this.checkedListBox6.FormattingEnabled = true;
             this.checkedListBox6.Location = new System.Drawing.Point(3, 33);
             this.checkedListBox6.Name = "checkedListBox6";
-            this.checkedListBox6.Size = new System.Drawing.Size(826, 4);
+            this.checkedListBox6.Size = new System.Drawing.Size(826, 19);
             this.checkedListBox6.TabIndex = 6;
             // 
             // btnall_6
@@ -566,10 +566,10 @@
             // 
             this.tabPage7.Controls.Add(this.checkedListBox7);
             this.tabPage7.Controls.Add(this.btnall_7);
-            this.tabPage7.Location = new System.Drawing.Point(4, 31);
+            this.tabPage7.Location = new System.Drawing.Point(4, 26);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(832, 40);
+            this.tabPage7.Size = new System.Drawing.Size(832, 45);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "2do Protocolo";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -581,7 +581,7 @@
             this.checkedListBox7.FormattingEnabled = true;
             this.checkedListBox7.Location = new System.Drawing.Point(3, 33);
             this.checkedListBox7.Name = "checkedListBox7";
-            this.checkedListBox7.Size = new System.Drawing.Size(826, 4);
+            this.checkedListBox7.Size = new System.Drawing.Size(826, 9);
             this.checkedListBox7.TabIndex = 7;
             // 
             // btnall_7
@@ -601,9 +601,9 @@
             // tabPageOtros
             // 
             this.tabPageOtros.Controls.Add(this.tabControl4);
-            this.tabPageOtros.Location = new System.Drawing.Point(4, 31);
+            this.tabPageOtros.Location = new System.Drawing.Point(4, 26);
             this.tabPageOtros.Name = "tabPageOtros";
-            this.tabPageOtros.Size = new System.Drawing.Size(846, 81);
+            this.tabPageOtros.Size = new System.Drawing.Size(846, 91);
             this.tabPageOtros.TabIndex = 3;
             this.tabPageOtros.Text = "Otros Especiales";
             this.tabPageOtros.UseVisualStyleBackColor = true;
@@ -617,17 +617,17 @@
             this.tabControl4.Location = new System.Drawing.Point(0, 0);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(846, 81);
+            this.tabControl4.Size = new System.Drawing.Size(846, 91);
             this.tabControl4.TabIndex = 0;
             // 
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.checkedListBox8);
             this.tabPage8.Controls.Add(this.btnall_8);
-            this.tabPage8.Location = new System.Drawing.Point(4, 31);
+            this.tabPage8.Location = new System.Drawing.Point(4, 26);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(838, 46);
+            this.tabPage8.Size = new System.Drawing.Size(838, 61);
             this.tabPage8.TabIndex = 0;
             this.tabPage8.Text = "PREOPERATORIOS";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -639,7 +639,7 @@
             this.checkedListBox8.FormattingEnabled = true;
             this.checkedListBox8.Location = new System.Drawing.Point(3, 33);
             this.checkedListBox8.Name = "checkedListBox8";
-            this.checkedListBox8.Size = new System.Drawing.Size(832, 10);
+            this.checkedListBox8.Size = new System.Drawing.Size(832, 25);
             this.checkedListBox8.TabIndex = 9;
             // 
             // btnall_8
@@ -660,10 +660,10 @@
             // 
             this.tabPage9.Controls.Add(this.checkedListBox9);
             this.tabPage9.Controls.Add(this.btnall_9);
-            this.tabPage9.Location = new System.Drawing.Point(4, 31);
+            this.tabPage9.Location = new System.Drawing.Point(4, 26);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(838, 46);
+            this.tabPage9.Size = new System.Drawing.Size(838, 51);
             this.tabPage9.TabIndex = 1;
             this.tabPage9.Text = "Donador";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -675,7 +675,7 @@
             this.checkedListBox9.FormattingEnabled = true;
             this.checkedListBox9.Location = new System.Drawing.Point(3, 33);
             this.checkedListBox9.Name = "checkedListBox9";
-            this.checkedListBox9.Size = new System.Drawing.Size(832, 10);
+            this.checkedListBox9.Size = new System.Drawing.Size(832, 15);
             this.checkedListBox9.TabIndex = 9;
             // 
             // btnall_9
@@ -695,9 +695,9 @@
             // tabPage10
             // 
             this.tabPage10.Controls.Add(this.checkedListBox10);
-            this.tabPage10.Location = new System.Drawing.Point(4, 31);
+            this.tabPage10.Location = new System.Drawing.Point(4, 26);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(838, 46);
+            this.tabPage10.Size = new System.Drawing.Size(838, 51);
             this.tabPage10.TabIndex = 2;
             this.tabPage10.Text = "ESPECIALES";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -709,7 +709,7 @@
             this.checkedListBox10.FormattingEnabled = true;
             this.checkedListBox10.Location = new System.Drawing.Point(0, 0);
             this.checkedListBox10.Name = "checkedListBox10";
-            this.checkedListBox10.Size = new System.Drawing.Size(838, 46);
+            this.checkedListBox10.Size = new System.Drawing.Size(838, 51);
             this.checkedListBox10.TabIndex = 1;
             // 
             // panel2
@@ -732,11 +732,11 @@
             this.checkBoxNota.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxNota.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBoxNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxNota.Location = new System.Drawing.Point(6, 64);
+            this.checkBoxNota.Location = new System.Drawing.Point(6, 70);
             this.checkBoxNota.Name = "checkBoxNota";
-            this.checkBoxNota.Size = new System.Drawing.Size(227, 44);
+            this.checkBoxNota.Size = new System.Drawing.Size(197, 38);
             this.checkBoxNota.TabIndex = 24;
-            this.checkBoxNota.Text = "Impresión diagnostica: \r\nProtocolo de trasplante";
+            this.checkBoxNota.Text = "Impresión diagnóstica:\r\nProtocolo de trasplante";
             this.checkBoxNota.UseVisualStyleBackColor = false;
             this.checkBoxNota.Visible = false;
             // 
@@ -768,7 +768,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(460, 8);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(386, 33);
+            this.comboBox1.Size = new System.Drawing.Size(386, 28);
             this.comboBox1.TabIndex = 20;
             // 
             // dataestudiosr
@@ -794,7 +794,7 @@
             this.dataestudiosr.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataestudiosr.EnableHeadersVisualStyles = false;
             this.dataestudiosr.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.dataestudiosr.Location = new System.Drawing.Point(0, 25);
+            this.dataestudiosr.Location = new System.Drawing.Point(0, 20);
             this.dataestudiosr.Margin = new System.Windows.Forms.Padding(2);
             this.dataestudiosr.Name = "dataestudiosr";
             this.dataestudiosr.ReadOnly = true;
@@ -828,7 +828,7 @@
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(188, 25);
+            this.label6.Size = new System.Drawing.Size(154, 20);
             this.label6.TabIndex = 8;
             this.label6.Text = "Estudios Realizados";
             // 
