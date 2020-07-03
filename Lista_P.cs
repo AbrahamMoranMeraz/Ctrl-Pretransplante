@@ -136,37 +136,53 @@ namespace Control_PreTransplante_V2
 
         private void txt_buscar_KeyDown(object sender, KeyEventArgs e)//Metodo de filtrar paceintes por textbox
         {
-            bool bandera = false;
             int c_filas = Lista.Rows.Count;
+            CurrencyManager cm = (CurrencyManager)BindingContext[Lista.DataSource];
+            cm.SuspendBinding();
             if (e.KeyData == Keys.Enter)
             {
-                foreach (DataGridViewRow oControls in Lista.Rows) // Buscamos en cada TextBox de nuestro Formulario.
+                if (e.KeyCode == Keys.Enter)
                 {
-                    if ((oControls.Index != c_filas-1))
+                    foreach (DataGridViewRow oControls in Lista.Rows) // Ocultamos todas las filas
                     {
-                        foreach (DataGridViewCell cell in oControls.Cells)
+                        if(oControls.Index != c_filas - 1)
                         {
-                            if (txt_buscar.Text == cell.Value.ToString())
-                            {
-                                Lista.ClearSelection();
-                                Lista.Rows[cell.RowIndex].Selected = true;
-                                bandera = true;
-                                break;
-                            }
-                            else { }
-                        }
-                        if (bandera)
-                        {
-                            break;
+                            oControls.Visible = false;
                         }
                         else { }
                     }
-                    else { MessageBox.Show("No se encontro coinicidencia"); break; }
+                    foreach (DataGridViewRow oControls in Lista.Rows) //Mostramos las que coinciden con la busqueda
+                    {
+                        if (oControls.Index != c_filas - 1)
+                        {
+                            foreach (DataGridViewCell cell in oControls.Cells)
+                            {
+                                if (cell.Value.ToString().Contains(txt_buscar.Text))
+                                {
+                                    oControls.Visible = true;
+                                    break;
+                                }
+                                else { }
+                            }
+                        }
+                        else { }
+                    }
                 }
+                else { }
             }
-            else
-            {
+            else { }
+        }
 
+        private void txt_buscar_TextChanged(object sender, EventArgs e)
+        {
+            int c_filas = Lista.Rows.Count;
+            foreach (DataGridViewRow oControls in Lista.Rows) // Ocultamos todas las filas
+            {
+                if (oControls.Index != c_filas - 1)
+                {
+                    oControls.Visible = true;
+                }
+                else { }
             }
         }
     }
