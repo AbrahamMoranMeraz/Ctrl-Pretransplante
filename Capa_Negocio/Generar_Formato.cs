@@ -62,7 +62,7 @@ namespace Capa_Negocio
             {
                 string tipo1 = "Protocolo Inicial Relacionado";
                 string tipo2 = "Protocolo Inicial No Relacionado";
-                CreateWordDocument($"{ruta}F_B1.docx", $"{ruta}" + datosPaciente[5] + "_F_B1.docx", Contadores[0], Contadores[1], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_B1.docx", $"{ruta}" + datosPaciente[5] + "_(Clinico Prot. Inicial R. y Inicial No R).docx", Contadores[0], Contadores[1], impresora, medico, tipo1, tipo2);
                 Contadores[0] = Contadores[0] - Contadores[0];
                 Contadores[1] = Contadores[1] - Contadores[1];
             }
@@ -72,7 +72,7 @@ namespace Capa_Negocio
                 string tipo1 = "Protocolo Inicial (Radiología)";
                 string tipo2 = "2do Protocolo (Radiología)";
                 notaRadiologia = nota;
-                CreateWordDocument($"{ruta}F2_2.docx", $"{ruta}" + datosPaciente[5] + "_F2_2.docx", Contadores[3], Contadores[4], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F2_2.docx", $"{ruta}" + datosPaciente[5] + "_(Radiologia Prot. Inicial y 2do).docx", Contadores[3], Contadores[4], impresora, medico, tipo1, tipo2);
                 ListaPIRA.RemoveAt(ListaPIRA.Count - 1);
                 ListaSPRA.RemoveAt(ListaSPRA.Count - 1);
                 Contadores[3] = Contadores[3] - 1;
@@ -83,7 +83,7 @@ namespace Capa_Negocio
             {
                 string tipo1 = "Protocolo Inicial Relacionado";
                 string tipo2 = "Servicios";
-                CreateWordDocument($"{ruta}F_U1.docx", $"{ruta}" + datosPaciente[5] + "_F_U1.docx", Contadores[0], Contadores[2], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U1.docx", $"{ruta}" + datosPaciente[5] + "_(Clinico Prot. Inicial y Servicio).docx", Contadores[0], Contadores[2], impresora, medico, tipo1, tipo2);
                 ListaServicios.RemoveAt(ListaServicios.Count - 1);
                 Contadores[0] = Contadores[0] - Contadores[0];
                 Contadores[2] = Contadores[2] - 1;
@@ -93,7 +93,7 @@ namespace Capa_Negocio
             {
                 string tipo1 = "Protocolo Inicial No Relacionado";
                 string tipo2 = "Servicios";
-                CreateWordDocument($"{ruta}F_U1.docx", $"{ruta}" + datosPaciente[5] + "_F_U1.docx", Contadores[1], Contadores[2], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U1.docx", $"{ruta}" + datosPaciente[5] + "_(Clinico Prot. Inicial NR y Servicios).docx", Contadores[1], Contadores[2], impresora, medico, tipo1, tipo2);
                 ListaServicios.RemoveAt(ListaServicios.Count - 1);
                 Contadores[1] = Contadores[1] - Contadores[1];
                 Contadores[2] = Contadores[2] - 1;
@@ -104,7 +104,7 @@ namespace Capa_Negocio
                 string tipo1 = "Protocolo Inicial (Radiología)";
                 string tipo2 = "Servicios";
                 notaRadiologia = nota;
-                CreateWordDocument($"{ruta}F_U2.docx", $"{ruta}" + datosPaciente[5] + "_F_U2.docx", Contadores[3], Contadores[2], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U2.docx", $"{ruta}" + datosPaciente[5] + "_(RAdiologia Prot. Inicial y Servicios).docx", Contadores[3], Contadores[2], impresora, medico, tipo1, tipo2);
                 ListaPIRA.RemoveAt(ListaPIRA.Count - 1);
                 ListaServicios.RemoveAt(ListaServicios.Count - 1);
                 Contadores[3] = Contadores[3] - 1;
@@ -116,7 +116,7 @@ namespace Capa_Negocio
                 string tipo1 = "2do Protocolo (Radiología)";
                 string tipo2 = "Servicios";
                 notaRadiologia = nota;
-                CreateWordDocument($"{ruta}F_U2.docx", $"{ruta}" + datosPaciente[5] + "_F_U2.docx", Contadores[4], Contadores[2], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U2.docx", $"{ruta}" + datosPaciente[5] + "_(Radiologia 2do Prot. y Servicio).docx", Contadores[4], Contadores[2], impresora, medico, tipo1, tipo2);
                 ListaSPRA.RemoveAt(ListaSPRA.Count - 1);
                 ListaServicios.RemoveAt(ListaServicios.Count - 1);
                 Contadores[4] = Contadores[4] - 1;
@@ -128,7 +128,7 @@ namespace Capa_Negocio
                 string tipo1 = "Protocolo Inicial Relacionado";
                 string tipo2 = "Protocolo Inicial (Radiología)";
                 notaRadiologia = nota;
-                CreateWordDocument($"{ruta}F_U3.docx", $"{ruta}" + datosPaciente[5] + "_F_U3.docx", Contadores[0], Contadores[3], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U3.docx", $"{ruta}" + datosPaciente[5] + "_(Clinico Prot. Inicial R y Radiologia Prot. Inicial).docx", Contadores[0], Contadores[3], impresora, medico, tipo1, tipo2);
                 ListaPIRA.RemoveAt(ListaPIRA.Count - 1);
                 Contadores[0] = Contadores[0] - Contadores[0];
                 Contadores[3] = Contadores[3] - 1;
@@ -139,7 +139,7 @@ namespace Capa_Negocio
                 string tipo1 = "Protocolo Inicial Relacionado";
                 string tipo2 = "2do Protocolo (Radiología)";
                 notaRadiologia = nota;
-                CreateWordDocument($"{ruta}F_U3.docx", $"{ruta}" + datosPaciente[5] + "_F_U3.docx", Contadores[0], Contadores[4], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U3.docx", $"{ruta}" + datosPaciente[5] + "_(Clinico Prot. Inicial R y Radiologia 2do Prot).docx", Contadores[0], Contadores[4], impresora, medico, tipo1, tipo2);
                 ListaSPRA.RemoveAt(ListaSPRA.Count - 1);
                 Contadores[0] = Contadores[0] - Contadores[0];
                 Contadores[4] = Contadores[4] - 1;
@@ -149,7 +149,7 @@ namespace Capa_Negocio
             {
                 string tipo1 = "Protocolo Inicial Relacionado";
                 string tipo2 = "Otros";
-                CreateWordDocument($"{ruta}F_U4.docx", $"{ruta}" + datosPaciente[5] + "_F_U4.docx", Contadores[0], Contadores[5], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U4.docx", $"{ruta}" + datosPaciente[5] + "_(Clinico Prot. Inicial R y Otros).docx", Contadores[0], Contadores[5], impresora, medico, tipo1, tipo2);
                 ListaOtros.RemoveAt(ListaOtros.Count - 1);
                 Contadores[0] = Contadores[0] - Contadores[0];
                 Contadores[5] = Contadores[5] - 1;
@@ -160,7 +160,7 @@ namespace Capa_Negocio
                 string tipo1 = "Protocolo Inicial No Relacionado";
                 string tipo2 = "Protocolo Inicial (Radiología)";
                 notaRadiologia = nota;
-                CreateWordDocument($"{ruta}F_U3.docx", $"{ruta}" + datosPaciente[5] + "_F_U3.docx", Contadores[1], Contadores[3], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U3.docx", $"{ruta}" + datosPaciente[5] + "_(Clinicos Prot. Inicial No R. y Radiologia Prot. Inicial).docx", Contadores[1], Contadores[3], impresora, medico, tipo1, tipo2);
                 ListaPIRA.RemoveAt(ListaPIRA.Count - 1);
                 Contadores[1] = Contadores[1] - Contadores[1];
                 Contadores[3] = Contadores[3] - 1;
@@ -171,7 +171,7 @@ namespace Capa_Negocio
                 string tipo1 = "Protocolo Inicial No Relacionado";
                 string tipo2 = "2do Protocolo (Radiología)";
                 notaRadiologia = nota;
-                CreateWordDocument($"{ruta}F_U3.docx", $"{ruta}" + datosPaciente[5] + "_F_U3.docx", Contadores[1], Contadores[4], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U3.docx", $"{ruta}" + datosPaciente[5] + "_(Clinico Prot. Inicial No R y Radiologia 2do Prot).docx", Contadores[1], Contadores[4], impresora, medico, tipo1, tipo2);
                 ListaSPRA.RemoveAt(ListaSPRA.Count - 1);
                 Contadores[1] = Contadores[1] - Contadores[1];
                 Contadores[4] = Contadores[4] - 1;
@@ -181,7 +181,7 @@ namespace Capa_Negocio
             {
                 string tipo1 = "Protocolo Inicial No Relacionado";
                 string tipo2 = "Otros";
-                CreateWordDocument($"{ruta}F_U4.docx", $"{ruta}" + datosPaciente[5] + "_F_U4.docx", Contadores[1], Contadores[5], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U4.docx", $"{ruta}" + datosPaciente[5] + "_(Clinico Prot. Inicial No R y Otros).docx", Contadores[1], Contadores[5], impresora, medico, tipo1, tipo2);
                 ListaOtros.RemoveAt(ListaOtros.Count - 1);
                 Contadores[1] = Contadores[1] - Contadores[1];
                 Contadores[5] = Contadores[5] - 1;
@@ -192,7 +192,7 @@ namespace Capa_Negocio
                 string tipo2 = "Protocolo Inicial (Radiología)";
                 string tipo1 = "Otros";
                 notaRadiologia = nota;
-                CreateWordDocument($"{ruta}F_U5.docx", $"{ruta}" + datosPaciente[5] + "_F_U5.docx", Contadores[5], Contadores[3], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U5.docx", $"{ruta}" + datosPaciente[5] + "_(Radiologia Prot. Inicial y Otros).docx", Contadores[5], Contadores[3], impresora, medico, tipo1, tipo2);
                 ListaPIRA.RemoveAt(ListaPIRA.Count - 1);
                 ListaOtros.RemoveAt(ListaOtros.Count - 1);
                 Contadores[3] = Contadores[3] - 1;
@@ -204,7 +204,7 @@ namespace Capa_Negocio
                 string tipo2 = "2do Protocolo (Radiología)";
                 string tipo1 = "Otros";
                 notaRadiologia = nota;
-                CreateWordDocument($"{ruta}F_U5.docx", $"{ruta}" + datosPaciente[5] + "_F_U5.docx", Contadores[5], Contadores[4], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U5.docx", $"{ruta}" + datosPaciente[5] + "_(Radiologia 2do Prot. y Otros).docx", Contadores[5], Contadores[4], impresora, medico, tipo1, tipo2);
                 ListaSPRA.RemoveAt(ListaSPRA.Count - 1);
                 ListaOtros.RemoveAt(ListaOtros.Count - 1);
                 Contadores[4] = Contadores[4] - 1;
@@ -216,7 +216,7 @@ namespace Capa_Negocio
                 string tipo2 = "Servicios";
                 string tipo1 = "Otros";
                 notaRadiologia = nota;
-                CreateWordDocument($"{ruta}F_U6.docx", $"{ruta}" + datosPaciente[5] + "_F_U6.docx", Contadores[5], Contadores[2], impresora, medico, tipo1, tipo2);
+                CreateWordDocument($"{ruta}F_U6.docx", $"{ruta}" + datosPaciente[5] + "_(Servicios y Otros).docx", Contadores[5], Contadores[2], impresora, medico, tipo1, tipo2);
                 ListaServicios.RemoveAt(ListaServicios.Count - 1);
                 ListaOtros.RemoveAt(ListaOtros.Count - 1);
                 Contadores[2] = Contadores[2] - 1;
@@ -228,13 +228,13 @@ namespace Capa_Negocio
             if (Contadores[0] != 0)
             {
                 string tipo = "Protocolo Inicial Relacionado";
-                CreateWordDocument($"{ruta}F_A1.docx", $"{ruta}" + datosPaciente[5] + "1.docx", Contadores[0], impresora, tipo, medico);
+                CreateWordDocument($"{ruta}F_A1.docx", $"{ruta}" + datosPaciente[5] + "_(Clinicos Prot. Inicial R).docx", Contadores[0], impresora, tipo, medico);
             }
             
             if (Contadores[1] != 0)
             {
                 string tipo = "Protocolo Inicial No Relacionado";
-                CreateWordDocument($"{ruta}F_A1.docx", $"{ruta}" + datosPaciente[5] + "1.docx", Contadores[1], impresora, tipo, medico);
+                CreateWordDocument($"{ruta}F_A1.docx", $"{ruta}" + datosPaciente[5] + "_(Clinicos Prot. Inicial No R).docx", Contadores[1], impresora, tipo, medico);
             }
             
             if (Contadores[2] != 0)
@@ -247,13 +247,13 @@ namespace Capa_Negocio
                 {
                     if (Contadores[2] > 1)
                     {
-                        CreateWordDocument($"{ruta}F3_2.docx", $"{ruta}" + datosPaciente[5] + "_3.docx", j, impresora, tipo, medico);
+                        CreateWordDocument($"{ruta}F3_2.docx", $"{ruta}" + datosPaciente[5] + "_(Servicios).docx", j, impresora, tipo, medico);
                         j = j + 2;
                         Contadores[2] = Contadores[2] - 2;
                     }
                     else if (Contadores[2] == 1)
                     {
-                        CreateWordDocument($"{ruta}F3.docx", $"{ruta}" + datosPaciente[5] + "3.docx", j, impresora, tipo, medico);
+                        CreateWordDocument($"{ruta}F3.docx", $"{ruta}" + datosPaciente[5] + "_(Servicio).docx", j, impresora, tipo, medico);
                         Contadores[2] = Contadores[2] - 1;
                     }
                 }
@@ -271,13 +271,13 @@ namespace Capa_Negocio
                 {
                     if (Contadores[3] > 1)
                     {
-                        CreateWordDocument($"{ruta}F2_2.docx", $"{ruta}" + datosPaciente[5] + "_2.docx", j, impresora, tipo, medico); 
+                        CreateWordDocument($"{ruta}F2_2.docx", $"{ruta}" + datosPaciente[5] + "_(Radiologia Prot. Inicial 2).docx", j, impresora, tipo, medico); 
                         j = j + 2;
                         Contadores[3] = Contadores[3] - 2;
                     }
                     else if (Contadores[3] == 1)
                     {
-                        CreateWordDocument($"{ruta}F2.docx", $"{ruta}" + datosPaciente[5] + "2.docx", j, impresora, tipo, medico);
+                        CreateWordDocument($"{ruta}F2.docx", $"{ruta}" + datosPaciente[5] + "_(Radiologia Prot. Inicial 1).docx", j, impresora, tipo, medico);
                         Contadores[3] = Contadores[3] - 1;
                     }
                 }
@@ -295,13 +295,13 @@ namespace Capa_Negocio
                 {
                     if (Contadores[4] > 1)
                     {
-                        CreateWordDocument($"{ruta}F2_2.docx", $"{ruta}" + datosPaciente[5] + "_2.docx", j, impresora, tipo, medico);
+                        CreateWordDocument($"{ruta}F2_2.docx", $"{ruta}" + datosPaciente[5] + "_(Radiologia 2do Prot. 2).docx", j, impresora, tipo, medico);
                         j = j + 2;
                         Contadores[4] = Contadores[4] - 2;
                     }
                     else if (Contadores[4] == 1)
                     {
-                        CreateWordDocument($"{ruta}F2.docx", $"{ruta}" + datosPaciente[5] + "2.docx", j, impresora, tipo, medico);
+                        CreateWordDocument($"{ruta}F2.docx", $"{ruta}" + datosPaciente[5] + "_(Radiologia 2do Prot. 1).docx", j, impresora, tipo, medico);
                         Contadores[4] = Contadores[4] - 1;
                     }
                 }
@@ -317,13 +317,13 @@ namespace Capa_Negocio
                 {
                     if (Contadores[5] > 1)
                     {
-                        CreateWordDocument($"{ruta}F_OB1.docx", $"{ruta}" + datosPaciente[5] + "F_OB1.docx", j, impresora, medico, tipo);
+                        CreateWordDocument($"{ruta}F_OB1.docx", $"{ruta}" + datosPaciente[5] + "_(Otros).docx", j, impresora, medico, tipo);
                         j = j + 2;
                         Contadores[5] = Contadores[5] - 2;
                     }
                     else if (Contadores[5] == 1)
                     {
-                        CreateWordDocument($"{ruta}F_OA1.docx", $"{ruta}" + datosPaciente[5] + "F_OA1.docx", j, impresora, medico, tipo);
+                        CreateWordDocument($"{ruta}F_OA1.docx", $"{ruta}" + datosPaciente[5] + "_(Otro).docx", j, impresora, medico, tipo);
                         Contadores[5] = Contadores[5] - 1;
                     }
                 }
@@ -633,29 +633,44 @@ namespace Capa_Negocio
                             ref missing, ref missing, ref missing);
             //-----------------------------------------------------//
             wordApp.ActivePrinter =combobox;
-            //Codigo para impresion de formatos y asi.
-            if (myWordDoc != null)
+            //Si es para guardar y usan la opcion Microsoft Print to PDF
+            if (myWordDoc != null && combobox == "Microsoft Print to PDF")
             {
-                //object copies = "1";
-                //object pages = "";
-                //object range = Word.WdPrintOutRange.wdPrintAllDocument;
-                //object items = Word.WdPrintOutItem.wdPrintDocumentContent;
-                //object pageType = Word.WdPrintOutPages.wdPrintAllPages;
-                //object oTrue = true;
-                //object oFalse = false;
-                //myWordDoc.PrintOut(ref oTrue, ref oFalse, ref range, ref missing, ref missing, ref missing,
-                //                   ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
-                //                   ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
-                object copies = "1";
-                object pages = "1";
-                object range = Word.WdPrintOutRange.wdPrintSelection;
-                object items = Word.WdPrintOutItem.wdPrintDocumentContent;
-                object pageType = Word.WdPrintOutPages.wdPrintOddPagesOnly;
-                object oTrue = true;
-                object oFalse = false;
-                myWordDoc.PrintOut(ref oTrue, ref oFalse, ref missing, ref missing, ref missing, ref missing,
-                                   ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
-                                   ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
+                var fldrDlg = new FolderBrowserDialog();
+
+                if (fldrDlg.ShowDialog() == DialogResult.OK)
+                {
+                    string direccion = fldrDlg.SelectedPath + "\\";
+                    object OutputFileName = Path.Combine(Path.GetDirectoryName(direccion), Path.GetFileNameWithoutExtension(SaveAs.ToString()) + ".pdf");
+                    object copies = "1";
+                    object pages = "1";
+                    object range = Word.WdPrintOutRange.wdPrintSelection;
+                    object items = Word.WdPrintOutItem.wdPrintDocumentContent;
+                    object pageType = Word.WdPrintOutPages.wdPrintOddPagesOnly;
+                    object oTrue = true;
+                    object oFalse = false;
+                    myWordDoc.PrintOut(ref oTrue, ref oFalse, ref missing, ref OutputFileName, ref missing, ref missing,
+                                       ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
+                                       ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
+                }
+            }
+            else
+            {
+                //Codigo para impresion de formatos y asi.
+                if (myWordDoc != null)
+                {
+                    object copies = "1";
+                    object pages = "1";
+                    object range = Word.WdPrintOutRange.wdPrintSelection;
+                    object items = Word.WdPrintOutItem.wdPrintDocumentContent;
+                    object pageType = Word.WdPrintOutPages.wdPrintOddPagesOnly;
+                    object oTrue = true;
+                    object oFalse = false;
+                    object OutputFileName = Path.GetFileName(SaveAs.ToString());
+                    myWordDoc.PrintOut(ref oTrue, ref oFalse, ref missing, ref OutputFileName, ref missing, ref missing,
+                                       ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
+                                       ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
+                }
             }
 
             myWordDoc.Close();
@@ -723,19 +738,44 @@ namespace Capa_Negocio
                             ref missing, ref missing, ref missing);
             //-----------------------------------------------------//
             wordApp.ActivePrinter = combobox;
-            //Codigo para impresion de formatos y asi.
-            if (myWordDoc != null)
+            //Si es para guardar y usan la opcion Microsoft Print to PDF
+            if (myWordDoc != null && combobox == "Microsoft Print to PDF")
             {
-                object copies = "1";
-                object pages = "1";
-                object range = Word.WdPrintOutRange.wdPrintSelection;
-                object items = Word.WdPrintOutItem.wdPrintDocumentContent;
-                object pageType = Word.WdPrintOutPages.wdPrintOddPagesOnly;
-                object oTrue = true;
-                object oFalse = false;
-                myWordDoc.PrintOut(ref oTrue, ref oFalse, ref missing, ref missing, ref missing, ref missing,
-                                   ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
-                                   ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
+                var fldrDlg = new FolderBrowserDialog();
+
+                if (fldrDlg.ShowDialog() == DialogResult.OK)
+                {
+                    string direccion = fldrDlg.SelectedPath + "\\";
+                    object OutputFileName = Path.Combine(Path.GetDirectoryName(direccion), Path.GetFileNameWithoutExtension(SaveAs.ToString()) + ".pdf");
+                    object copies = "1";
+                    object pages = "1";
+                    object range = Word.WdPrintOutRange.wdPrintSelection;
+                    object items = Word.WdPrintOutItem.wdPrintDocumentContent;
+                    object pageType = Word.WdPrintOutPages.wdPrintOddPagesOnly;
+                    object oTrue = true;
+                    object oFalse = false;
+                    myWordDoc.PrintOut(ref oTrue, ref oFalse, ref missing, ref OutputFileName, ref missing, ref missing,
+                                       ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
+                                       ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
+                }
+            }
+            else
+            {
+                //Codigo para impresion de formatos y asi.
+                if (myWordDoc != null)
+                {
+                    object copies = "1";
+                    object pages = "1";
+                    object range = Word.WdPrintOutRange.wdPrintSelection;
+                    object items = Word.WdPrintOutItem.wdPrintDocumentContent;
+                    object pageType = Word.WdPrintOutPages.wdPrintOddPagesOnly;
+                    object oTrue = true;
+                    object oFalse = false;
+                    object OutputFileName = Path.GetFileName(SaveAs.ToString());
+                    myWordDoc.PrintOut(ref oTrue, ref oFalse, ref missing, ref OutputFileName, ref missing, ref missing,
+                                       ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
+                                       ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
+                }
             }
 
             myWordDoc.Close();
@@ -915,20 +955,45 @@ namespace Capa_Negocio
                             ref missing, ref missing, ref missing);
             //-----------------------------------------------------//
             wordApp.ActivePrinter = combobox;
-            //Codigo para impresion de formatos y asi.
-            if (myWordDoc != null)
+            //Si es para guardar y usan la opcion Microsoft Print to PDF
+            if (myWordDoc !=null && combobox == "Microsoft Print to PDF")
             {
-                object copies = "1";
-                object pages = "1";
-                object range = Word.WdPrintOutRange.wdPrintSelection;
-                object items = Word.WdPrintOutItem.wdPrintDocumentContent;
-                object pageType = Word.WdPrintOutPages.wdPrintOddPagesOnly;
-                object oTrue = true;
-                object oFalse = false;
-                myWordDoc.PrintOut(ref oTrue, ref oFalse, ref missing, ref missing, ref missing, ref missing,
-                                   ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
-                                   ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
+                var fldrDlg = new FolderBrowserDialog();
+
+                if (fldrDlg.ShowDialog() == DialogResult.OK)
+                {
+                    string direccion = fldrDlg.SelectedPath + "\\";
+                    object OutputFileName = Path.Combine(Path.GetDirectoryName(direccion), Path.GetFileNameWithoutExtension(SaveAs.ToString()) + ".pdf");
+                    object copies = "1";
+                    object pages = "1";
+                    object range = Word.WdPrintOutRange.wdPrintSelection;
+                    object items = Word.WdPrintOutItem.wdPrintDocumentContent;
+                    object pageType = Word.WdPrintOutPages.wdPrintOddPagesOnly;
+                    object oTrue = true;
+                    object oFalse = false;
+                    myWordDoc.PrintOut(ref oTrue, ref oFalse, ref missing, ref OutputFileName, ref missing, ref missing,
+                                       ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
+                                       ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
+                }
             }
+            else
+            {
+                //Codigo para impresion de formatos y asi.
+                if (myWordDoc != null)
+                {
+                    object copies = "1";
+                    object pages = "1";
+                    object range = Word.WdPrintOutRange.wdPrintSelection;
+                    object items = Word.WdPrintOutItem.wdPrintDocumentContent;
+                    object pageType = Word.WdPrintOutPages.wdPrintOddPagesOnly;
+                    object oTrue = true;
+                    object oFalse = false;
+                    object OutputFileName = Path.GetFileName(SaveAs.ToString());
+                    myWordDoc.PrintOut(ref oTrue, ref oFalse, ref missing, ref OutputFileName, ref missing, ref missing,
+                                       ref items, ref copies, ref pages, ref pageType, ref oFalse, ref oTrue,
+                                       ref missing, ref oFalse, ref missing, ref missing, ref missing, ref missing);
+                }
+            } 
 
             myWordDoc.Close();
             wordApp.Quit();
