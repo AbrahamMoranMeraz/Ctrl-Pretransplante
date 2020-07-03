@@ -208,7 +208,7 @@ namespace Control_PreTransplante_V2
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            if (UsuarioActual == "Abr06")
+            if (UsuarioActual == "usuario")
             {
                 iconButtonEstudios.Enabled = true;
                 iconButtonEstudios.Visible = true;
