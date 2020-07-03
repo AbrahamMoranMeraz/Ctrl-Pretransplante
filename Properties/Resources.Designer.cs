@@ -83,9 +83,49 @@ namespace Control_PreTransplante_V2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ITTlogo {
+            get {
+                object obj = ResourceManager.GetObject("ITTlogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_imss {
             get {
                 object obj = ResourceManager.GetObject("logo_imss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_IMSS_ {
+            get {
+                object obj = ResourceManager.GetObject("Logo_IMSS_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logotecnm {
+            get {
+                object obj = ResourceManager.GetObject("logotecnm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoTecNMBlanco {
+            get {
+                object obj = ResourceManager.GetObject("LogoTecNMBlanco", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -13,6 +13,21 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,6 +51,9 @@
   <PropertyGroup>
     <StartupObject>Control_PreTransplante_V2.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>medica_health_healthcare_sign_icon_143444.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acerca_de_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acerca_de_.Designer.cs">
+      <DependentUpon>Acerca_de_.cs</DependentUpon>
+    </Compile>
     <Compile Include="Blanco.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,11 +98,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="NPaciente.cs">
+    <Compile Include="NuevosEstudiosCate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NPaciente.Designer.cs">
-      <DependentUpon>NPaciente.cs</DependentUpon>
+    <Compile Include="NuevosEstudiosCate.Designer.cs">
+      <DependentUpon>NuevosEstudiosCate.cs</DependentUpon>
     </Compile>
     <Compile Include="Paciente.cs">
       <SubType>Form</SubType>
@@ -88,6 +112,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EditarPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarPacientes.Designer.cs">
+      <DependentUpon>EditarPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RgPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RgPacientes.Designer.cs">
+      <DependentUpon>RgPacientes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Acerca_de_.resx">
+      <DependentUpon>Acerca_de_.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Blanco.resx">
       <DependentUpon>Blanco.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,8 +139,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NPaciente.resx">
-      <DependentUpon>NPaciente.cs</DependentUpon>
+    <EmbeddedResource Include="NuevosEstudiosCate.resx">
+      <DependentUpon>NuevosEstudiosCate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paciente.resx">
       <DependentUpon>Paciente.cs</DependentUpon>
@@ -116,6 +155,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="EditarPacientes.resx">
+      <DependentUpon>EditarPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RgPacientes.resx">
+      <DependentUpon>RgPacientes.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -154,6 +199,34 @@
       <Project>{3ce6f80c-4cf6-4a11-a3ae-8bfaa89b4fb1}</Project>
       <Name>Capa_Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_IMSS_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITTlogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoTecNMBlanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logotecnm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="health_healthcare_heart_love_medic_medical_rate_icon_127269.ico" />
+    <Content Include="medica_health_healthcare_sign_icon_143444.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

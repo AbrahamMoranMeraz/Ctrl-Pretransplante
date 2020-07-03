@@ -14,9 +14,11 @@ namespace Control_PreTransplante_V2
 {
     public partial class Inicio : Form
     {
-        public Inicio()
+        public string UsuarioActual;
+        public Inicio(string text)
         {
             InitializeComponent();
+            UsuarioActual = text;
         }
         #region Funcionalidades Formulario
 
@@ -67,7 +69,12 @@ namespace Control_PreTransplante_V2
 
         private void label1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Salir de la aplicación, ¿estas seguro?", "Advertencia",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else { }
         }
         //Captura de posicion y tamaño antes de maximisar
         int lx, ly;
@@ -172,28 +179,48 @@ namespace Control_PreTransplante_V2
             if(panelsubmenupaciente.Visible == true)
             {
                 panelsubmenupaciente.Visible = false;
+                PersonalizarFormulario();
             }
             else { }
         }
 
         private void btnlista_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Lista_P>();
+            Form formulario;
+            formulario = panelcentral.Controls.OfType<Lista_P>().FirstOrDefault();//buscaen la coleccion el formulario
+            if(formulario == null)
+            {
+
+            }
+            else
+            {
+                formulario.Close();
+            }
             OcultarSubmenu();
+            AbrirFormulario<Lista_P>();
         }
 
         private void btnnuevop_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<NPaciente>();
             OcultarSubmenu();
+            AbrirFormulario<RgPacientes>();
         }
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            if (UsuarioActual == "Abr06")
+            {
+                iconButtonEstudios.Enabled = true;
+                iconButtonEstudios.Visible = true;
+            }
+            else
+            {
+                iconButtonEstudios.Enabled = false;
+                iconButtonEstudios.Visible = false;
+            }
             OcultarSubmenu();
             AbrirFormulario<Lista_P>();
-            AbrirFormulario<NPaciente>();
-            AbrirFormulario<Blanco>();
+            AbrirFormulario<RgPacientes>();
             AbrirFormulario<Blanco>();
         }
 
@@ -222,14 +249,71 @@ namespace Control_PreTransplante_V2
                 formulario.Dock = DockStyle.Fill;
                 panelcentral.Size = formulario.MinimumSize;
                 formulario.Show();
+                formulario.BringToFront();
             }
             else//Si el formulario existe
             {
                 formulario.BringToFront();
             }
         }
+
+        private void panelmenu_MouseLeave(object sender, EventArgs e)
+        {
+            OcultarSubmenu();
+        }
+
+        private void panelsubmenupaciente_MouseLeave(object sender, EventArgs e)
+        {
+            OcultarSubmenu();
+        }
+
+        private void panelcentral_MouseEnter(object sender, EventArgs e)
+        {
+            OcultarSubmenu();
+        }
+
+        private void iconButtonEstudios_Click(object sender, EventArgs e)
+        {
+            NuevosEstudiosCate nuevosEstudiosCate = new NuevosEstudiosCate();
+            nuevosEstudiosCate.Show();
+        }
+
+        private void Inicio_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Login formulario = null;
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(Login))
+                {
+                    formulario = (Login)frm;
+                    break;
+                }
+                else { return; }
+            }
+            formulario.Show();
+        }
+
+        private void acercade_Click(object sender, EventArgs e)
+        {
+            Acerca_de_ editar = new Acerca_de_();
+            editar.TopMost = true;
+            editar.TopLevel = true;
+            editar.ShowDialog();
+        }
+
+        private void acercade_MouseEnter(object sender, EventArgs e)
+        {
+            acercade.BackColor = Color.FromArgb(197, 162, 110);
+        }
+
+        private void acercade_MouseLeave(object sender, EventArgs e)
+        {
+            acercade.BackColor = Color.FromArgb(13, 102, 87);
+        }
+
         private void btninicio_Click(object sender, EventArgs e)
         {
+            OcultarSubmenu();
             AbrirFormulario<Blanco>();
         }
 
