@@ -47,7 +47,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::Control_PreTransplante_V2.Properties.Resources.encabezado;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(886, 119);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -67,7 +67,7 @@
             this.panel_IniciarSesion.Controls.Add(this.txt_usuario);
             this.panel_IniciarSesion.Controls.Add(this.lbl_InicioSesion);
             this.panel_IniciarSesion.Location = new System.Drawing.Point(142, 186);
-            this.panel_IniciarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_IniciarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.panel_IniciarSesion.Name = "panel_IniciarSesion";
             this.panel_IniciarSesion.Size = new System.Drawing.Size(596, 261);
             this.panel_IniciarSesion.TabIndex = 1;
@@ -120,7 +120,6 @@
             this.txt_contra.PasswordChar = '*';
             this.txt_contra.Size = new System.Drawing.Size(238, 29);
             this.txt_contra.TabIndex = 7;
-            this.txt_contra.Text = "SUSANA24";
             this.txt_contra.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_contra_KeyDown_1);
             // 
             // txt_usuario
@@ -131,7 +130,6 @@
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(238, 29);
             this.txt_usuario.TabIndex = 6;
-            this.txt_usuario.Text = "Abr06";
             this.txt_usuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_usuario_KeyDown_1);
             // 
             // lbl_InicioSesion
@@ -165,7 +163,7 @@
             this.Controls.Add(this.panel_IniciarSesion);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(902, 606);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
