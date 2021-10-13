@@ -36,6 +36,10 @@
     <ApplicationIcon>medica_health_healthcare_sign_icon_143444.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word1">
+      <HintPath>..\..\..\..\..\Downloads\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Spire.Barcode, Version=4.4.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
       <HintPath>..\packages\Spire.Office.5.4.2\lib\net40\Spire.Barcode.dll</HintPath>
     </Reference>
